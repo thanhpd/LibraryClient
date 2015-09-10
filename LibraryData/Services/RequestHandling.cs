@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LibraryData.Model
+namespace LibraryData.Services
 {
-    public class LibItem
+    class RequestHandling
     {
-        public Guid Guid { get; set; }
+
     }
 }
