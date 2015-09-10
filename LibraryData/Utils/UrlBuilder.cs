@@ -9,12 +9,12 @@ namespace LibraryData.Utils
 {
     public class UrlBuilder
     {        
-        private const string BaseUrl = "";
-        private const string GetAllBooksPath = "";
-        private const string FindBookPath = "";
-        private const string AddBookPath = "";
-        private const string EditBookPath = "";
-        private const string DeleteBookPath = "";
+        public static string BaseUrl = "";
+        public static string GetAllBooksPath = "";
+        public static string FindBookPath = "";
+        public static string AddBookPath = "";
+        public static string EditBookPath = "";
+        public static string DeleteBookPath = "";
 
         public static string GetAllBooks = BuildUrl(GetAllBooksPath);
         public static string FindBook = BuildUrl(FindBookPath);
