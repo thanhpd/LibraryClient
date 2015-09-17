@@ -15,9 +15,9 @@ namespace LibraryData.Models
 
         public string book_publisher { get; set; }
 
-        public string created_at { get; set; }
+        public DateTime created_at { get; set; }
 
-        public string updated_at { get; set; }
+        public DateTime updated_at { get; set; }
 
         public string book_year { get; set; }
 

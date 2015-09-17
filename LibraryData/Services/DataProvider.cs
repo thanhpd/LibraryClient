@@ -14,9 +14,7 @@ namespace LibraryData.Services
         public static List<Book> GetAllBooks(int limit, int offset)
         {
             var request = new RestRequest();
-            request.Resource = UrlBuilder.GetAllBooksPath;
-            request.AddUrlSegment("limit", limit.ToString());
-            request.AddUrlSegment("offset", offset.ToString());
+            request.Resource = String.Format("{0}?limit={1}&offset={2}", UrlBuilder.GetAllBooksPath, 100, 0);
             request.RootElement = "data";
             request.OnBeforeDeserialization = response => { response.ContentType = "application/json"; };
 
