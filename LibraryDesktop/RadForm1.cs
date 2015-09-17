@@ -27,5 +27,10 @@ namespace LibraryDesktop
         {
 
         }
+
+        private void radLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
