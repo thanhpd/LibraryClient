@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Forms;
+using LibraryData.Services;
 
 namespace LibraryDesktop
 {
@@ -11,10 +12,10 @@ namespace LibraryDesktop
         /// </summary>
         [STAThread]
         static void Main()
-        {
+        {            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RadForm1());
+            Application.Run(new RadForm1());            
         }
     }
 }

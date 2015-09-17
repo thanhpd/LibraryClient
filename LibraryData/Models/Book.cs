@@ -3,30 +3,26 @@ using System.Collections.Generic;
 
 namespace LibraryData.Models
 {
-    public class Book : LibItem
+    public class Book
     {        
-        public string Code { get; set; }
+        public string id { get; set; }
 
-        public string Name { get; set; }
+        public string book_image { get; set; }
 
-        public DateTime PublishedDate { get; set; }
+        public string book_name { get; set; }
 
-        public string Publisher { get; set; }        
+        public string book_author { get; set; }
 
-        public string ImageUrl { get; set; }
+        public string book_publisher { get; set; }
 
-        public int TotalPages { get; set; }
+        public string created_at { get; set; }
 
-        public string Status { get; set; }
+        public string updated_at { get; set; }
 
-        public string Language { get; set; }
+        public string book_year { get; set; }
 
-        public string Summary { get; set; }
+        public string status { get; set; }
 
-        public string LocationCode { get; set; }
-
-        public virtual List<Author> Authors { get; set; }
-
-        public virtual List<Genre> Genres { get; set; }
+        public string book_description { get; set; }
     }
 }

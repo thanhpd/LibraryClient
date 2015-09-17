@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,21 +9,36 @@ using RestSharp;
 
 namespace LibraryData.Services
 {
-    class RequestHandling
+    public class RequestHandling
     {
-        static IRestResponse GetAllBooksRequest()
+        public static T Execute<T>(RestRequest request) where T : new()
         {
             var client = new RestClient(UrlBuilder.BaseUrl);
-            var request = new RestRequest(UrlBuilder.GetAllBooksPath, Method.GET);
+            var response = client.Execute<T>(request);
 
-            IRestResponse result = null;
-
-            client.ExecuteAsync(request, response =>
+            if (response.ErrorException != null)
             {
-                result = response;
-            });
+                const string message = "Error retrieving response.  Check inner details for more info.";
+                var twilioException = new ApplicationException(message, response.ErrorException);
+                throw twilioException;
+            }
+            return response.Data;
+        }
 
-            return result;
+        public static bool DeleteBook(RestRequest request)
+        {
+            var client = new RestClient(UrlBuilder.BaseUrl);
+            var response = client.Execute(request);
+
+            if (response.ErrorException != null)
+            {
+                const string message = "Error retrieving response.  Check inner details for more info.";
+                var twilioException = new ApplicationException(message, response.ErrorException);
+                throw twilioException;
+            }
+            
+            //TO-DO: Analyze response to define whether succeed or not
+            return true;
         }
     }
 }

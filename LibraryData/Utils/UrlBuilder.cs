@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 namespace LibraryData.Utils
 {
     public class UrlBuilder
-    {        
-        public static string BaseUrl = "";
-        public static string GetAllBooksPath = "";
-        public static string FindBookPath = "";
-        public static string AddBookPath = "";
-        public static string EditBookPath = "";
-        public static string DeleteBookPath = "";
+    {
+        public static string BaseUrl = "http://128.199.167.255/soa/book";
+        public static string GetAllBooksPath = "list";
+        public static string FindBookPath = "search";
+        public static string AddBookPath = "add";
+        public static string EditBookPath = "update";
+        public static string DeleteBookPath = "delete";
 
         public static string GetAllBooks = BuildUrl(GetAllBooksPath);
         public static string FindBook = BuildUrl(FindBookPath);
