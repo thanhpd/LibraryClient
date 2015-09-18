@@ -7,6 +7,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryDesktop", "LibraryDe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryData", "LibraryData\LibraryData.csproj", "{9F52EB62-FCDA-4F66-8126-B7A69AD371DA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{310AD77B-3FFC-4CD5-A510-760B16B0BE55}"
+	ProjectSection(SolutionItems) = preProject
+		stable\Application Files\LibraryDesktop_1_0_0_0\LibraryData.dll.deploy = stable\Application Files\LibraryDesktop_1_0_0_0\LibraryData.dll.deploy
+		stable\LibraryDesktop.application = stable\LibraryDesktop.application
+		stable\Application Files\LibraryDesktop_1_0_0_0\LibraryDesktop.application = stable\Application Files\LibraryDesktop_1_0_0_0\LibraryDesktop.application
+		stable\Application Files\LibraryDesktop_1_0_0_0\LibraryDesktop.exe.config.deploy = stable\Application Files\LibraryDesktop_1_0_0_0\LibraryDesktop.exe.config.deploy
+		stable\Application Files\LibraryDesktop_1_0_0_0\LibraryDesktop.exe.deploy = stable\Application Files\LibraryDesktop_1_0_0_0\LibraryDesktop.exe.deploy
+		stable\Application Files\LibraryDesktop_1_0_0_0\LibraryDesktop.exe.manifest = stable\Application Files\LibraryDesktop_1_0_0_0\LibraryDesktop.exe.manifest
+		stable\Application Files\LibraryDesktop_1_0_0_0\RestSharp.dll.deploy = stable\Application Files\LibraryDesktop_1_0_0_0\RestSharp.dll.deploy
+		stable\setup.exe = stable\setup.exe
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
