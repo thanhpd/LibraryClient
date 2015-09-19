@@ -1,11 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="LibraryDesktop.exe" version="1.0.0.1" publicKeyToken="ae60cdcef22bc2e4" language="neutral" processorArchitecture="x86" type="win32" />
+  <asmv1:assemblyIdentity name="LibraryDesktop.exe" version="1.0.0.1" publicKeyToken="9306e1bbc7300fa3" language="neutral" processorArchitecture="x86" type="win32" />
+  <description asmv2:publisher="Thanh Duy Phan" asmv2:product="Library Desktop" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
     <assemblyIdentity name="LibraryDesktop" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
     <commandLine file="LibraryDesktop.exe" parameters="" />
   </entryPoint>
+  <co.v1:useManifestForTrust xmlns="urn:schemas-microsoft-com:asm.v1" />
   <trustInfo>
     <security>
       <applicationRequestMinimum>
@@ -283,8 +285,8 @@
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yJG2uQnS4+UD4WJ6nEWGrJj+7TJ/O/i3cOMtJMiir6Y=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>xlSWTlxnzQU0Z8tdbk4GwJhhldY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -295,8 +297,20 @@
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+bDmr2XfRLMwVzqh0CxMbxVWwy2fB/gNAXL9WgilDSc=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>fpudqM/Wl7R6Om33Gp93LHQhzYs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LibraryDesktop.application" size="5665">
+      <assemblyIdentity name="LibraryDesktop.application" version="1.0.0.1" publicKeyToken="ae60cdcef22bc2e4" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>te7oyeDE7xdfUTY+b5W332f6esQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -307,8 +321,8 @@
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>NGImQbw+iVVIzT21qx3Ls6DIKg6/Dylu3tV+N2BYwq4=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>Q8ihWfmgUnKTkpzNYvs+WHxkPhQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -317,8 +331,9 @@
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>YCZ1iwOatGf2Dqhrsy/ZacMmFwBxPLY0+7yB5B5VDVE=</dsig:DigestValue>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Qds3R+OzcAXryipBMbUWfiK08uU=</dsig:DigestValue>
     </hash>
   </file>
-<publisherIdentity name="CN=TOKASHIKI\PhanDuy" issuerKeyHash="2f08bc2d19fa604b4127ea34e422a0a72e57067c" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>Z6bzAlSEEK9iRUC7I3hzCJKZwgxjNiedg4u4FensTrA=</DigestValue></Reference></SignedInfo><SignatureValue>pGfKMq0/y4GQ/aFXBgF4qOEmJisN50CUdFsRE6RDSo/13CW1R+u4u/DD+1zOKWpWGnR5I/EjNM1Z0TXuySMTga5Tb2adaia1ctn9pLNtetg406wDBIeUOZOKrk70Itk6xr8MO24j+vw9zF234fFR/LtkFy9Zr5g4WHSJ/fXV21I=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>zc2FcXcJHzLfpz8udp45LHnQotHa/jy3u61QPRyXwEGx8xqZWG3AZGoUd26rHgpIT9GFDbnbAe2Kfi9hJJdN5p7WJBCunSsk0DEzGnldIO1A3HkLNLxizyNe8lB4HKsRK+cTqS6ttC0lby2M2PdRfP86guzUIbaNZKgXa/ZvsEc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="b04eece915b88b839d2736630cc2999208737823bb404562af10845402f3a667" Description="" Url=""><as:assemblyIdentity name="LibraryDesktop.exe" version="1.0.0.1" publicKeyToken="ae60cdcef22bc2e4" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=TOKASHIKI\PhanDuy</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>CUyUVqLgGDPQ/jcwWLQkfdd4cVt5A4hiGMPmx3z5T7U=</DigestValue></Reference></SignedInfo><SignatureValue>PYp6k3bQNcTuVp04LW8bETT3Wyem+f80bhMDQZr6cy0/GrXV/medlqM55qSvv8VLQFXxIgpizotVsB1gJKeXmqpMWJvbufSaIWkmOxojyh+DwzIYfhcMjYczHaXPW/Aoyh2J3SohjtJ4N9+YGRXQng5+gaIzd/WzcRXsv5NbEWk=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>zc2FcXcJHzLfpz8udp45LHnQotHa/jy3u61QPRyXwEGx8xqZWG3AZGoUd26rHgpIT9GFDbnbAe2Kfi9hJJdN5p7WJBCunSsk0DEzGnldIO1A3HkLNLxizyNe8lB4HKsRK+cTqS6ttC0lby2M2PdRfP86guzUIbaNZKgXa/ZvsEc=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB3TCCAUagAwIBAgIQYSLz+YOMIYFMn77CHCuYAjANBgkqhkiG9w0BAQsFADAtMSswKQYDVQQDHiIAVABPAEsAQQBTAEgASQBLAEkAXABQAGgAYQBuAEQAdQB5MB4XDTE1MDkxODE3MTYxMFoXDTE2MDkxNzIzMTYxMFowLTErMCkGA1UEAx4iAFQATwBLAEEAUwBIAEkASwBJAFwAUABoAGEAbgBEAHUAeTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAzc2FcXcJHzLfpz8udp45LHnQotHa/jy3u61QPRyXwEGx8xqZWG3AZGoUd26rHgpIT9GFDbnbAe2Kfi9hJJdN5p7WJBCunSsk0DEzGnldIO1A3HkLNLxizyNe8lB4HKsRK+cTqS6ttC0lby2M2PdRfP86guzUIbaNZKgXa/ZvsEcCAwEAATANBgkqhkiG9w0BAQsFAAOBgQCcV8ULhxGshaWwYxuo4Oqx14eACAmFDpafDBfreqM8WMlPv3pErhbVB+N1VLTkUyNMXzucI4Qxb/Ao5J/o2sgh9hWxxueCpJpc9AMXHWZth8Jf5rDt/8DuR4jA/1+2kjZwTq9su2jzoHwZ6K6OArr47Ab0RkzVI5YqEtl+6x+f0Q==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
+  
+<publisherIdentity name="CN=TOKASHIKI\PhanDuy" issuerKeyHash="4b9b672cf42580fb50f3acc6c244a3ef603db4bf" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>aeuNrVngJ6zIE1/ttgi+z62FsNE=</DigestValue></Reference></SignedInfo><SignatureValue>Nj7BVmVJF9rMJS7brPq+eBk5QCdhRB7lS9MRuUC03EEWibhmHf3emJQjutDPPeLVrsQsxFwDLDckU0p6mXpUT9DVqilnBRn+8z+f0LeBekQ3A5ihhsCAmI6U/j9q4EfckzUANhHAkLroxzUeO0SCCdCgbTNY80Y7cbaZwwXOQBU=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>x5ZUVc+rhmxSyvGSBaivGYIWfxi3U2xNLyRT+X2lUp9VcnujX1/s6KddZmlfJzJRilmXqdWcIVeTcED4tAUcYPuOk3oX1XVISLfx1fsHLRH8Nwctjbmur3bHTAG6SBqCE9l4v8xY3+iVHztrUbFEl7LGqFjhwbvn86aNsHml1bE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="d1b085adcfbe08b6ed5f13c8ac27e059ad8deb69" Description="" Url=""><as:assemblyIdentity name="LibraryDesktop.exe" version="1.0.0.1" publicKeyToken="9306e1bbc7300fa3" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=TOKASHIKI\PhanDuy</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>1fQuN6ZNfvM80GfySHtyCV76COs=</DigestValue></Reference></SignedInfo><SignatureValue>CxFqVyG6Yzr5R17P50TlG/9j7HbMpe03n2xt8KA2g+WL/O6hDCZKIsGzHeF7lG8cA+ggfeNUAuPrMVClUSKPi7wzqaYO3dW+wKkgn9jkfF6a8fwOnvKRF7Z5PvEIwT9/B0ffu7R47qSpu7iB5sDzx0YLQMjja2r6coXDMxdPmYY=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>x5ZUVc+rhmxSyvGSBaivGYIWfxi3U2xNLyRT+X2lUp9VcnujX1/s6KddZmlfJzJRilmXqdWcIVeTcED4tAUcYPuOk3oX1XVISLfx1fsHLRH8Nwctjbmur3bHTAG6SBqCE9l4v8xY3+iVHztrUbFEl7LGqFjhwbvn86aNsHml1bE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB3TCCAUagAwIBAgIQHxN+qNLNzJdITmuD8+rstzANBgkqhkiG9w0BAQUFADAtMSswKQYDVQQDHiIAVABPAEsAQQBTAEgASQBLAEkAXABQAGgAYQBuAEQAdQB5MB4XDTE1MDYwNjE1MTUxM1oXDTE2MDYwNTIxMTUxM1owLTErMCkGA1UEAx4iAFQATwBLAEEAUwBIAEkASwBJAFwAUABoAGEAbgBEAHUAeTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAx5ZUVc+rhmxSyvGSBaivGYIWfxi3U2xNLyRT+X2lUp9VcnujX1/s6KddZmlfJzJRilmXqdWcIVeTcED4tAUcYPuOk3oX1XVISLfx1fsHLRH8Nwctjbmur3bHTAG6SBqCE9l4v8xY3+iVHztrUbFEl7LGqFjhwbvn86aNsHml1bECAwEAATANBgkqhkiG9w0BAQUFAAOBgQCgdtE/8F2uLHCGS90YAabIWKmtxNWjbzkbW62QSFiTIjKt3IxE5naIsdKB0CAaaweOzSlqwxtOGigyvZzrOlwaenTYLdrPjh6Jt9wJLLT/jVkEiNnvle3j+NTLzItVZOeRy1kCiYAt8u9GIOyI3m60n4gHEcGroBY/gbJdAiAxuA==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

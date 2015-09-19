@@ -25,6 +25,20 @@ namespace LibraryData.Services
             return response.Data;
         }
 
+        public static IRestResponse Execute(RestRequest request)
+        {
+            var client = new RestClient(UrlBuilder.BaseUrl);
+            var response = client.Execute(request);
+
+            if (response.ErrorException != null)
+            {
+                const string message = "Error retrieving response.  Check inner details for more info.";
+                var twilioException = new ApplicationException(message, response.ErrorException);
+                throw twilioException;
+            }
+            return response;
+        }
+
         public static bool DeleteBook(RestRequest request)
         {
             var client = new RestClient(UrlBuilder.BaseUrl);

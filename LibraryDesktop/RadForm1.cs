@@ -45,7 +45,11 @@ namespace LibraryDesktop
         private void RadForm1_Load(object sender, EventArgs e)
         {
             var result = DataProvider.GetAllBooks(100, 0);
-            radGridView1.DataSource = result;            
+            radGridView1.DataSource = result;
+            for (int i = 0; i < result.Count; i++)
+            {
+                
+            }
         }
 
         private void radGridView1_Click(object sender, EventArgs e)

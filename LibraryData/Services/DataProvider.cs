@@ -32,6 +32,14 @@ namespace LibraryData.Services
             var result = RequestHandling.DeleteBook(request);
             return result;
         }
+
+        public static void GetImage(string path)
+        {
+            var request = new RestRequest();
+            request.Resource = path;
+
+            var result = RequestHandling.Execute(request);
+        }
     }
 }
 
