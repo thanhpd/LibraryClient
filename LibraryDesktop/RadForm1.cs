@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using LibraryData.Services;
+using LibraryDesktop.Models;
 using LibraryDesktop.Utils;
 
 namespace LibraryDesktop
@@ -44,12 +45,10 @@ namespace LibraryDesktop
 
         private void RadForm1_Load(object sender, EventArgs e)
         {
-            var result = DataProvider.GetAllBooks(100, 0);
-            radGridView1.DataSource = result;
-            for (int i = 0; i < result.Count; i++)
-            {
-                
-            }
+            var books = DataProvider.GetAllBooks(100, 0);
+            List<BookModel> listBookModels = books.Select(book => new BookModel(book)).ToList();
+            radGridView1.DataSource = listBookModels;
+            
         }
 
         private void radGridView1_Click(object sender, EventArgs e)

@@ -33,12 +33,13 @@ namespace LibraryData.Services
             return result;
         }
 
-        public static void GetImage(string path)
+        public static byte[] GetImage(string path)
         {
             var request = new RestRequest();
             request.Resource = path;
 
             var result = RequestHandling.Execute(request);
+            return result;
         }
     }
 }

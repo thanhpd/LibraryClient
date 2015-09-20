@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Drawing;
 using System.Collections.Generic;
+using System.Net.Mime;
 using LibraryData.Utils;
 
 namespace LibraryData.Models
@@ -24,6 +26,6 @@ namespace LibraryData.Models
 
         public string status { get; set; }
 
-        public string book_description { get; set; }
+        public string book_description { get; set; }        
     }
 }

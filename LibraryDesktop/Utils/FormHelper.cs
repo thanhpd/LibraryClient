@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +28,18 @@ namespace LibraryDesktop.Utils
         public static void SetTextForTextBox(RadTextBox textBox, RadGridView gridView, int cellId)
         {
             textBox.Text = gridView.SelectedRows[0].Cells[cellId].Value.ToString();
+        }
+
+        public static Image FetchImage(byte[] byteArrayIn)
+        {
+            Image returnImage;
+//            using (MemoryStream ms = new MemoryStream(byteArrayIn))
+//            {                
+//                returnImage = Image.FromStream(ms);                
+//            }
+            MemoryStream ms = new MemoryStream(byteArrayIn);
+            returnImage = Image.FromStream(ms);
+            return returnImage;
         }
     }
 }

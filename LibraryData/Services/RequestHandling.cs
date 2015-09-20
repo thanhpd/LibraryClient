@@ -29,7 +29,7 @@ namespace LibraryData.Services
             return tcs.Task;
         }
 
-        public static IRestResponse Execute(RestRequest request)
+        public static byte[] Execute(RestRequest request)
         {
             var client = new RestClient(UrlBuilder.BaseUrl);
             var response = client.Execute(request);
@@ -40,7 +40,7 @@ namespace LibraryData.Services
                 var twilioException = new ApplicationException(message, response.ErrorException);
                 throw twilioException;
             }
-            return response;
+            return response.RawBytes;
         }
 
         public static bool DeleteBook(RestRequest request)
