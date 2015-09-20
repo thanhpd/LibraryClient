@@ -18,7 +18,7 @@ namespace LibraryData.Services
             request.RootElement = "data";
             request.OnBeforeDeserialization = response => { response.ContentType = "application/json"; };
 
-            var result = RequestHandling.Execute<List<Book>>(request);
+            var result = RequestHandling.Execute<List<Book>>(request).Result;
             return result;
         }
 

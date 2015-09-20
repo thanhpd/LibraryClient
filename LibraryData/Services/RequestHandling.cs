@@ -11,18 +11,22 @@ namespace LibraryData.Services
 {
     public class RequestHandling
     {
-        public static T Execute<T>(RestRequest request) where T : new()
+        public static Task<T> Execute<T>(RestRequest request) where T : new()
         {
             var client = new RestClient(UrlBuilder.BaseUrl);
-            var response = client.Execute<T>(request);
-
-            if (response.ErrorException != null)
+            var tcs=new TaskCompletionSource<T>();  
+            client.ExecuteAsync<T>(request, response =>
             {
-                const string message = "Error retrieving response.  Check inner details for more info.";
-                var twilioException = new ApplicationException(message, response.ErrorException);
-                throw twilioException;
-            }
-            return response.Data;
+                if (response.ErrorException != null)
+                {
+                    const string message = "Error retrieving response.  Check inner details for more info.";
+                    var twilioException = new ApplicationException(message, response.ErrorException);
+                    throw twilioException;
+                }
+
+                tcs.SetResult(response.Data);
+            });
+            return tcs.Task;
         }
 
         public static IRestResponse Execute(RestRequest request)
