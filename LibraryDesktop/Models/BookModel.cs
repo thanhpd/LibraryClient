@@ -10,8 +10,28 @@ using LibraryDesktop.Utils;
 
 namespace LibraryDesktop.Models
 {
-    public class BookModel : Book
+    public class BookModel
     {
+        public string id { get; set; }
+
+        public string book_image { get; set; }
+
+        public string book_name { get; set; }
+
+        public string book_author { get; set; }
+
+        public string book_publisher { get; set; }
+
+        public DateTime created_at { get; set; }
+
+        public DateTime updated_at { get; set; }
+
+        public string book_year { get; set; }
+
+        public string status { get; set; }
+
+        public string book_description { get; set; } 
+
         public Image BookImage { get; set; }
 
         public BookModel(Book book)

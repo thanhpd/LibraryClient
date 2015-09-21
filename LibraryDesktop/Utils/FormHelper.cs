@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -39,6 +40,7 @@ namespace LibraryDesktop.Utils
 //            }
             MemoryStream ms = new MemoryStream(byteArrayIn);
             returnImage = Image.FromStream(ms);
+            returnImage.Save(ms, ImageFormat.Png);
             return returnImage;
         }
     }

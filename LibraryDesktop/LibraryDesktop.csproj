@@ -240,6 +240,12 @@
     <Compile Include="RadForm1.Designer.cs">
       <DependentUpon>RadForm1.cs</DependentUpon>
     </Compile>
+    <Compile Include="RadForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RadForm2.Designer.cs">
+      <DependentUpon>RadForm2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\FormHelper.cs" />
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="RadForm1.resx">
@@ -256,9 +262,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RadForm2.resx">
+      <DependentUpon>RadForm2.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
-    <None Include="Properties\DataSources\LibraryData.Models.Book.datasource" />
     <None Include="Properties\DataSources\LibraryDesktop.Models.BookModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -9,12 +9,12 @@ namespace LibraryData.Utils
 {
     public class UrlBuilder
     {
-        public static string BaseUrl = "http://128.199.167.255/soa/book";
-        public static string GetAllBooksPath = "list";
-        public static string FindBookPath = "search";
-        public static string AddBookPath = "add";
-        public static string EditBookPath = "update";
-        public static string DeleteBookPath = "delete";
+        public static string BaseUrl = "http://128.199.167.255/soa/";
+        public static string GetAllBooksPath = "book/list";
+        public static string FindBookPath = "book/search";
+        public static string AddBookPath = "book/add";
+        public static string EditBookPath = "book/update";
+        public static string DeleteBookPath = "book/delete";
 
         public static string GetAllBooks = BuildUrl(GetAllBooksPath);
         public static string FindBook = BuildUrl(FindBookPath);

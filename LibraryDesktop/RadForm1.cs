@@ -47,7 +47,7 @@ namespace LibraryDesktop
         {
             var books = DataProvider.GetAllBooks(100, 0);
             List<BookModel> listBookModels = books.Select(book => new BookModel(book)).ToList();
-            radGridView1.DataSource = listBookModels;
+            radGridView1.DataSource = listBookModels;            
             
         }
 
