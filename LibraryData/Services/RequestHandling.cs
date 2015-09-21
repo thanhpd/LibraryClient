@@ -11,10 +11,10 @@ namespace LibraryData.Services
 {
     public class RequestHandling
     {
-        public static Task<T> Execute<T>(RestRequest request) where T : new()
+        public static Task<T> ExecuteReceive<T>(RestRequest request) where T : new()
         {
             var client = new RestClient(UrlBuilder.BaseUrl);
-            var tcs=new TaskCompletionSource<T>();  
+            var tcs = new TaskCompletionSource<T>();  
             client.ExecuteAsync<T>(request, response =>
             {
                 if (response.ErrorException != null)
@@ -29,7 +29,7 @@ namespace LibraryData.Services
             return tcs.Task;
         }
 
-        public static byte[] Execute(RestRequest request)
+        public static byte[] ExecuteReceive(RestRequest request)
         {
             var client = new RestClient(UrlBuilder.BaseUrl);
             var response = client.Execute(request);
@@ -43,20 +43,35 @@ namespace LibraryData.Services
             return response.RawBytes;
         }
 
-        public static bool DeleteBook(RestRequest request)
+        public static Task<bool> ExecuteSend(RestRequest request)
         {
             var client = new RestClient(UrlBuilder.BaseUrl);
-            var response = client.Execute(request);
-
-            if (response.ErrorException != null)
+            var tcs = new TaskCompletionSource<bool>();
+            client.ExecuteAsync(request, response =>
             {
-                const string message = "Error retrieving response.  Check inner details for more info.";
-                var twilioException = new ApplicationException(message, response.ErrorException);
-                throw twilioException;
-            }
-            
+                if (response.ErrorException != null)
+                {
+                    const string message = "Error retrieving response.  Check inner details for more info.";
+                    var twilioException = new ApplicationException(message, response.ErrorException);
+                    throw twilioException;
+                }
+
+                tcs.SetResult(true);
+            });
+
             //TO-DO: Analyze response to define whether succeed or not
-            return true;
+            return tcs.Task;
+
+            //var response = client.Execute(request);
+            //if (response.ErrorException != null)
+            //{
+            //    const string message = "Error retrieving response.  Check inner details for more info.";
+            //    var twilioException = new ApplicationException(message, response.ErrorException);
+            //    throw twilioException;
+            //}
+
+            //return true;
         }
+        
     }
 }

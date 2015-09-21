@@ -12,7 +12,8 @@ namespace LibraryDesktop
         /// </summary>
         [STAThread]
         static void Main()
-        {            
+        {
+            DataProvider.DeleteBook("38");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new RadForm1());  

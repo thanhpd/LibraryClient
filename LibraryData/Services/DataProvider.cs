@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using LibraryData.Models;
@@ -18,7 +19,7 @@ namespace LibraryData.Services
             request.RootElement = "data";
             request.OnBeforeDeserialization = response => { response.ContentType = "application/json"; };
 
-            var result = RequestHandling.Execute<List<Book>>(request).Result;
+            var result = RequestHandling.ExecuteReceive<List<Book>>(request).Result;
             return result;
         }
 
@@ -26,10 +27,11 @@ namespace LibraryData.Services
         {
             var request = new RestRequest(Method.DELETE);
             request.Resource = UrlBuilder.DeleteBookPath;
-            request.AddParameter("book_id", bookId);
+            var body = String.Format("book_id={0}", bookId);
+            request.AddParameter("application/x-www-form-urlencoded", body, ParameterType.RequestBody);      
             request.OnBeforeDeserialization = response => { response.ContentType = "application/json"; };
-
-            var result = RequestHandling.DeleteBook(request);
+            
+            var result = RequestHandling.ExecuteSend(request).Result;
             return result;
         }
 
@@ -38,7 +40,7 @@ namespace LibraryData.Services
             var request = new RestRequest();
             request.Resource = path;
 
-            var result = RequestHandling.Execute(request);
+            var result = RequestHandling.ExecuteReceive(request);
             return result;
         }
     }
