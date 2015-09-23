@@ -27,7 +27,7 @@ namespace LibraryDesktop
 
             listBookModels = (DataProvider.GetAllBooks(100, 0)).Select(book => new BookModel(book)).ToList();
             radGridView2.DataSource = listBookModels;
-        }        
+        }
 
         private void radGridView1_LayoutLoaded(object sender, Telerik.WinControls.UI.LayoutLoadedEventArgs e)
         {
@@ -51,9 +51,9 @@ namespace LibraryDesktop
         {
             try
             {
-                var id = e.NewRow.Cells[0].Value.ToString();
-                BookModel bookModel = listBookModels.Where(b => b.id == id).ToList().FirstOrDefault();
-                radPropertyGrid1.SelectedObject = bookModel;
+            var id = e.NewRow.Cells[0].Value.ToString();            
+            BookModel bookModel = listBookModels.Where(b => b.id == id).ToList().FirstOrDefault();
+            radPropertyGrid1.SelectedObject = bookModel;
                 pictureBox1.Image = FormHelper.FetchLargeThumb(bookModel.book_image);
             }
             catch (Exception ex)
@@ -61,6 +61,10 @@ namespace LibraryDesktop
                 
             }
             
+        private void splitPanel2_Paint(object sender, PaintEventArgs e, string imagePath)
+        {
+            var image = FormHelper.FetchImage(DataProvider.GetImage(imagePath), 250, 150);
+            e.Graphics.DrawImage(image, new Point(0, 0));
         }
 
         private void RadForm2_Load(object sender, EventArgs e)
