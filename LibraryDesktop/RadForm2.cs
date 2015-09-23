@@ -15,12 +15,11 @@ namespace LibraryDesktop
 {
     public partial class RadForm2 : Telerik.WinControls.UI.RadForm
     {
-        Font boldFont = new Font(SystemFonts.DialogFont, FontStyle.Bold);
+        Font boldFont = new Font(SystemFonts.DialogFont, FontStyle.Bold);        
+        List<BookModel> listBookModels = (DataProvider.GetAllBooks(100, 0)).Select(book => new BookModel(book)).ToList();
         public RadForm2()
         {
-            InitializeComponent();
-            var books = DataProvider.GetAllBooks(100, 0);
-            List<BookModel> listBookModels = books.Select(book => new BookModel(book)).ToList();
+            InitializeComponent();            
             radGridView2.DataSource = listBookModels;
             radGridView2.TableElement.RowHeight = 80;
             radGridView2.MasterTemplate.AllowAddNewRow = false;
@@ -42,6 +41,13 @@ namespace LibraryDesktop
             {
                 e.CellElement.Font = boldFont;
             }
+        }
+
+        private void radGridView2_CurrentRowChanging(object sender, CurrentRowChangingEventArgs e)
+        {
+            var id = e.NewRow.Cells[0].Value.ToString();            
+            BookModel bookModel = listBookModels.Where(b => b.id == id).ToList().FirstOrDefault();
+            radPropertyGrid1.SelectedObject = bookModel;
         }
     }
 }

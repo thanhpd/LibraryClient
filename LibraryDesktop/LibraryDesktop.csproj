@@ -51,10 +51,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>FCC7D07FE2BE68F5D65463E6C07585420003A0ED</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>17730F412D3E40354EEE6D495D983CADAD2AEF52</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>LibraryDesktop_1_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>LibraryDesktop_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -265,6 +265,7 @@
     <EmbeddedResource Include="RadForm2.resx">
       <DependentUpon>RadForm2.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="LibraryDesktop_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\DataSources\LibraryDesktop.Models.BookModel.datasource" />
