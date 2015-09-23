@@ -7,11 +7,14 @@ using System.Threading.Tasks;
 using LibraryData.Models;
 using LibraryData.Services;
 using LibraryDesktop.Utils;
+using System.ComponentModel.DataAnno
 
 namespace LibraryDesktop.Models
 {
     public class BookModel
-    {
+    {   
+        [DisplayName("ID")]
+        [Description("The identify number of the book")]
         public string id { get; set; }
 
         public string book_image { get; set; }
