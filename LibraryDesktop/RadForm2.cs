@@ -49,16 +49,18 @@ namespace LibraryDesktop
             var id = e.NewRow.Cells[0].Value.ToString();            
             BookModel bookModel = listBookModels.Where(b => b.id == id).ToList().FirstOrDefault();
             radPropertyGrid1.SelectedObject = bookModel;
-            //var e = new CustomPaintEventArgs();
-            //e.ImagePath = bookModel.book_image;
-            //splitPanel2.Paint += splitPanel2_Paint;
-            
+            splitPanel2.Paint += delegate(object sender1, PaintEventArgs e1) { splitPanel2_Paint(sender1, e1, bookModel.book_image); };            
         }
 
-        //private void splitPanel2_Paint(object sender, CustomPaintEventArgs e)
-        //{
-        //    var image = FormHelper.FetchImage(DataProvider.GetImage(e.ImagePath), 250, 150);
-        //    e.Graphics.DrawImage(image, new Point(0, 0));
-        //}
+        private void splitPanel2_Paint(object sender, PaintEventArgs e, string imagePath)
+        {
+            var image = FormHelper.FetchImage(DataProvider.GetImage(imagePath), 250, 150);
+            e.Graphics.DrawImage(image, new Point(0, 0));
+        }
+
+        private void radGridView2_CurrentRowChanged(object sender, CurrentRowChangedEventArgs e)
+        {
+            
+        }
     }
 }

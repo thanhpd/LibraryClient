@@ -122,6 +122,7 @@
             // 
             // splitPanel2
             // 
+            this.splitPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitPanel2.Location = new System.Drawing.Point(0, 0);
             this.splitPanel2.Name = "splitPanel2";
             // 
@@ -286,6 +287,7 @@
             this.radGridView2.Size = new System.Drawing.Size(1008, 543);
             this.radGridView2.TabIndex = 1;
             this.radGridView2.Text = "radGridView2";
+            this.radGridView2.CurrentRowChanged += new Telerik.WinControls.UI.CurrentRowChangedEventHandler(this.radGridView2_CurrentRowChanged);
             this.radGridView2.CurrentRowChanging += new Telerik.WinControls.UI.CurrentRowChangingEventHandler(this.radGridView2_CurrentRowChanging);
             // 
             // bookModelBindingSource
