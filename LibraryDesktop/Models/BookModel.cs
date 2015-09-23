@@ -15,6 +15,7 @@ namespace LibraryDesktop.Models
     {   
         [DisplayName("ID")]
         [Description("The identify number of the book.")]
+        [ReadOnly(true)]
         public string id { get; set; }
 
         [DisplayName("Image Url")]
@@ -35,10 +36,12 @@ namespace LibraryDesktop.Models
 
         [DisplayName("Date Created")]
         [Description("Imported time of the book.")]
+        [ReadOnly(true)]
         public DateTime created_at { get; set; }
 
         [DisplayName("Last Update")]
         [Description("The most recent time that this book had been edited.")]
+        [ReadOnly(true)]
         public DateTime updated_at { get; set; }
 
         [DisplayName("Year")]
@@ -55,6 +58,7 @@ namespace LibraryDesktop.Models
 
         [DisplayName("Book Image")]
         [Description("The cover image of the book.")]
+        [ReadOnly(true)]
         public Image BookImage { get; set; }
 
         public BookModel(Book book)
