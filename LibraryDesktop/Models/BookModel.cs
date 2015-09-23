@@ -75,9 +75,9 @@ namespace LibraryDesktop.Models
             status = book.status == "1";
 
             if (!String.IsNullOrWhiteSpace(book_image))
-            {
-                BookImage = FormHelper.FetchImage(DataProvider.GetImage(book_image), 150, 80);
-            }
+            {                
+                BookImage = FormHelper.AddImageStore(book_image, DataProvider.GetImage(book_image));
+            }            
         }
     }
 }

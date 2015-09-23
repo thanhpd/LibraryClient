@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LibraryDesktop.Models;
 using Telerik.WinControls.UI;
 
 namespace LibraryDesktop.Utils
@@ -29,6 +30,32 @@ namespace LibraryDesktop.Utils
         public static void SetTextForTextBox(RadTextBox textBox, RadGridView gridView, int cellId)
         {
             textBox.Text = gridView.SelectedRows[0].Cells[cellId].Value.ToString();
+        }
+
+        public static Image AddImageStore(string imagePath, byte[] byteArrayIn)
+        {
+            var listImages = ImageSet.GetInstance();
+
+            var smallThumb = FetchImage(byteArrayIn, 150, 80);
+            var largeThumb = FetchImage(byteArrayIn, 250, 150);
+            var singleImage = new SingleImage
+            {
+                ImageUrl = imagePath,
+                SmallThumbnail = smallThumb,
+                LargeThumbnail = largeThumb
+            };
+
+            listImages.Images.Add(singleImage);
+
+            return smallThumb;
+        }
+
+        public static Image FetchLargeThumb(string imagePath)
+        {
+            var listImages = ImageSet.GetInstance();
+            var image = listImages.Images.Where(t => t.ImageUrl == imagePath).ToList().First().LargeThumbnail;
+
+            return image;
         }
 
         public static Image FetchImage(byte[] byteArrayIn, int maxWidth, int maxHeight)
@@ -62,5 +89,7 @@ namespace LibraryDesktop.Utils
 
             return newImage;
         }
+
+
     }
 }

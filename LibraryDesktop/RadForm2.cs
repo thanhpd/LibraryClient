@@ -17,14 +17,17 @@ namespace LibraryDesktop
     public partial class RadForm2 : Telerik.WinControls.UI.RadForm
     {
         Font boldFont = new Font(SystemFonts.DialogFont, FontStyle.Bold);        
-        List<BookModel> listBookModels = (DataProvider.GetAllBooks(100, 0)).Select(book => new BookModel(book)).ToList();
+        List<BookModel> listBookModels = new List<BookModel>();
         public RadForm2()
         {
             InitializeComponent();            
-            radGridView2.DataSource = listBookModels;
+            
             radGridView2.TableElement.RowHeight = 80;
             radGridView2.MasterTemplate.AllowAddNewRow = false;
-        }
+
+            listBookModels = (DataProvider.GetAllBooks(100, 0)).Select(book => new BookModel(book)).ToList();
+            radGridView2.DataSource = listBookModels;
+        }        
 
         private void radGridView1_LayoutLoaded(object sender, Telerik.WinControls.UI.LayoutLoadedEventArgs e)
         {
@@ -46,19 +49,23 @@ namespace LibraryDesktop
 
         private void radGridView2_CurrentRowChanging(object sender, CurrentRowChangingEventArgs e)
         {
-            var id = e.NewRow.Cells[0].Value.ToString();            
-            BookModel bookModel = listBookModels.Where(b => b.id == id).ToList().FirstOrDefault();
-            radPropertyGrid1.SelectedObject = bookModel;
-            //var e = new CustomPaintEventArgs();
-            //e.ImagePath = bookModel.book_image;
-            //splitPanel2.Paint += splitPanel2_Paint;
+            try
+            {
+                var id = e.NewRow.Cells[0].Value.ToString();
+                BookModel bookModel = listBookModels.Where(b => b.id == id).ToList().FirstOrDefault();
+                radPropertyGrid1.SelectedObject = bookModel;
+                pictureBox1.Image = FormHelper.FetchLargeThumb(bookModel.book_image);
+            }
+            catch (Exception ex)
+            {
+                
+            }
             
         }
 
-        //private void splitPanel2_Paint(object sender, CustomPaintEventArgs e)
-        //{
-        //    var image = FormHelper.FetchImage(DataProvider.GetImage(e.ImagePath), 250, 150);
-        //    e.Graphics.DrawImage(image, new Point(0, 0));
-        //}
+        private void RadForm2_Load(object sender, EventArgs e)
+        {
+
+        }        
     }
 }

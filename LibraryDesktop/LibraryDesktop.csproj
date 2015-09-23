@@ -236,6 +236,12 @@
   <ItemGroup>
     <Compile Include="Models\BookModel.cs" />
     <Compile Include="Models\CustomEventArgs.cs" />
+    <Compile Include="Models\ImageSet.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="RadForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -257,13 +263,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="RadForm2.resx">
       <DependentUpon>RadForm2.cs</DependentUpon>
     </EmbeddedResource>
@@ -313,6 +315,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bluemarine_favicon.ico" />
+    <Content Include="Resources\green-circle1.png" />
+    <None Include="Resources\red-circle1.png" />
+    <None Include="Resources\green-circle11.png" />
+    <Content Include="Resources\red-circle.png" />
   </ItemGroup>
   <ItemGroup>
     <PublishFile Include="Telerik.WinControls">
