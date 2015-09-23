@@ -31,14 +31,14 @@ namespace LibraryDesktop.Utils
             textBox.Text = gridView.SelectedRows[0].Cells[cellId].Value.ToString();
         }
 
-        public static Image FetchImage(byte[] byteArrayIn)
+        public static Image FetchImage(byte[] byteArrayIn, int maxWidth, int maxHeight)
         {
             Image finalImage;            
             using (MemoryStream ms = new MemoryStream(byteArrayIn))
             {
                 using (var returnImage = Image.FromStream(ms))
                 {
-                    finalImage = ScaleImage(returnImage, 150, 80);
+                    finalImage = ScaleImage(returnImage, maxWidth, maxHeight);
                     finalImage.Save(ms, ImageFormat.Png);
                 }                
             }

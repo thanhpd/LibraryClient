@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using LibraryData.Services;
 using LibraryDesktop.Models;
+using LibraryDesktop.Utils;
 using Telerik.WinControls;
 using Telerik.WinControls.UI;
 
@@ -48,6 +49,16 @@ namespace LibraryDesktop
             var id = e.NewRow.Cells[0].Value.ToString();            
             BookModel bookModel = listBookModels.Where(b => b.id == id).ToList().FirstOrDefault();
             radPropertyGrid1.SelectedObject = bookModel;
+            //var e = new CustomPaintEventArgs();
+            //e.ImagePath = bookModel.book_image;
+            //splitPanel2.Paint += splitPanel2_Paint;
+            
         }
+
+        //private void splitPanel2_Paint(object sender, CustomPaintEventArgs e)
+        //{
+        //    var image = FormHelper.FetchImage(DataProvider.GetImage(e.ImagePath), 250, 150);
+        //    e.Graphics.DrawImage(image, new Point(0, 0));
+        //}
     }
 }
