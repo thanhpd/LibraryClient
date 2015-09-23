@@ -33,15 +33,34 @@ namespace LibraryDesktop.Utils
 
         public static Image FetchImage(byte[] byteArrayIn)
         {
-            Image returnImage;
-//            using (MemoryStream ms = new MemoryStream(byteArrayIn))
-//            {                
-//                returnImage = Image.FromStream(ms);                
-//            }
-            MemoryStream ms = new MemoryStream(byteArrayIn);
-            returnImage = Image.FromStream(ms);
-            returnImage.Save(ms, ImageFormat.Png);
-            return returnImage;
+            Image finalImage;            
+            using (MemoryStream ms = new MemoryStream(byteArrayIn))
+            {
+                using (var returnImage = Image.FromStream(ms))
+                {
+                    finalImage = ScaleImage(returnImage, 150, 80);
+                    finalImage.Save(ms, ImageFormat.Png);
+                }                
+            }
+            
+            return finalImage;
+        }
+
+        public static Image ScaleImage(Image image, int maxWidth, int maxHeight)
+        {
+            var ratioX = (double)maxWidth / image.Width;
+            var ratioY = (double)maxHeight / image.Height;
+            var ratio = Math.Min(ratioX, ratioY);
+
+            var newWidth = (int)(image.Width * ratio);
+            var newHeight = (int)(image.Height * ratio);
+
+            var newImage = new Bitmap(newWidth, newHeight);
+
+            using (var graphics = Graphics.FromImage(newImage))
+                graphics.DrawImage(image, 0, 0, newWidth, newHeight);
+
+            return newImage;
         }
     }
 }
