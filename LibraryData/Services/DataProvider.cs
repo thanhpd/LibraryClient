@@ -49,8 +49,27 @@ namespace LibraryData.Services
         public static bool AddNewBook(string bookName, string bookImagePath, string bookDescription, string bookAuthor,
             string bookPublisher, string bookYear)
         {
-            var request = new RestRequest(Method.POST);
+            var request = BuildPostRequest(bookName, bookImagePath, bookDescription, bookAuthor, bookPublisher, bookYear);
             request.Resource = UrlBuilder.AddBookPath;
+            
+            var result = RequestHandling.ExecuteSend(request).Result;
+            return result;
+        }
+
+        public static bool EditBook(string bookName, string bookImagePath, string bookDescription, string bookAuthor,
+            string bookPublisher, string bookYear)
+        {
+            var request = BuildPostRequest(bookName, bookImagePath, bookDescription, bookAuthor, bookPublisher, bookYear);
+            request.Resource = UrlBuilder.EditBookPath;
+
+            var result = RequestHandling.ExecuteSend(request).Result;
+            return result;
+        }
+
+        private static RestRequest BuildPostRequest(string bookName, string bookImagePath, string bookDescription, string bookAuthor,
+            string bookPublisher, string bookYear)
+        {
+            var request = new RestRequest(Method.POST);            
             request.AddHeader("Content-Type", "multipart/form-data");
             request.AddParameter("book_name", bookName);
             request.AddFile("book_image", bookImagePath);
@@ -59,8 +78,7 @@ namespace LibraryData.Services
             request.AddParameter("book_publisher", bookPublisher);
             request.AddParameter("book_year", bookYear);
 
-            var result = RequestHandling.ExecuteSend(request).Result;
-            return result;
+            return request;
         }
     }
 }
