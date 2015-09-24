@@ -43,11 +43,11 @@ namespace LibraryData.Services
             return response.RawBytes;
         }
 
-        public static Task<bool> ExecuteSend(RestRequest request)
+        public static Task<T> ExecuteSend<T>(RestRequest request) where T : new()
         {
             var client = new RestClient(UrlBuilder.BaseUrl);
-            var tcs = new TaskCompletionSource<bool>();
-            client.ExecuteAsync(request, response =>
+            var tcs = new TaskCompletionSource<T>();
+            client.ExecuteAsync<T>(request, response =>
             {
                 if (response.ErrorException != null)
                 {
@@ -55,8 +55,8 @@ namespace LibraryData.Services
                     var twilioException = new ApplicationException(message, response.ErrorException);
                     throw twilioException;
                 }
-
-                tcs.SetResult(true);
+                
+                tcs.SetResult(response.Data);
             });
 
             //TO-DO: Analyze response to define whether succeed or not

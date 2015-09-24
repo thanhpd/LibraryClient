@@ -33,8 +33,8 @@ namespace LibraryData.Services
             request.AddParameter("application/x-www-form-urlencoded", body, ParameterType.RequestBody);      
             request.OnBeforeDeserialization = response => { response.ContentType = "application/json"; };
             
-            var result = RequestHandling.ExecuteSend(request).Result;
-            return result;
+            var result = RequestHandling.ExecuteSend<RespondObj>(request).Result;
+            return result.status == 1;
         }
 
         public static byte[] GetImage(string path)
@@ -52,18 +52,19 @@ namespace LibraryData.Services
             var request = BuildPostRequest(bookName, bookImagePath, bookDescription, bookAuthor, bookPublisher, bookYear);
             request.Resource = UrlBuilder.AddBookPath;
             
-            var result = RequestHandling.ExecuteSend(request).Result;
-            return result;
+            var result = RequestHandling.ExecuteSend<RespondObj>(request).Result;
+            return result.status == 1;
         }
 
-        public static bool EditBook(string bookName, string bookImagePath, string bookDescription, string bookAuthor,
+        public static bool EditBook(int book_id, string bookName, string bookImagePath, string bookDescription, string bookAuthor,
             string bookPublisher, string bookYear)
         {
             var request = BuildPostRequest(bookName, bookImagePath, bookDescription, bookAuthor, bookPublisher, bookYear);
+            request.AddParameter("book_id", book_id);
             request.Resource = UrlBuilder.EditBookPath;
 
-            var result = RequestHandling.ExecuteSend(request).Result;
-            return result;
+            var result = RequestHandling.ExecuteSend<RespondObj>(request).Result;
+            return result.status == 1;
         }
 
         private static RestRequest BuildPostRequest(string bookName, string bookImagePath, string bookDescription, string bookAuthor,
@@ -77,6 +78,7 @@ namespace LibraryData.Services
             request.AddParameter("book_author", bookAuthor);
             request.AddParameter("book_publisher", bookPublisher);
             request.AddParameter("book_year", bookYear);
+            request.OnBeforeDeserialization = resp => { resp.ContentType = "application/json"; };
 
             return request;
         }

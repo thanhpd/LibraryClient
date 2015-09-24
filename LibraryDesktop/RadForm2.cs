@@ -20,15 +20,13 @@ namespace LibraryDesktop
         List<BookModel> listBookModels = new List<BookModel>();
         public RadForm2()
         {
-            InitializeComponent();
-
-            //var a = DataProvider.AddNewBook("huysidaaaaa", "C:\\Users\\thanh\\Source\\Repos\\LibraryClient\\LibraryDesktop\\Resources\\green-circle1.png", "HUY", "HUY", "ABC", "1999");
-
-            radGridView2.TableElement.RowHeight = 80;
-            radGridView2.MasterTemplate.AllowAddNewRow = false;
+            InitializeComponent();                       
 
             listBookModels = (DataProvider.GetAllBooks(100, 0)).Select(book => new BookModel(book)).ToList();
             radGridView2.DataSource = listBookModels;
+
+            radGridView2.TableElement.RowHeight = 80;
+            radGridView2.MasterTemplate.AllowAddNewRow = false;
         }        
 
         private void MasterTemplate_ViewCellFormatting(object sender, CellFormattingEventArgs e)

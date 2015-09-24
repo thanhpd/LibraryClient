@@ -67,6 +67,7 @@
     <Compile Include="Models\BookGenre.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\LibItem.cs" />
+    <Compile Include="Models\RespondObj.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DataProvider.cs" />
     <Compile Include="Services\RequestHandling.cs" />
