@@ -234,9 +234,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateBookForm.Designer.cs">
+      <DependentUpon>CreateBookForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\BookModel.cs" />
-    <Compile Include="Models\CustomEventArgs.cs" />
     <Compile Include="Models\ImageSet.cs" />
+    <Compile Include="Models\PostBookModel.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -249,6 +255,9 @@
       <DependentUpon>RadForm2.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\FormHelper.cs" />
+    <EmbeddedResource Include="CreateBookForm.resx">
+      <DependentUpon>CreateBookForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -264,6 +273,7 @@
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\DataSources\LibraryDesktop.Models.BookModel.datasource" />
+    <None Include="Properties\DataSources\LibraryDesktop.Models.PostBookModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -309,6 +319,7 @@
     <Content Include="Resources\green-circle1.png" />
     <None Include="Resources\red-circle1.png" />
     <None Include="Resources\green-circle11.png" />
+    <Content Include="Resources\img-placeholder.PNG" />
     <Content Include="Resources\red-circle.png" />
   </ItemGroup>
   <ItemGroup>
