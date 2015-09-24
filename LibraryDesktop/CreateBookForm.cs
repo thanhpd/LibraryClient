@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
+using LibraryData.Services;
 using LibraryDesktop.Models;
 using LibraryDesktop.Utils;
 using Telerik.WinControls;
@@ -15,17 +16,18 @@ namespace LibraryDesktop
 {
     public partial class CreateBookForm : Telerik.WinControls.UI.RadForm
     {
+        private PostBookModel bookModel = new PostBookModel();
+        private RadBrowseEditor openDialog = new RadBrowseEditor();
         public CreateBookForm()
         {
             InitializeComponent();
-            radDataEntry1.DataSource = new PostBookModel();                        
+            radDataEntry1.DataSource = bookModel;
         }
 
         private void radDataEntry1_EditorInitializing(object sender, Telerik.WinControls.UI.EditorInitializingEventArgs e)
         {
             if (e.Property.Name == "image_path")
-            {
-                var openDialog = new RadBrowseEditor();
+            {                
                 openDialog.DialogType = BrowseEditorDialogType.OpenFileDialog;
                 openDialog.ReadOnly = true;
                 openDialog.ValueChanging += OpenDialogOnValueChanging;                
@@ -40,12 +42,32 @@ namespace LibraryDesktop
             if (!e.Cancel)
             {
                 picturePanel1.BackgroundImage = FormHelper.FetchImage(e.NewValue.ToString(), 298, 182);
+                bookModel.image_path = e.NewValue.ToString();
             }
         }        
 
         private void radButton4_Click(object sender, EventArgs e)
         {
             Close();            
+        }
+
+        private void radButton3_Click(object sender, EventArgs e)
+        {
+            DataProvider.AddNewBook(bookModel.book_name, bookModel.image_path, bookModel.book_description,
+                bookModel.book_author, bookModel.book_publisher, bookModel.book_year);
+        }
+
+        private void radDataEntry1_BindingCreated(object sender, BindingCreatedEventArgs e)
+        {
+            if (e.DataMember == "image_path")
+            {
+                e.Binding.Parse += new ConvertEventHandler(Binding_Parse);
+            }
+        }
+
+        void Binding_Parse(object sender, ConvertEventArgs e)
+        {
+            e.Value = openDialog.Value;
         }
     }
 }

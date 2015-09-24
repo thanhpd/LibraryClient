@@ -15,8 +15,8 @@ namespace LibraryDesktop
         {            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-//            Application.Run(new RadForm2());  
-            Application.Run(new CreateBookForm());  
+            Application.Run(new RadForm2());  
+//            Application.Run(new CreateBookForm());  
         }
     }
 }

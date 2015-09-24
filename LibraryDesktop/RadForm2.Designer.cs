@@ -51,11 +51,11 @@
             this.splitPanel3 = new Telerik.WinControls.UI.SplitPanel();
             this.radPropertyGrid1 = new Telerik.WinControls.UI.RadPropertyGrid();
             this.radGridView2 = new Telerik.WinControls.UI.RadGridView();
-            this.bookModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
             this.radImageButtonElement1 = new Telerik.WinControls.UI.RadImageButtonElement();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bookModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bookModelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.radSplitContainer1)).BeginInit();
             this.radSplitContainer1.SuspendLayout();
@@ -71,10 +71,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPropertyGrid1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView2.MasterTemplate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookModelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookModelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookModelBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
@@ -88,7 +88,7 @@
             // 
             // 
             this.radSplitContainer1.RootElement.MinSize = new System.Drawing.Size(0, 0);
-            this.radSplitContainer1.Size = new System.Drawing.Size(1296, 536);
+            this.radSplitContainer1.Size = new System.Drawing.Size(1170, 536);
             this.radSplitContainer1.SplitterWidth = 5;
             this.radSplitContainer1.TabIndex = 1;
             this.radSplitContainer1.TabStop = false;
@@ -105,7 +105,7 @@
             // 
             // 
             this.splitPanel1.RootElement.MinSize = new System.Drawing.Size(0, 0);
-            this.splitPanel1.Size = new System.Drawing.Size(1296, 536);
+            this.splitPanel1.Size = new System.Drawing.Size(1170, 536);
             this.splitPanel1.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0.234127F, 0F);
             this.splitPanel1.SizeInfo.SplitterCorrection = new System.Drawing.Size(237, 0);
             this.splitPanel1.TabIndex = 0;
@@ -118,14 +118,14 @@
             this.radSplitContainer2.Controls.Add(this.splitPanel2);
             this.radSplitContainer2.Controls.Add(this.splitPanel3);
             this.radSplitContainer2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.radSplitContainer2.Location = new System.Drawing.Point(1012, 0);
+            this.radSplitContainer2.Location = new System.Drawing.Point(870, 0);
             this.radSplitContainer2.Name = "radSplitContainer2";
             this.radSplitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // 
             // 
             this.radSplitContainer2.RootElement.MinSize = new System.Drawing.Size(0, 0);
-            this.radSplitContainer2.Size = new System.Drawing.Size(284, 536);
+            this.radSplitContainer2.Size = new System.Drawing.Size(300, 536);
             this.radSplitContainer2.SplitterWidth = 5;
             this.radSplitContainer2.TabIndex = 2;
             this.radSplitContainer2.TabStop = false;
@@ -141,7 +141,7 @@
             // 
             // 
             this.splitPanel2.RootElement.MinSize = new System.Drawing.Size(0, 0);
-            this.splitPanel2.Size = new System.Drawing.Size(284, 157);
+            this.splitPanel2.Size = new System.Drawing.Size(300, 157);
             this.splitPanel2.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0F, -0.2039106F);
             this.splitPanel2.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, -109);
             this.splitPanel2.TabIndex = 0;
@@ -154,7 +154,7 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(284, 157);
+            this.pictureBox2.Size = new System.Drawing.Size(300, 157);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -168,7 +168,7 @@
             // 
             // 
             this.splitPanel3.RootElement.MinSize = new System.Drawing.Size(0, 0);
-            this.splitPanel3.Size = new System.Drawing.Size(284, 374);
+            this.splitPanel3.Size = new System.Drawing.Size(300, 374);
             this.splitPanel3.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0F, 0.2039106F);
             this.splitPanel3.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, 109);
             this.splitPanel3.TabIndex = 1;
@@ -178,12 +178,12 @@
             // 
             // radPropertyGrid1
             // 
-            this.radPropertyGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radPropertyGrid1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.radPropertyGrid1.Location = new System.Drawing.Point(0, 0);
             this.radPropertyGrid1.Name = "radPropertyGrid1";
             this.radPropertyGrid1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.radPropertyGrid1.SelectedObject = this.radGridView2.RootElement;
-            this.radPropertyGrid1.Size = new System.Drawing.Size(284, 374);
+            this.radPropertyGrid1.Size = new System.Drawing.Size(300, 374);
             this.radPropertyGrid1.SortOrder = System.Windows.Forms.SortOrder.Ascending;
             this.radPropertyGrid1.TabIndex = 0;
             this.radPropertyGrid1.Text = "radPropertyGrid1";
@@ -276,6 +276,7 @@
             gridViewDateTimeColumn1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             gridViewDateTimeColumn1.HeaderText = "Date Created";
             gridViewDateTimeColumn1.IsAutoGenerated = true;
+            gridViewDateTimeColumn1.IsVisible = false;
             gridViewDateTimeColumn1.Name = "created_at";
             gridViewDateTimeColumn1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewDateTimeColumn1.Width = 80;
@@ -284,6 +285,7 @@
             gridViewDateTimeColumn2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             gridViewDateTimeColumn2.HeaderText = "Last Update";
             gridViewDateTimeColumn2.IsAutoGenerated = true;
+            gridViewDateTimeColumn2.IsVisible = false;
             gridViewDateTimeColumn2.Name = "updated_at";
             gridViewDateTimeColumn2.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewDateTimeColumn2.Width = 80;
@@ -313,14 +315,10 @@
             this.radGridView2.Name = "radGridView2";
             this.radGridView2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.radGridView2.ShowGroupPanel = false;
-            this.radGridView2.Size = new System.Drawing.Size(1008, 533);
+            this.radGridView2.Size = new System.Drawing.Size(865, 533);
             this.radGridView2.TabIndex = 1;
             this.radGridView2.Text = "radGridView2";
             this.radGridView2.CurrentRowChanging += new Telerik.WinControls.UI.CurrentRowChangingEventHandler(this.radGridView2_CurrentRowChanging);
-            // 
-            // bookModelBindingSource
-            // 
-            this.bookModelBindingSource.DataSource = typeof(LibraryDesktop.Models.BookModel);
             // 
             // pictureBox1
             // 
@@ -338,7 +336,7 @@
             this.radImageButtonElement1});
             this.radStatusStrip1.Location = new System.Drawing.Point(0, 668);
             this.radStatusStrip1.Name = "radStatusStrip1";
-            this.radStatusStrip1.Size = new System.Drawing.Size(1312, 26);
+            this.radStatusStrip1.Size = new System.Drawing.Size(1177, 26);
             this.radStatusStrip1.TabIndex = 2;
             this.radStatusStrip1.Text = "radStatusStrip1";
             // 
@@ -359,6 +357,10 @@
             this.radImageButtonElement1.ToolTipText = "Unable to connect to server";
             this.radImageButtonElement1.Click += new System.EventHandler(this.radImageButtonElement1_Click);
             // 
+            // bookModelBindingSource
+            // 
+            this.bookModelBindingSource.DataSource = typeof(LibraryDesktop.Models.BookModel);
+            // 
             // bookModelBindingSource1
             // 
             this.bookModelBindingSource1.DataSource = typeof(LibraryDesktop.Models.BookModel);
@@ -367,7 +369,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1312, 694);
+            this.ClientSize = new System.Drawing.Size(1177, 694);
             this.Controls.Add(this.radStatusStrip1);
             this.Controls.Add(this.radSplitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -394,10 +396,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPropertyGrid1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView2.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookModelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookModelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookModelBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);

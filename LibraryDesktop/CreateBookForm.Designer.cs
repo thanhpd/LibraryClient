@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateBookForm));
             this.radTextBox1 = new Telerik.WinControls.UI.RadTextBox();
             this.radTextBox2 = new Telerik.WinControls.UI.RadTextBox();
@@ -93,9 +92,79 @@
             this.radLabel26 = new Telerik.WinControls.UI.RadLabel();
             this.radButton3 = new Telerik.WinControls.UI.RadButton();
             this.radButton4 = new Telerik.WinControls.UI.RadButton();
+            this.radTextBox13 = new Telerik.WinControls.UI.RadTextBox();
+            this.radTextBox14 = new Telerik.WinControls.UI.RadTextBox();
+            this.radTextBox15 = new Telerik.WinControls.UI.RadTextBox();
+            this.radTextBox16 = new Telerik.WinControls.UI.RadTextBox();
+            this.radTextBox17 = new Telerik.WinControls.UI.RadTextBox();
+            this.radTextBox18 = new Telerik.WinControls.UI.RadTextBox();
+            this.radPanel15 = new Telerik.WinControls.UI.RadPanel();
+            this.radLabel25 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel27 = new Telerik.WinControls.UI.RadLabel();
+            this.radPanel16 = new Telerik.WinControls.UI.RadPanel();
+            this.radLabel28 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel29 = new Telerik.WinControls.UI.RadLabel();
+            this.radPanel17 = new Telerik.WinControls.UI.RadPanel();
+            this.radLabel30 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel31 = new Telerik.WinControls.UI.RadLabel();
+            this.radPanel18 = new Telerik.WinControls.UI.RadPanel();
+            this.radLabel32 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel33 = new Telerik.WinControls.UI.RadLabel();
+            this.radPanel19 = new Telerik.WinControls.UI.RadPanel();
+            this.radLabel34 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel35 = new Telerik.WinControls.UI.RadLabel();
+            this.radPanel20 = new Telerik.WinControls.UI.RadPanel();
+            this.radLabel36 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel37 = new Telerik.WinControls.UI.RadLabel();
+            this.radTextBox19 = new Telerik.WinControls.UI.RadTextBox();
+            this.radTextBox20 = new Telerik.WinControls.UI.RadTextBox();
+            this.radTextBox21 = new Telerik.WinControls.UI.RadTextBox();
+            this.radTextBox22 = new Telerik.WinControls.UI.RadTextBox();
+            this.radTextBox23 = new Telerik.WinControls.UI.RadTextBox();
+            this.radTextBox24 = new Telerik.WinControls.UI.RadTextBox();
+            this.radPanel21 = new Telerik.WinControls.UI.RadPanel();
+            this.radLabel38 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel39 = new Telerik.WinControls.UI.RadLabel();
+            this.radPanel22 = new Telerik.WinControls.UI.RadPanel();
+            this.radLabel40 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel41 = new Telerik.WinControls.UI.RadLabel();
+            this.radPanel23 = new Telerik.WinControls.UI.RadPanel();
+            this.radLabel42 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel43 = new Telerik.WinControls.UI.RadLabel();
+            this.radPanel24 = new Telerik.WinControls.UI.RadPanel();
+            this.radLabel44 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel45 = new Telerik.WinControls.UI.RadLabel();
+            this.radPanel25 = new Telerik.WinControls.UI.RadPanel();
+            this.radLabel46 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel47 = new Telerik.WinControls.UI.RadLabel();
+            this.radPanel26 = new Telerik.WinControls.UI.RadPanel();
+            this.radLabel48 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel49 = new Telerik.WinControls.UI.RadLabel();
+            this.radTextBox25 = new Telerik.WinControls.UI.RadTextBox();
+            this.radTextBox26 = new Telerik.WinControls.UI.RadTextBox();
+            this.radTextBox27 = new Telerik.WinControls.UI.RadTextBox();
+            this.radTextBox28 = new Telerik.WinControls.UI.RadTextBox();
+            this.radTextBox29 = new Telerik.WinControls.UI.RadTextBox();
+            this.radTextBox30 = new Telerik.WinControls.UI.RadTextBox();
+            this.radPanel27 = new Telerik.WinControls.UI.RadPanel();
+            this.radLabel50 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel51 = new Telerik.WinControls.UI.RadLabel();
+            this.radPanel28 = new Telerik.WinControls.UI.RadPanel();
+            this.radLabel52 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel53 = new Telerik.WinControls.UI.RadLabel();
+            this.radPanel29 = new Telerik.WinControls.UI.RadPanel();
+            this.radLabel54 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel55 = new Telerik.WinControls.UI.RadLabel();
+            this.radPanel30 = new Telerik.WinControls.UI.RadPanel();
+            this.radLabel56 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel57 = new Telerik.WinControls.UI.RadLabel();
+            this.radPanel31 = new Telerik.WinControls.UI.RadPanel();
+            this.radLabel58 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel59 = new Telerik.WinControls.UI.RadLabel();
+            this.radPanel32 = new Telerik.WinControls.UI.RadPanel();
+            this.radLabel60 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel61 = new Telerik.WinControls.UI.RadLabel();
             this.picturePanel1 = new LibraryDesktop.Utils.PicturePanel();
-            this.postBookModelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.postBookModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox3)).BeginInit();
@@ -176,8 +245,96 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postBookModelBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postBookModelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel15)).BeginInit();
+            this.radPanel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel16)).BeginInit();
+            this.radPanel16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel28)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel29)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel17)).BeginInit();
+            this.radPanel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel31)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel18)).BeginInit();
+            this.radPanel18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel32)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel33)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel19)).BeginInit();
+            this.radPanel19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel34)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel35)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel20)).BeginInit();
+            this.radPanel20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel36)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel37)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel21)).BeginInit();
+            this.radPanel21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel38)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel39)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel22)).BeginInit();
+            this.radPanel22.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel40)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel41)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel23)).BeginInit();
+            this.radPanel23.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel42)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel43)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel24)).BeginInit();
+            this.radPanel24.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel44)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel45)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel25)).BeginInit();
+            this.radPanel25.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel46)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel47)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel26)).BeginInit();
+            this.radPanel26.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel48)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel49)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox26)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox28)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox29)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel27)).BeginInit();
+            this.radPanel27.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel50)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel51)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel28)).BeginInit();
+            this.radPanel28.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel52)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel53)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel29)).BeginInit();
+            this.radPanel29.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel54)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel55)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel30)).BeginInit();
+            this.radPanel30.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel56)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel57)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel31)).BeginInit();
+            this.radPanel31.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel58)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel59)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel32)).BeginInit();
+            this.radPanel32.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel60)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel61)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -560,6 +717,7 @@
             this.radDataEntry1.TabIndex = 1;
             this.radDataEntry1.Text = "radDataEntry1";
             this.radDataEntry1.EditorInitializing += new Telerik.WinControls.UI.EditorInitializingEventHandler(this.radDataEntry1_EditorInitializing);
+            this.radDataEntry1.BindingCreated += new Telerik.WinControls.UI.BindingCreatedEventHandler(this.radDataEntry1_BindingCreated);
             // 
             // splitPanel2
             // 
@@ -892,6 +1050,7 @@
             this.radButton3.Size = new System.Drawing.Size(100, 28);
             this.radButton3.TabIndex = 0;
             this.radButton3.Text = "OK";
+            this.radButton3.Click += new System.EventHandler(this.radButton3_Click);
             // 
             // radButton4
             // 
@@ -902,6 +1061,816 @@
             this.radButton4.Text = "Cancel";
             this.radButton4.Click += new System.EventHandler(this.radButton4_Click);
             // 
+            // radTextBox13
+            // 
+            this.radTextBox13.AutoSize = false;
+            this.radTextBox13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radTextBox13.Location = new System.Drawing.Point(69, 0);
+            this.radTextBox13.Name = "radTextBox13";
+            this.radTextBox13.Size = new System.Drawing.Size(201, 22);
+            this.radTextBox13.TabIndex = 0;
+            // 
+            // radTextBox14
+            // 
+            this.radTextBox14.AutoSize = false;
+            this.radTextBox14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radTextBox14.Location = new System.Drawing.Point(69, 0);
+            this.radTextBox14.Name = "radTextBox14";
+            this.radTextBox14.Size = new System.Drawing.Size(201, 22);
+            this.radTextBox14.TabIndex = 0;
+            // 
+            // radTextBox15
+            // 
+            this.radTextBox15.AutoSize = false;
+            this.radTextBox15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radTextBox15.Location = new System.Drawing.Point(69, 0);
+            this.radTextBox15.Name = "radTextBox15";
+            this.radTextBox15.Size = new System.Drawing.Size(201, 22);
+            this.radTextBox15.TabIndex = 0;
+            // 
+            // radTextBox16
+            // 
+            this.radTextBox16.AutoSize = false;
+            this.radTextBox16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radTextBox16.Location = new System.Drawing.Point(69, 0);
+            this.radTextBox16.Name = "radTextBox16";
+            this.radTextBox16.Size = new System.Drawing.Size(201, 22);
+            this.radTextBox16.TabIndex = 0;
+            // 
+            // radTextBox17
+            // 
+            this.radTextBox17.AutoSize = false;
+            this.radTextBox17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radTextBox17.Location = new System.Drawing.Point(69, 0);
+            this.radTextBox17.Name = "radTextBox17";
+            this.radTextBox17.Size = new System.Drawing.Size(201, 22);
+            this.radTextBox17.TabIndex = 0;
+            // 
+            // radTextBox18
+            // 
+            this.radTextBox18.AutoSize = false;
+            this.radTextBox18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radTextBox18.Location = new System.Drawing.Point(69, 0);
+            this.radTextBox18.Name = "radTextBox18";
+            this.radTextBox18.Size = new System.Drawing.Size(201, 22);
+            this.radTextBox18.TabIndex = 0;
+            // 
+            // radPanel15
+            // 
+            this.radPanel15.Controls.Add(this.radTextBox13);
+            this.radPanel15.Controls.Add(this.radLabel25);
+            this.radPanel15.Controls.Add(this.radLabel27);
+            this.radPanel15.Location = new System.Drawing.Point(5, 5);
+            this.radPanel15.Name = "radPanel15";
+            this.radPanel15.Size = new System.Drawing.Size(290, 22);
+            this.radPanel15.TabIndex = 0;
+            // 
+            // radLabel25
+            // 
+            this.radLabel25.AutoSize = false;
+            this.radLabel25.Dock = System.Windows.Forms.DockStyle.Left;
+            this.radLabel25.Location = new System.Drawing.Point(0, 0);
+            this.radLabel25.Name = "radLabel25";
+            this.radLabel25.Size = new System.Drawing.Size(69, 22);
+            this.radLabel25.TabIndex = 1;
+            this.radLabel25.Text = "Book Name";
+            this.radLabel25.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radLabel25.TextWrap = false;
+            // 
+            // radLabel27
+            // 
+            this.radLabel27.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radLabel27.Location = new System.Drawing.Point(270, 0);
+            this.radLabel27.MinimumSize = new System.Drawing.Size(20, 0);
+            this.radLabel27.Name = "radLabel27";
+            // 
+            // 
+            // 
+            this.radLabel27.RootElement.MinSize = new System.Drawing.Size(20, 0);
+            this.radLabel27.Size = new System.Drawing.Size(20, 2);
+            this.radLabel27.TabIndex = 2;
+            this.radLabel27.TextWrap = false;
+            // 
+            // radPanel16
+            // 
+            this.radPanel16.Controls.Add(this.radTextBox14);
+            this.radPanel16.Controls.Add(this.radLabel28);
+            this.radPanel16.Controls.Add(this.radLabel29);
+            this.radPanel16.Location = new System.Drawing.Point(5, 32);
+            this.radPanel16.Name = "radPanel16";
+            this.radPanel16.Size = new System.Drawing.Size(290, 22);
+            this.radPanel16.TabIndex = 1;
+            // 
+            // radLabel28
+            // 
+            this.radLabel28.AutoSize = false;
+            this.radLabel28.Dock = System.Windows.Forms.DockStyle.Left;
+            this.radLabel28.Location = new System.Drawing.Point(0, 0);
+            this.radLabel28.Name = "radLabel28";
+            this.radLabel28.Size = new System.Drawing.Size(69, 22);
+            this.radLabel28.TabIndex = 1;
+            this.radLabel28.Text = "Description";
+            this.radLabel28.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radLabel28.TextWrap = false;
+            // 
+            // radLabel29
+            // 
+            this.radLabel29.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radLabel29.Location = new System.Drawing.Point(270, 0);
+            this.radLabel29.MinimumSize = new System.Drawing.Size(20, 0);
+            this.radLabel29.Name = "radLabel29";
+            // 
+            // 
+            // 
+            this.radLabel29.RootElement.MinSize = new System.Drawing.Size(20, 0);
+            this.radLabel29.Size = new System.Drawing.Size(20, 2);
+            this.radLabel29.TabIndex = 2;
+            this.radLabel29.TextWrap = false;
+            // 
+            // radPanel17
+            // 
+            this.radPanel17.Controls.Add(this.radTextBox15);
+            this.radPanel17.Controls.Add(this.radLabel30);
+            this.radPanel17.Controls.Add(this.radLabel31);
+            this.radPanel17.Location = new System.Drawing.Point(5, 59);
+            this.radPanel17.Name = "radPanel17";
+            this.radPanel17.Size = new System.Drawing.Size(290, 22);
+            this.radPanel17.TabIndex = 2;
+            // 
+            // radLabel30
+            // 
+            this.radLabel30.AutoSize = false;
+            this.radLabel30.Dock = System.Windows.Forms.DockStyle.Left;
+            this.radLabel30.Location = new System.Drawing.Point(0, 0);
+            this.radLabel30.Name = "radLabel30";
+            this.radLabel30.Size = new System.Drawing.Size(69, 22);
+            this.radLabel30.TabIndex = 1;
+            this.radLabel30.Text = "Author(s)";
+            this.radLabel30.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radLabel30.TextWrap = false;
+            // 
+            // radLabel31
+            // 
+            this.radLabel31.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radLabel31.Location = new System.Drawing.Point(270, 0);
+            this.radLabel31.MinimumSize = new System.Drawing.Size(20, 0);
+            this.radLabel31.Name = "radLabel31";
+            // 
+            // 
+            // 
+            this.radLabel31.RootElement.MinSize = new System.Drawing.Size(20, 0);
+            this.radLabel31.Size = new System.Drawing.Size(20, 2);
+            this.radLabel31.TabIndex = 2;
+            this.radLabel31.TextWrap = false;
+            // 
+            // radPanel18
+            // 
+            this.radPanel18.Controls.Add(this.radTextBox16);
+            this.radPanel18.Controls.Add(this.radLabel32);
+            this.radPanel18.Controls.Add(this.radLabel33);
+            this.radPanel18.Location = new System.Drawing.Point(5, 86);
+            this.radPanel18.Name = "radPanel18";
+            this.radPanel18.Size = new System.Drawing.Size(290, 22);
+            this.radPanel18.TabIndex = 3;
+            // 
+            // radLabel32
+            // 
+            this.radLabel32.AutoSize = false;
+            this.radLabel32.Dock = System.Windows.Forms.DockStyle.Left;
+            this.radLabel32.Location = new System.Drawing.Point(0, 0);
+            this.radLabel32.Name = "radLabel32";
+            this.radLabel32.Size = new System.Drawing.Size(69, 22);
+            this.radLabel32.TabIndex = 1;
+            this.radLabel32.Text = "Publisher";
+            this.radLabel32.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radLabel32.TextWrap = false;
+            // 
+            // radLabel33
+            // 
+            this.radLabel33.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radLabel33.Location = new System.Drawing.Point(270, 0);
+            this.radLabel33.MinimumSize = new System.Drawing.Size(20, 0);
+            this.radLabel33.Name = "radLabel33";
+            // 
+            // 
+            // 
+            this.radLabel33.RootElement.MinSize = new System.Drawing.Size(20, 0);
+            this.radLabel33.Size = new System.Drawing.Size(20, 2);
+            this.radLabel33.TabIndex = 2;
+            this.radLabel33.TextWrap = false;
+            // 
+            // radPanel19
+            // 
+            this.radPanel19.Controls.Add(this.radTextBox17);
+            this.radPanel19.Controls.Add(this.radLabel34);
+            this.radPanel19.Controls.Add(this.radLabel35);
+            this.radPanel19.Location = new System.Drawing.Point(5, 113);
+            this.radPanel19.Name = "radPanel19";
+            this.radPanel19.Size = new System.Drawing.Size(290, 22);
+            this.radPanel19.TabIndex = 4;
+            // 
+            // radLabel34
+            // 
+            this.radLabel34.AutoSize = false;
+            this.radLabel34.Dock = System.Windows.Forms.DockStyle.Left;
+            this.radLabel34.Location = new System.Drawing.Point(0, 0);
+            this.radLabel34.Name = "radLabel34";
+            this.radLabel34.Size = new System.Drawing.Size(69, 22);
+            this.radLabel34.TabIndex = 1;
+            this.radLabel34.Text = "Year";
+            this.radLabel34.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radLabel34.TextWrap = false;
+            // 
+            // radLabel35
+            // 
+            this.radLabel35.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radLabel35.Location = new System.Drawing.Point(270, 0);
+            this.radLabel35.MinimumSize = new System.Drawing.Size(20, 0);
+            this.radLabel35.Name = "radLabel35";
+            // 
+            // 
+            // 
+            this.radLabel35.RootElement.MinSize = new System.Drawing.Size(20, 0);
+            this.radLabel35.Size = new System.Drawing.Size(20, 2);
+            this.radLabel35.TabIndex = 2;
+            this.radLabel35.TextWrap = false;
+            // 
+            // radPanel20
+            // 
+            this.radPanel20.Controls.Add(this.radTextBox18);
+            this.radPanel20.Controls.Add(this.radLabel36);
+            this.radPanel20.Controls.Add(this.radLabel37);
+            this.radPanel20.Location = new System.Drawing.Point(5, 140);
+            this.radPanel20.Name = "radPanel20";
+            this.radPanel20.Size = new System.Drawing.Size(290, 22);
+            this.radPanel20.TabIndex = 5;
+            // 
+            // radLabel36
+            // 
+            this.radLabel36.AutoSize = false;
+            this.radLabel36.Dock = System.Windows.Forms.DockStyle.Left;
+            this.radLabel36.Location = new System.Drawing.Point(0, 0);
+            this.radLabel36.Name = "radLabel36";
+            this.radLabel36.Size = new System.Drawing.Size(69, 22);
+            this.radLabel36.TabIndex = 1;
+            this.radLabel36.Text = "Image";
+            this.radLabel36.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radLabel36.TextWrap = false;
+            // 
+            // radLabel37
+            // 
+            this.radLabel37.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radLabel37.Location = new System.Drawing.Point(270, 0);
+            this.radLabel37.MinimumSize = new System.Drawing.Size(20, 0);
+            this.radLabel37.Name = "radLabel37";
+            // 
+            // 
+            // 
+            this.radLabel37.RootElement.MinSize = new System.Drawing.Size(20, 0);
+            this.radLabel37.Size = new System.Drawing.Size(20, 2);
+            this.radLabel37.TabIndex = 2;
+            this.radLabel37.TextWrap = false;
+            // 
+            // radTextBox19
+            // 
+            this.radTextBox19.AutoSize = false;
+            this.radTextBox19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radTextBox19.Location = new System.Drawing.Point(69, 0);
+            this.radTextBox19.Name = "radTextBox19";
+            this.radTextBox19.Size = new System.Drawing.Size(201, 22);
+            this.radTextBox19.TabIndex = 0;
+            // 
+            // radTextBox20
+            // 
+            this.radTextBox20.AutoSize = false;
+            this.radTextBox20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radTextBox20.Location = new System.Drawing.Point(69, 0);
+            this.radTextBox20.Name = "radTextBox20";
+            this.radTextBox20.Size = new System.Drawing.Size(201, 22);
+            this.radTextBox20.TabIndex = 0;
+            // 
+            // radTextBox21
+            // 
+            this.radTextBox21.AutoSize = false;
+            this.radTextBox21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radTextBox21.Location = new System.Drawing.Point(69, 0);
+            this.radTextBox21.Name = "radTextBox21";
+            this.radTextBox21.Size = new System.Drawing.Size(201, 22);
+            this.radTextBox21.TabIndex = 0;
+            // 
+            // radTextBox22
+            // 
+            this.radTextBox22.AutoSize = false;
+            this.radTextBox22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radTextBox22.Location = new System.Drawing.Point(69, 0);
+            this.radTextBox22.Name = "radTextBox22";
+            this.radTextBox22.Size = new System.Drawing.Size(201, 22);
+            this.radTextBox22.TabIndex = 0;
+            // 
+            // radTextBox23
+            // 
+            this.radTextBox23.AutoSize = false;
+            this.radTextBox23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radTextBox23.Location = new System.Drawing.Point(69, 0);
+            this.radTextBox23.Name = "radTextBox23";
+            this.radTextBox23.Size = new System.Drawing.Size(201, 22);
+            this.radTextBox23.TabIndex = 0;
+            // 
+            // radTextBox24
+            // 
+            this.radTextBox24.AutoSize = false;
+            this.radTextBox24.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radTextBox24.Location = new System.Drawing.Point(69, 0);
+            this.radTextBox24.Name = "radTextBox24";
+            this.radTextBox24.Size = new System.Drawing.Size(201, 22);
+            this.radTextBox24.TabIndex = 0;
+            // 
+            // radPanel21
+            // 
+            this.radPanel21.Controls.Add(this.radTextBox19);
+            this.radPanel21.Controls.Add(this.radLabel38);
+            this.radPanel21.Controls.Add(this.radLabel39);
+            this.radPanel21.Location = new System.Drawing.Point(5, 5);
+            this.radPanel21.Name = "radPanel21";
+            this.radPanel21.Size = new System.Drawing.Size(290, 22);
+            this.radPanel21.TabIndex = 0;
+            // 
+            // radLabel38
+            // 
+            this.radLabel38.AutoSize = false;
+            this.radLabel38.Dock = System.Windows.Forms.DockStyle.Left;
+            this.radLabel38.Location = new System.Drawing.Point(0, 0);
+            this.radLabel38.Name = "radLabel38";
+            this.radLabel38.Size = new System.Drawing.Size(69, 22);
+            this.radLabel38.TabIndex = 1;
+            this.radLabel38.Text = "Book Name";
+            this.radLabel38.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radLabel38.TextWrap = false;
+            // 
+            // radLabel39
+            // 
+            this.radLabel39.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radLabel39.Location = new System.Drawing.Point(270, 0);
+            this.radLabel39.MinimumSize = new System.Drawing.Size(20, 0);
+            this.radLabel39.Name = "radLabel39";
+            // 
+            // 
+            // 
+            this.radLabel39.RootElement.MinSize = new System.Drawing.Size(20, 0);
+            this.radLabel39.Size = new System.Drawing.Size(20, 2);
+            this.radLabel39.TabIndex = 2;
+            this.radLabel39.TextWrap = false;
+            // 
+            // radPanel22
+            // 
+            this.radPanel22.Controls.Add(this.radTextBox20);
+            this.radPanel22.Controls.Add(this.radLabel40);
+            this.radPanel22.Controls.Add(this.radLabel41);
+            this.radPanel22.Location = new System.Drawing.Point(5, 32);
+            this.radPanel22.Name = "radPanel22";
+            this.radPanel22.Size = new System.Drawing.Size(290, 22);
+            this.radPanel22.TabIndex = 1;
+            // 
+            // radLabel40
+            // 
+            this.radLabel40.AutoSize = false;
+            this.radLabel40.Dock = System.Windows.Forms.DockStyle.Left;
+            this.radLabel40.Location = new System.Drawing.Point(0, 0);
+            this.radLabel40.Name = "radLabel40";
+            this.radLabel40.Size = new System.Drawing.Size(69, 22);
+            this.radLabel40.TabIndex = 1;
+            this.radLabel40.Text = "Description";
+            this.radLabel40.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radLabel40.TextWrap = false;
+            // 
+            // radLabel41
+            // 
+            this.radLabel41.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radLabel41.Location = new System.Drawing.Point(270, 0);
+            this.radLabel41.MinimumSize = new System.Drawing.Size(20, 0);
+            this.radLabel41.Name = "radLabel41";
+            // 
+            // 
+            // 
+            this.radLabel41.RootElement.MinSize = new System.Drawing.Size(20, 0);
+            this.radLabel41.Size = new System.Drawing.Size(20, 2);
+            this.radLabel41.TabIndex = 2;
+            this.radLabel41.TextWrap = false;
+            // 
+            // radPanel23
+            // 
+            this.radPanel23.Controls.Add(this.radTextBox21);
+            this.radPanel23.Controls.Add(this.radLabel42);
+            this.radPanel23.Controls.Add(this.radLabel43);
+            this.radPanel23.Location = new System.Drawing.Point(5, 59);
+            this.radPanel23.Name = "radPanel23";
+            this.radPanel23.Size = new System.Drawing.Size(290, 22);
+            this.radPanel23.TabIndex = 2;
+            // 
+            // radLabel42
+            // 
+            this.radLabel42.AutoSize = false;
+            this.radLabel42.Dock = System.Windows.Forms.DockStyle.Left;
+            this.radLabel42.Location = new System.Drawing.Point(0, 0);
+            this.radLabel42.Name = "radLabel42";
+            this.radLabel42.Size = new System.Drawing.Size(69, 22);
+            this.radLabel42.TabIndex = 1;
+            this.radLabel42.Text = "Author(s)";
+            this.radLabel42.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radLabel42.TextWrap = false;
+            // 
+            // radLabel43
+            // 
+            this.radLabel43.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radLabel43.Location = new System.Drawing.Point(270, 0);
+            this.radLabel43.MinimumSize = new System.Drawing.Size(20, 0);
+            this.radLabel43.Name = "radLabel43";
+            // 
+            // 
+            // 
+            this.radLabel43.RootElement.MinSize = new System.Drawing.Size(20, 0);
+            this.radLabel43.Size = new System.Drawing.Size(20, 2);
+            this.radLabel43.TabIndex = 2;
+            this.radLabel43.TextWrap = false;
+            // 
+            // radPanel24
+            // 
+            this.radPanel24.Controls.Add(this.radTextBox22);
+            this.radPanel24.Controls.Add(this.radLabel44);
+            this.radPanel24.Controls.Add(this.radLabel45);
+            this.radPanel24.Location = new System.Drawing.Point(5, 86);
+            this.radPanel24.Name = "radPanel24";
+            this.radPanel24.Size = new System.Drawing.Size(290, 22);
+            this.radPanel24.TabIndex = 3;
+            // 
+            // radLabel44
+            // 
+            this.radLabel44.AutoSize = false;
+            this.radLabel44.Dock = System.Windows.Forms.DockStyle.Left;
+            this.radLabel44.Location = new System.Drawing.Point(0, 0);
+            this.radLabel44.Name = "radLabel44";
+            this.radLabel44.Size = new System.Drawing.Size(69, 22);
+            this.radLabel44.TabIndex = 1;
+            this.radLabel44.Text = "Publisher";
+            this.radLabel44.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radLabel44.TextWrap = false;
+            // 
+            // radLabel45
+            // 
+            this.radLabel45.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radLabel45.Location = new System.Drawing.Point(270, 0);
+            this.radLabel45.MinimumSize = new System.Drawing.Size(20, 0);
+            this.radLabel45.Name = "radLabel45";
+            // 
+            // 
+            // 
+            this.radLabel45.RootElement.MinSize = new System.Drawing.Size(20, 0);
+            this.radLabel45.Size = new System.Drawing.Size(20, 2);
+            this.radLabel45.TabIndex = 2;
+            this.radLabel45.TextWrap = false;
+            // 
+            // radPanel25
+            // 
+            this.radPanel25.Controls.Add(this.radTextBox23);
+            this.radPanel25.Controls.Add(this.radLabel46);
+            this.radPanel25.Controls.Add(this.radLabel47);
+            this.radPanel25.Location = new System.Drawing.Point(5, 113);
+            this.radPanel25.Name = "radPanel25";
+            this.radPanel25.Size = new System.Drawing.Size(290, 22);
+            this.radPanel25.TabIndex = 4;
+            // 
+            // radLabel46
+            // 
+            this.radLabel46.AutoSize = false;
+            this.radLabel46.Dock = System.Windows.Forms.DockStyle.Left;
+            this.radLabel46.Location = new System.Drawing.Point(0, 0);
+            this.radLabel46.Name = "radLabel46";
+            this.radLabel46.Size = new System.Drawing.Size(69, 22);
+            this.radLabel46.TabIndex = 1;
+            this.radLabel46.Text = "Year";
+            this.radLabel46.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radLabel46.TextWrap = false;
+            // 
+            // radLabel47
+            // 
+            this.radLabel47.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radLabel47.Location = new System.Drawing.Point(270, 0);
+            this.radLabel47.MinimumSize = new System.Drawing.Size(20, 0);
+            this.radLabel47.Name = "radLabel47";
+            // 
+            // 
+            // 
+            this.radLabel47.RootElement.MinSize = new System.Drawing.Size(20, 0);
+            this.radLabel47.Size = new System.Drawing.Size(20, 2);
+            this.radLabel47.TabIndex = 2;
+            this.radLabel47.TextWrap = false;
+            // 
+            // radPanel26
+            // 
+            this.radPanel26.Controls.Add(this.radTextBox24);
+            this.radPanel26.Controls.Add(this.radLabel48);
+            this.radPanel26.Controls.Add(this.radLabel49);
+            this.radPanel26.Location = new System.Drawing.Point(5, 140);
+            this.radPanel26.Name = "radPanel26";
+            this.radPanel26.Size = new System.Drawing.Size(290, 22);
+            this.radPanel26.TabIndex = 5;
+            // 
+            // radLabel48
+            // 
+            this.radLabel48.AutoSize = false;
+            this.radLabel48.Dock = System.Windows.Forms.DockStyle.Left;
+            this.radLabel48.Location = new System.Drawing.Point(0, 0);
+            this.radLabel48.Name = "radLabel48";
+            this.radLabel48.Size = new System.Drawing.Size(69, 22);
+            this.radLabel48.TabIndex = 1;
+            this.radLabel48.Text = "Image";
+            this.radLabel48.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radLabel48.TextWrap = false;
+            // 
+            // radLabel49
+            // 
+            this.radLabel49.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radLabel49.Location = new System.Drawing.Point(270, 0);
+            this.radLabel49.MinimumSize = new System.Drawing.Size(20, 0);
+            this.radLabel49.Name = "radLabel49";
+            // 
+            // 
+            // 
+            this.radLabel49.RootElement.MinSize = new System.Drawing.Size(20, 0);
+            this.radLabel49.Size = new System.Drawing.Size(20, 2);
+            this.radLabel49.TabIndex = 2;
+            this.radLabel49.TextWrap = false;
+            // 
+            // radTextBox25
+            // 
+            this.radTextBox25.AutoSize = false;
+            this.radTextBox25.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radTextBox25.Location = new System.Drawing.Point(69, 0);
+            this.radTextBox25.Name = "radTextBox25";
+            this.radTextBox25.Size = new System.Drawing.Size(201, 22);
+            this.radTextBox25.TabIndex = 0;
+            // 
+            // radTextBox26
+            // 
+            this.radTextBox26.AutoSize = false;
+            this.radTextBox26.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radTextBox26.Location = new System.Drawing.Point(69, 0);
+            this.radTextBox26.Name = "radTextBox26";
+            this.radTextBox26.Size = new System.Drawing.Size(201, 22);
+            this.radTextBox26.TabIndex = 0;
+            // 
+            // radTextBox27
+            // 
+            this.radTextBox27.AutoSize = false;
+            this.radTextBox27.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radTextBox27.Location = new System.Drawing.Point(69, 0);
+            this.radTextBox27.Name = "radTextBox27";
+            this.radTextBox27.Size = new System.Drawing.Size(201, 22);
+            this.radTextBox27.TabIndex = 0;
+            // 
+            // radTextBox28
+            // 
+            this.radTextBox28.AutoSize = false;
+            this.radTextBox28.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radTextBox28.Location = new System.Drawing.Point(69, 0);
+            this.radTextBox28.Name = "radTextBox28";
+            this.radTextBox28.Size = new System.Drawing.Size(201, 22);
+            this.radTextBox28.TabIndex = 0;
+            // 
+            // radTextBox29
+            // 
+            this.radTextBox29.AutoSize = false;
+            this.radTextBox29.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radTextBox29.Location = new System.Drawing.Point(69, 0);
+            this.radTextBox29.Name = "radTextBox29";
+            this.radTextBox29.Size = new System.Drawing.Size(201, 22);
+            this.radTextBox29.TabIndex = 0;
+            // 
+            // radTextBox30
+            // 
+            this.radTextBox30.AutoSize = false;
+            this.radTextBox30.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radTextBox30.Location = new System.Drawing.Point(69, 0);
+            this.radTextBox30.Name = "radTextBox30";
+            this.radTextBox30.Size = new System.Drawing.Size(201, 22);
+            this.radTextBox30.TabIndex = 0;
+            // 
+            // radPanel27
+            // 
+            this.radPanel27.Controls.Add(this.radTextBox25);
+            this.radPanel27.Controls.Add(this.radLabel50);
+            this.radPanel27.Controls.Add(this.radLabel51);
+            this.radPanel27.Location = new System.Drawing.Point(5, 5);
+            this.radPanel27.Name = "radPanel27";
+            this.radPanel27.Size = new System.Drawing.Size(290, 22);
+            this.radPanel27.TabIndex = 0;
+            // 
+            // radLabel50
+            // 
+            this.radLabel50.AutoSize = false;
+            this.radLabel50.Dock = System.Windows.Forms.DockStyle.Left;
+            this.radLabel50.Location = new System.Drawing.Point(0, 0);
+            this.radLabel50.Name = "radLabel50";
+            this.radLabel50.Size = new System.Drawing.Size(69, 22);
+            this.radLabel50.TabIndex = 1;
+            this.radLabel50.Text = "Book Name";
+            this.radLabel50.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radLabel50.TextWrap = false;
+            // 
+            // radLabel51
+            // 
+            this.radLabel51.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radLabel51.Location = new System.Drawing.Point(270, 0);
+            this.radLabel51.MinimumSize = new System.Drawing.Size(20, 0);
+            this.radLabel51.Name = "radLabel51";
+            // 
+            // 
+            // 
+            this.radLabel51.RootElement.MinSize = new System.Drawing.Size(20, 0);
+            this.radLabel51.Size = new System.Drawing.Size(20, 2);
+            this.radLabel51.TabIndex = 2;
+            this.radLabel51.TextWrap = false;
+            // 
+            // radPanel28
+            // 
+            this.radPanel28.Controls.Add(this.radTextBox26);
+            this.radPanel28.Controls.Add(this.radLabel52);
+            this.radPanel28.Controls.Add(this.radLabel53);
+            this.radPanel28.Location = new System.Drawing.Point(5, 32);
+            this.radPanel28.Name = "radPanel28";
+            this.radPanel28.Size = new System.Drawing.Size(290, 22);
+            this.radPanel28.TabIndex = 1;
+            // 
+            // radLabel52
+            // 
+            this.radLabel52.AutoSize = false;
+            this.radLabel52.Dock = System.Windows.Forms.DockStyle.Left;
+            this.radLabel52.Location = new System.Drawing.Point(0, 0);
+            this.radLabel52.Name = "radLabel52";
+            this.radLabel52.Size = new System.Drawing.Size(69, 22);
+            this.radLabel52.TabIndex = 1;
+            this.radLabel52.Text = "Description";
+            this.radLabel52.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radLabel52.TextWrap = false;
+            // 
+            // radLabel53
+            // 
+            this.radLabel53.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radLabel53.Location = new System.Drawing.Point(270, 0);
+            this.radLabel53.MinimumSize = new System.Drawing.Size(20, 0);
+            this.radLabel53.Name = "radLabel53";
+            // 
+            // 
+            // 
+            this.radLabel53.RootElement.MinSize = new System.Drawing.Size(20, 0);
+            this.radLabel53.Size = new System.Drawing.Size(20, 2);
+            this.radLabel53.TabIndex = 2;
+            this.radLabel53.TextWrap = false;
+            // 
+            // radPanel29
+            // 
+            this.radPanel29.Controls.Add(this.radTextBox27);
+            this.radPanel29.Controls.Add(this.radLabel54);
+            this.radPanel29.Controls.Add(this.radLabel55);
+            this.radPanel29.Location = new System.Drawing.Point(5, 59);
+            this.radPanel29.Name = "radPanel29";
+            this.radPanel29.Size = new System.Drawing.Size(290, 22);
+            this.radPanel29.TabIndex = 2;
+            // 
+            // radLabel54
+            // 
+            this.radLabel54.AutoSize = false;
+            this.radLabel54.Dock = System.Windows.Forms.DockStyle.Left;
+            this.radLabel54.Location = new System.Drawing.Point(0, 0);
+            this.radLabel54.Name = "radLabel54";
+            this.radLabel54.Size = new System.Drawing.Size(69, 22);
+            this.radLabel54.TabIndex = 1;
+            this.radLabel54.Text = "Author(s)";
+            this.radLabel54.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radLabel54.TextWrap = false;
+            // 
+            // radLabel55
+            // 
+            this.radLabel55.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radLabel55.Location = new System.Drawing.Point(270, 0);
+            this.radLabel55.MinimumSize = new System.Drawing.Size(20, 0);
+            this.radLabel55.Name = "radLabel55";
+            // 
+            // 
+            // 
+            this.radLabel55.RootElement.MinSize = new System.Drawing.Size(20, 0);
+            this.radLabel55.Size = new System.Drawing.Size(20, 2);
+            this.radLabel55.TabIndex = 2;
+            this.radLabel55.TextWrap = false;
+            // 
+            // radPanel30
+            // 
+            this.radPanel30.Controls.Add(this.radTextBox28);
+            this.radPanel30.Controls.Add(this.radLabel56);
+            this.radPanel30.Controls.Add(this.radLabel57);
+            this.radPanel30.Location = new System.Drawing.Point(5, 86);
+            this.radPanel30.Name = "radPanel30";
+            this.radPanel30.Size = new System.Drawing.Size(290, 22);
+            this.radPanel30.TabIndex = 3;
+            // 
+            // radLabel56
+            // 
+            this.radLabel56.AutoSize = false;
+            this.radLabel56.Dock = System.Windows.Forms.DockStyle.Left;
+            this.radLabel56.Location = new System.Drawing.Point(0, 0);
+            this.radLabel56.Name = "radLabel56";
+            this.radLabel56.Size = new System.Drawing.Size(69, 22);
+            this.radLabel56.TabIndex = 1;
+            this.radLabel56.Text = "Publisher";
+            this.radLabel56.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radLabel56.TextWrap = false;
+            // 
+            // radLabel57
+            // 
+            this.radLabel57.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radLabel57.Location = new System.Drawing.Point(270, 0);
+            this.radLabel57.MinimumSize = new System.Drawing.Size(20, 0);
+            this.radLabel57.Name = "radLabel57";
+            // 
+            // 
+            // 
+            this.radLabel57.RootElement.MinSize = new System.Drawing.Size(20, 0);
+            this.radLabel57.Size = new System.Drawing.Size(20, 2);
+            this.radLabel57.TabIndex = 2;
+            this.radLabel57.TextWrap = false;
+            // 
+            // radPanel31
+            // 
+            this.radPanel31.Controls.Add(this.radTextBox29);
+            this.radPanel31.Controls.Add(this.radLabel58);
+            this.radPanel31.Controls.Add(this.radLabel59);
+            this.radPanel31.Location = new System.Drawing.Point(5, 113);
+            this.radPanel31.Name = "radPanel31";
+            this.radPanel31.Size = new System.Drawing.Size(290, 22);
+            this.radPanel31.TabIndex = 4;
+            // 
+            // radLabel58
+            // 
+            this.radLabel58.AutoSize = false;
+            this.radLabel58.Dock = System.Windows.Forms.DockStyle.Left;
+            this.radLabel58.Location = new System.Drawing.Point(0, 0);
+            this.radLabel58.Name = "radLabel58";
+            this.radLabel58.Size = new System.Drawing.Size(69, 22);
+            this.radLabel58.TabIndex = 1;
+            this.radLabel58.Text = "Year";
+            this.radLabel58.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radLabel58.TextWrap = false;
+            // 
+            // radLabel59
+            // 
+            this.radLabel59.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radLabel59.Location = new System.Drawing.Point(270, 0);
+            this.radLabel59.MinimumSize = new System.Drawing.Size(20, 0);
+            this.radLabel59.Name = "radLabel59";
+            // 
+            // 
+            // 
+            this.radLabel59.RootElement.MinSize = new System.Drawing.Size(20, 0);
+            this.radLabel59.Size = new System.Drawing.Size(20, 2);
+            this.radLabel59.TabIndex = 2;
+            this.radLabel59.TextWrap = false;
+            // 
+            // radPanel32
+            // 
+            this.radPanel32.Controls.Add(this.radTextBox30);
+            this.radPanel32.Controls.Add(this.radLabel60);
+            this.radPanel32.Controls.Add(this.radLabel61);
+            this.radPanel32.Location = new System.Drawing.Point(5, 140);
+            this.radPanel32.Name = "radPanel32";
+            this.radPanel32.Size = new System.Drawing.Size(290, 22);
+            this.radPanel32.TabIndex = 5;
+            // 
+            // radLabel60
+            // 
+            this.radLabel60.AutoSize = false;
+            this.radLabel60.Dock = System.Windows.Forms.DockStyle.Left;
+            this.radLabel60.Location = new System.Drawing.Point(0, 0);
+            this.radLabel60.Name = "radLabel60";
+            this.radLabel60.Size = new System.Drawing.Size(69, 22);
+            this.radLabel60.TabIndex = 1;
+            this.radLabel60.Text = "Image";
+            this.radLabel60.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radLabel60.TextWrap = false;
+            // 
+            // radLabel61
+            // 
+            this.radLabel61.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radLabel61.Location = new System.Drawing.Point(270, 0);
+            this.radLabel61.MinimumSize = new System.Drawing.Size(20, 0);
+            this.radLabel61.Name = "radLabel61";
+            // 
+            // 
+            // 
+            this.radLabel61.RootElement.MinSize = new System.Drawing.Size(20, 0);
+            this.radLabel61.Size = new System.Drawing.Size(20, 2);
+            this.radLabel61.TabIndex = 2;
+            this.radLabel61.TextWrap = false;
+            // 
             // picturePanel1
             // 
             this.picturePanel1.AutoScroll = true;
@@ -911,14 +1880,6 @@
             this.picturePanel1.Name = "picturePanel1";
             this.picturePanel1.Size = new System.Drawing.Size(298, 182);
             this.picturePanel1.TabIndex = 0;
-            // 
-            // postBookModelBindingSource1
-            // 
-            this.postBookModelBindingSource1.DataSource = typeof(LibraryDesktop.Models.PostBookModel);
-            // 
-            // postBookModelBindingSource
-            // 
-            this.postBookModelBindingSource.DataSource = typeof(LibraryDesktop.Models.PostBookModel);
             // 
             // CreateBookForm
             // 
@@ -936,8 +1897,8 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.ShowInTaskbar = false;
             this.Text = "Add new book";
-            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox3)).EndInit();
@@ -1032,8 +1993,114 @@
             ((System.ComponentModel.ISupportInitialize)(this.radLabel26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postBookModelBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postBookModelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel15)).EndInit();
+            this.radPanel15.ResumeLayout(false);
+            this.radPanel15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel16)).EndInit();
+            this.radPanel16.ResumeLayout(false);
+            this.radPanel16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel28)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel29)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel17)).EndInit();
+            this.radPanel17.ResumeLayout(false);
+            this.radPanel17.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel31)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel18)).EndInit();
+            this.radPanel18.ResumeLayout(false);
+            this.radPanel18.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel32)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel33)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel19)).EndInit();
+            this.radPanel19.ResumeLayout(false);
+            this.radPanel19.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel34)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel35)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel20)).EndInit();
+            this.radPanel20.ResumeLayout(false);
+            this.radPanel20.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel36)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel37)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel21)).EndInit();
+            this.radPanel21.ResumeLayout(false);
+            this.radPanel21.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel38)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel39)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel22)).EndInit();
+            this.radPanel22.ResumeLayout(false);
+            this.radPanel22.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel40)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel41)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel23)).EndInit();
+            this.radPanel23.ResumeLayout(false);
+            this.radPanel23.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel42)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel43)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel24)).EndInit();
+            this.radPanel24.ResumeLayout(false);
+            this.radPanel24.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel44)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel45)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel25)).EndInit();
+            this.radPanel25.ResumeLayout(false);
+            this.radPanel25.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel46)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel47)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel26)).EndInit();
+            this.radPanel26.ResumeLayout(false);
+            this.radPanel26.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel48)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel49)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox26)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox28)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox29)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radTextBox30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel27)).EndInit();
+            this.radPanel27.ResumeLayout(false);
+            this.radPanel27.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel50)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel51)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel28)).EndInit();
+            this.radPanel28.ResumeLayout(false);
+            this.radPanel28.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel52)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel53)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel29)).EndInit();
+            this.radPanel29.ResumeLayout(false);
+            this.radPanel29.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel54)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel55)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel30)).EndInit();
+            this.radPanel30.ResumeLayout(false);
+            this.radPanel30.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel56)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel57)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel31)).EndInit();
+            this.radPanel31.ResumeLayout(false);
+            this.radPanel31.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel58)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel59)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel32)).EndInit();
+            this.radPanel32.ResumeLayout(false);
+            this.radPanel32.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel60)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel61)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -1102,10 +2169,80 @@
         private Telerik.WinControls.UI.RadLabel radLabel26;
         private Telerik.WinControls.UI.SplitPanel splitPanel2;
         private Telerik.WinControls.UI.SplitPanel splitPanel3;
-        private System.Windows.Forms.BindingSource postBookModelBindingSource;
-        private System.Windows.Forms.BindingSource postBookModelBindingSource1;
         private Utils.PicturePanel picturePanel1;
         private Telerik.WinControls.UI.RadButton radButton4;
         private Telerik.WinControls.UI.RadButton radButton3;
+        private Telerik.WinControls.UI.RadPanel radPanel15;
+        private Telerik.WinControls.UI.RadTextBox radTextBox13;
+        private Telerik.WinControls.UI.RadLabel radLabel25;
+        private Telerik.WinControls.UI.RadLabel radLabel27;
+        private Telerik.WinControls.UI.RadPanel radPanel16;
+        private Telerik.WinControls.UI.RadTextBox radTextBox14;
+        private Telerik.WinControls.UI.RadLabel radLabel28;
+        private Telerik.WinControls.UI.RadLabel radLabel29;
+        private Telerik.WinControls.UI.RadPanel radPanel17;
+        private Telerik.WinControls.UI.RadTextBox radTextBox15;
+        private Telerik.WinControls.UI.RadLabel radLabel30;
+        private Telerik.WinControls.UI.RadLabel radLabel31;
+        private Telerik.WinControls.UI.RadPanel radPanel18;
+        private Telerik.WinControls.UI.RadTextBox radTextBox16;
+        private Telerik.WinControls.UI.RadLabel radLabel32;
+        private Telerik.WinControls.UI.RadLabel radLabel33;
+        private Telerik.WinControls.UI.RadPanel radPanel19;
+        private Telerik.WinControls.UI.RadTextBox radTextBox17;
+        private Telerik.WinControls.UI.RadLabel radLabel34;
+        private Telerik.WinControls.UI.RadLabel radLabel35;
+        private Telerik.WinControls.UI.RadPanel radPanel20;
+        private Telerik.WinControls.UI.RadTextBox radTextBox18;
+        private Telerik.WinControls.UI.RadLabel radLabel36;
+        private Telerik.WinControls.UI.RadLabel radLabel37;
+        private Telerik.WinControls.UI.RadTextBox radTextBox19;
+        private Telerik.WinControls.UI.RadTextBox radTextBox20;
+        private Telerik.WinControls.UI.RadTextBox radTextBox21;
+        private Telerik.WinControls.UI.RadTextBox radTextBox22;
+        private Telerik.WinControls.UI.RadTextBox radTextBox23;
+        private Telerik.WinControls.UI.RadTextBox radTextBox24;
+        private Telerik.WinControls.UI.RadPanel radPanel21;
+        private Telerik.WinControls.UI.RadLabel radLabel38;
+        private Telerik.WinControls.UI.RadLabel radLabel39;
+        private Telerik.WinControls.UI.RadPanel radPanel22;
+        private Telerik.WinControls.UI.RadLabel radLabel40;
+        private Telerik.WinControls.UI.RadLabel radLabel41;
+        private Telerik.WinControls.UI.RadPanel radPanel23;
+        private Telerik.WinControls.UI.RadLabel radLabel42;
+        private Telerik.WinControls.UI.RadLabel radLabel43;
+        private Telerik.WinControls.UI.RadPanel radPanel24;
+        private Telerik.WinControls.UI.RadLabel radLabel44;
+        private Telerik.WinControls.UI.RadLabel radLabel45;
+        private Telerik.WinControls.UI.RadPanel radPanel25;
+        private Telerik.WinControls.UI.RadLabel radLabel46;
+        private Telerik.WinControls.UI.RadLabel radLabel47;
+        private Telerik.WinControls.UI.RadPanel radPanel26;
+        private Telerik.WinControls.UI.RadLabel radLabel48;
+        private Telerik.WinControls.UI.RadLabel radLabel49;
+        private Telerik.WinControls.UI.RadPanel radPanel27;
+        private Telerik.WinControls.UI.RadTextBox radTextBox25;
+        private Telerik.WinControls.UI.RadLabel radLabel50;
+        private Telerik.WinControls.UI.RadLabel radLabel51;
+        private Telerik.WinControls.UI.RadPanel radPanel28;
+        private Telerik.WinControls.UI.RadTextBox radTextBox26;
+        private Telerik.WinControls.UI.RadLabel radLabel52;
+        private Telerik.WinControls.UI.RadLabel radLabel53;
+        private Telerik.WinControls.UI.RadPanel radPanel29;
+        private Telerik.WinControls.UI.RadTextBox radTextBox27;
+        private Telerik.WinControls.UI.RadLabel radLabel54;
+        private Telerik.WinControls.UI.RadLabel radLabel55;
+        private Telerik.WinControls.UI.RadPanel radPanel30;
+        private Telerik.WinControls.UI.RadTextBox radTextBox28;
+        private Telerik.WinControls.UI.RadLabel radLabel56;
+        private Telerik.WinControls.UI.RadLabel radLabel57;
+        private Telerik.WinControls.UI.RadPanel radPanel31;
+        private Telerik.WinControls.UI.RadTextBox radTextBox29;
+        private Telerik.WinControls.UI.RadLabel radLabel58;
+        private Telerik.WinControls.UI.RadLabel radLabel59;
+        private Telerik.WinControls.UI.RadPanel radPanel32;
+        private Telerik.WinControls.UI.RadTextBox radTextBox30;
+        private Telerik.WinControls.UI.RadLabel radLabel60;
+        private Telerik.WinControls.UI.RadLabel radLabel61;
     }
 }
