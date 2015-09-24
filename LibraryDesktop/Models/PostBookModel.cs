@@ -27,20 +27,7 @@ namespace LibraryDesktop.Models
         [DisplayName("Year")]
         public string book_year { get; set; }
 
-        [DisplayName("Image Path")]
-        public string image_path { get; set; }
-
-        [DisplayName("Preview")]
-        public Image image
-        {
-            get
-            {
-                return Image.FromFile(Path.Combine(
-                    Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location),
-                    "Resources\\img-placeholder.PNG"));
-            }
-
-            set { image = value; }
-        }
+        [DisplayName("Image")]
+        public string image_path { get; set; }        
     }
 }

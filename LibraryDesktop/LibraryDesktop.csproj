@@ -255,6 +255,9 @@
       <DependentUpon>RadForm2.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\FormHelper.cs" />
+    <Compile Include="Utils\PicturePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="CreateBookForm.resx">
       <DependentUpon>CreateBookForm.cs</DependentUpon>
     </EmbeddedResource>
