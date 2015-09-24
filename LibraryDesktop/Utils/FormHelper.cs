@@ -5,8 +5,10 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
+using LibraryData.Utils;
 using LibraryDesktop.Models;
 using Telerik.WinControls.UI;
 
@@ -90,6 +92,24 @@ namespace LibraryDesktop.Utils
             return newImage;
         }
 
-
+        public static bool IsConnectedToInternet
+        {
+            get
+            {
+                Uri url = new Uri(UrlBuilder.BaseUrl);
+                string pingurl = string.Format("{0}", url.Host);
+                string host = pingurl;
+                bool result = false;
+                Ping p = new Ping();
+                try
+                {
+                    PingReply reply = p.Send(host, 3000);
+                    if (reply.Status == IPStatus.Success)
+                        return true;
+                }
+                catch { }
+                return result;
+            }
+        }
     }
 }

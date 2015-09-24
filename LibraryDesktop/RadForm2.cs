@@ -20,24 +20,16 @@ namespace LibraryDesktop
         List<BookModel> listBookModels = new List<BookModel>();
         public RadForm2()
         {
-            InitializeComponent();            
-            
+            InitializeComponent();
+
+            //var a = DataProvider.AddNewBook("huysidaaaaa", "C:\\Users\\thanh\\Source\\Repos\\LibraryClient\\LibraryDesktop\\Resources\\green-circle1.png", "HUY", "HUY", "ABC", "1999");
+
             radGridView2.TableElement.RowHeight = 80;
             radGridView2.MasterTemplate.AllowAddNewRow = false;
 
             listBookModels = (DataProvider.GetAllBooks(100, 0)).Select(book => new BookModel(book)).ToList();
             radGridView2.DataSource = listBookModels;
-        }
-
-        private void radGridView1_LayoutLoaded(object sender, Telerik.WinControls.UI.LayoutLoadedEventArgs e)
-        {
-            
-        }
-
-        private void radGridView1_Click(object sender, EventArgs e)
-        {
-
-        }
+        }        
 
         private void MasterTemplate_ViewCellFormatting(object sender, CellFormattingEventArgs e)
         {
@@ -54,7 +46,7 @@ namespace LibraryDesktop
                 var id = e.NewRow.Cells[0].Value.ToString();
                 BookModel bookModel = listBookModels.Where(b => b.id == id).ToList().FirstOrDefault();
                 radPropertyGrid1.SelectedObject = bookModel;
-                pictureBox1.Image = FormHelper.FetchLargeThumb(bookModel.book_image);
+                pictureBox2.Image = FormHelper.FetchLargeThumb(bookModel.book_image);
             }
             catch (Exception ex)
             {
@@ -65,6 +57,11 @@ namespace LibraryDesktop
         private void RadForm2_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void radImageButtonElement1_Click(object sender, EventArgs e)
+        {
+            
         }        
     }
 }
