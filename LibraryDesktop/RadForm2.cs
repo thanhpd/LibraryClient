@@ -19,7 +19,9 @@ namespace LibraryDesktop
     {
         Font boldFont = new Font(SystemFonts.DialogFont, FontStyle.Bold);        
         List<BookModel> listBookModels = new List<BookModel>();
-        BookModel cacheBookModel = new BookModel(new Book());
+        BookModel cacheLastRow = new BookModel(new Book());
+        BookModel cacheNewRow = new BookModel(new Book());
+        private BookModel newBookModel = new BookModel(new Book());
         public RadForm2()
         {
             InitializeComponent();
@@ -35,13 +37,18 @@ namespace LibraryDesktop
             radGridView2.DataSource = listBookModels;
         }
 
+        private void rowCaching(BookModel model, string id)
+        {            
+            BookModel bookModel = listBookModels.Where(b => b.id == id).ToList().FirstOrDefault();
+            model = bookModel;
+        }        
+
         private void radGridView2_CurrentRowChanging(object sender, CurrentRowChangingEventArgs e)
         {
             try
-            {
-                var id = e.NewRow.Cells[0].Value.ToString();
-                BookModel bookModel = listBookModels.Where(b => b.id == id).ToList().FirstOrDefault();
-                cacheBookModel = bookModel;
+            {                
+                rowCaching(cacheLastRow, e.CurrentRow.Cells[0].Value.ToString());
+                rowCaching(cacheNewRow, e.NewRow.Cells[0].Value.ToString());
                 radPropertyGrid1.SelectedObject = bookModel;
 
                 if (!String.IsNullOrWhiteSpace(bookModel.book_image))
@@ -87,16 +94,23 @@ namespace LibraryDesktop
         private void radButton1_Click(object sender, EventArgs e)
         {
             var bookModel = (BookModel) radPropertyGrid1.SelectedObject;
-            DataProvider.EditBook(Convert.ToInt32(bookModel.id), bookModel.book_name, bookModel.image_url, bookModel.book_description, bookModel.book_description, bookModel.book_publisher, bookModel.book_year);
-            bindData();
+            var updateResult = DataProvider.EditBook(Convert.ToInt32(bookModel.id), bookModel.book_name, bookModel.image_url, bookModel.book_description, bookModel.book_description, bookModel.book_publisher, bookModel.book_year);
+            if (updateResult)
+            {
+
+            }
+            else
+            {
+                bookModel = cacheLastRow;
+            }
         }
 
         private void radPropertyGrid1_Edited(object sender, PropertyGridItemEditedEventArgs e)
         {
             try
             {
-                var bookModel = (BookModel)radPropertyGrid1.SelectedObject;
-                bookModel.image_url = e.Editor.Value.ToString();
+                newBookModel = (BookModel)radPropertyGrid1.SelectedObject;
+                newBookModel.image_url = e.Editor.Value.ToString();
                 pictureBox2.Image = FormHelper.FetchImage(bookModel.NewBookImage, 250, 150);
             }
             catch (Exception)
