@@ -25,7 +25,7 @@ namespace LibraryDesktop
         public RadForm2()
         {
             InitializeComponent();
-
+            listBookModels = (DataProvider.GetAllBooks(100, 0)).Select(book => new BookModel(book)).ToList();
             bindData();
             radGridView2.TableElement.RowHeight = 80;
             radGridView2.MasterTemplate.AllowAddNewRow = false;
@@ -33,27 +33,33 @@ namespace LibraryDesktop
 
         private void bindData()
         {
-            listBookModels = (DataProvider.GetAllBooks(100, 0)).Select(book => new BookModel(book)).ToList();
-            radGridView2.DataSource = listBookModels;
+            var a = listBookModels;
+            radGridView2.DataSource = a;
         }
 
-        private void rowCaching(BookModel model, string id)
+        private void updateRow(BookModel model)
+        {
+            BookModel bookModel = listBookModels.FirstOrDefault(m => m.id == model.id);
+            bookModel = model;            
+        }
+
+        private BookModel rowCaching(string id)
         {            
             BookModel bookModel = listBookModels.Where(b => b.id == id).ToList().FirstOrDefault();
-            model = bookModel;
+            return bookModel;
         }        
 
         private void radGridView2_CurrentRowChanging(object sender, CurrentRowChangingEventArgs e)
         {
             try
             {                
-                rowCaching(cacheLastRow, e.CurrentRow.Cells[0].Value.ToString());
-                rowCaching(cacheNewRow, e.NewRow.Cells[0].Value.ToString());
-                radPropertyGrid1.SelectedObject = bookModel;
+                cacheLastRow = rowCaching(e.CurrentRow.Cells[0].Value.ToString());
+                cacheNewRow = rowCaching(e.NewRow.Cells[0].Value.ToString());
+                radPropertyGrid1.SelectedObject = cacheNewRow;
 
-                if (!String.IsNullOrWhiteSpace(bookModel.book_image))
+                if (!String.IsNullOrWhiteSpace(cacheNewRow.book_image))
                 {
-                    pictureBox2.Image = FormHelper.FetchLargeThumb(bookModel.book_image);
+                    pictureBox2.Image = FormHelper.FetchLargeThumb(cacheNewRow.book_image);
                 }
                 //else if (!String.IsNullOrWhiteSpace(bookModel.image_path))
                 //{
@@ -97,7 +103,8 @@ namespace LibraryDesktop
             var updateResult = DataProvider.EditBook(Convert.ToInt32(bookModel.id), bookModel.book_name, bookModel.image_url, bookModel.book_description, bookModel.book_description, bookModel.book_publisher, bookModel.book_year);
             if (updateResult)
             {
-
+                updateRow(bookModel);
+                bindData();
             }
             else
             {
@@ -111,7 +118,7 @@ namespace LibraryDesktop
             {
                 newBookModel = (BookModel)radPropertyGrid1.SelectedObject;
                 newBookModel.image_url = e.Editor.Value.ToString();
-                pictureBox2.Image = FormHelper.FetchImage(bookModel.NewBookImage, 250, 150);
+                pictureBox2.Image = FormHelper.FetchImage(cacheNewRow.NewBookImage, 250, 150);
             }
             catch (Exception)
             {

@@ -69,15 +69,19 @@ namespace LibraryData.Services
 
         private static RestRequest BuildPostRequest(string bookName, string bookImagePath, string bookDescription, string bookAuthor,
             string bookPublisher, string bookYear)
-        {
+        {            
+
             var request = new RestRequest(Method.POST);            
             request.AddHeader("Content-Type", "multipart/form-data");
             request.AddParameter("book_name", bookName);
-            request.AddFile("book_image", bookImagePath);
+            if (!String.IsNullOrWhiteSpace(bookImagePath))
+            {
+                request.AddFile("book_image", bookImagePath);
+            }
             request.AddParameter("book_description", bookDescription);
             request.AddParameter("book_author", bookAuthor);
             request.AddParameter("book_publisher", bookPublisher);
-            request.AddParameter("book_year", bookYear);
+            request.AddParameter("book_year", bookYear);            
             request.OnBeforeDeserialization = resp => { resp.ContentType = "application/json"; };
 
             return request;

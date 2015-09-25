@@ -234,6 +234,7 @@
             this.radGridView2.MasterTemplate.AllowAddNewRow = false;
             this.radGridView2.MasterTemplate.AllowDeleteRow = false;
             this.radGridView2.MasterTemplate.AllowEditRow = false;
+            this.radGridView2.MasterTemplate.AllowRowResize = false;
             this.radGridView2.MasterTemplate.AutoGenerateColumns = false;
             gridViewTextBoxColumn1.EnableExpressionEditor = false;
             gridViewTextBoxColumn1.FieldName = "id";
