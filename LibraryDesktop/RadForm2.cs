@@ -47,7 +47,19 @@ namespace LibraryDesktop
                 BookModel bookModel = listBookModels.Where(b => b.id == id).ToList().FirstOrDefault();
                 cacheBookModel = bookModel;
                 radPropertyGrid1.SelectedObject = bookModel;
-                pictureBox2.Image = FormHelper.FetchLargeThumb(bookModel.book_image);
+
+                if (!String.IsNullOrWhiteSpace(bookModel.book_image) && String.IsNullOrWhiteSpace(bookModel.image_path))
+                {
+                    pictureBox2.Image = FormHelper.FetchLargeThumb(bookModel.book_image);
+                }
+                else if (!String.IsNullOrWhiteSpace(bookModel.image_path))
+                {
+                    pictureBox2.Image = FormHelper.FetchImage(bookModel.image_path, 250, 150);
+                }
+                else
+                {
+                    pictureBox2.Image = null;
+                }
             }
             catch (Exception ex)
             {
