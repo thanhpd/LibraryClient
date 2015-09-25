@@ -55,6 +55,8 @@
             this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
             this.radImageButtonElement1 = new Telerik.WinControls.UI.RadImageButtonElement();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.radButton1 = new Telerik.WinControls.UI.RadButton();
+            this.radButton2 = new Telerik.WinControls.UI.RadButton();
             this.bookModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bookModelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.radSplitContainer1)).BeginInit();
@@ -74,6 +76,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookModelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookModelBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -141,9 +145,9 @@
             // 
             // 
             this.splitPanel2.RootElement.MinSize = new System.Drawing.Size(0, 0);
-            this.splitPanel2.Size = new System.Drawing.Size(300, 157);
-            this.splitPanel2.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0F, -0.2039106F);
-            this.splitPanel2.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, -109);
+            this.splitPanel2.Size = new System.Drawing.Size(300, 155);
+            this.splitPanel2.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0F, -0.2080979F);
+            this.splitPanel2.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, -112);
             this.splitPanel2.TabIndex = 0;
             this.splitPanel2.TabStop = false;
             this.splitPanel2.Text = "splitPanel2";
@@ -154,23 +158,25 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(300, 157);
+            this.pictureBox2.Size = new System.Drawing.Size(300, 155);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
             // splitPanel3
             // 
+            this.splitPanel3.Controls.Add(this.radButton2);
+            this.splitPanel3.Controls.Add(this.radButton1);
             this.splitPanel3.Controls.Add(this.radPropertyGrid1);
-            this.splitPanel3.Location = new System.Drawing.Point(0, 162);
+            this.splitPanel3.Location = new System.Drawing.Point(0, 160);
             this.splitPanel3.Name = "splitPanel3";
             // 
             // 
             // 
             this.splitPanel3.RootElement.MinSize = new System.Drawing.Size(0, 0);
-            this.splitPanel3.Size = new System.Drawing.Size(300, 374);
-            this.splitPanel3.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0F, 0.2039106F);
-            this.splitPanel3.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, 109);
+            this.splitPanel3.Size = new System.Drawing.Size(300, 376);
+            this.splitPanel3.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0F, 0.2080979F);
+            this.splitPanel3.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, 256);
             this.splitPanel3.TabIndex = 1;
             this.splitPanel3.TabStop = false;
             this.splitPanel3.Text = "splitPanel3";
@@ -178,7 +184,7 @@
             // 
             // radPropertyGrid1
             // 
-            this.radPropertyGrid1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.radPropertyGrid1.Dock = System.Windows.Forms.DockStyle.Top;
             this.radPropertyGrid1.Location = new System.Drawing.Point(0, 0);
             this.radPropertyGrid1.Name = "radPropertyGrid1";
             this.radPropertyGrid1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
@@ -189,6 +195,8 @@
             this.radPropertyGrid1.Text = "radPropertyGrid1";
             this.radPropertyGrid1.ThemeName = "Windows8";
             this.radPropertyGrid1.ToolbarVisible = true;
+            this.radPropertyGrid1.Editing += new Telerik.WinControls.UI.PropertyGridItemEditingEventHandler(this.radPropertyGrid1_Editing);
+            this.radPropertyGrid1.MouseLeave += new System.EventHandler(this.radPropertyGrid1_MouseLeave);
             // 
             // radGridView2
             // 
@@ -357,6 +365,23 @@
             this.radImageButtonElement1.ToolTipText = "Unable to connect to server";
             this.radImageButtonElement1.Click += new System.EventHandler(this.radImageButtonElement1_Click);
             // 
+            // radButton1
+            // 
+            this.radButton1.Location = new System.Drawing.Point(45, 343);
+            this.radButton1.Name = "radButton1";
+            this.radButton1.Size = new System.Drawing.Size(100, 27);
+            this.radButton1.TabIndex = 1;
+            this.radButton1.Text = "Save";
+            this.radButton1.Click += new System.EventHandler(this.radButton1_Click);
+            // 
+            // radButton2
+            // 
+            this.radButton2.Location = new System.Drawing.Point(171, 343);
+            this.radButton2.Name = "radButton2";
+            this.radButton2.Size = new System.Drawing.Size(100, 27);
+            this.radButton2.TabIndex = 2;
+            this.radButton2.Text = "Cancel";
+            // 
             // bookModelBindingSource
             // 
             this.bookModelBindingSource.DataSource = typeof(LibraryDesktop.Models.BookModel);
@@ -399,6 +424,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookModelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookModelBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
@@ -423,5 +450,7 @@
         private Telerik.WinControls.UI.RadStatusStrip radStatusStrip1;
         private Telerik.WinControls.UI.RadImageButtonElement radImageButtonElement1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private Telerik.WinControls.UI.RadButton radButton2;
+        private Telerik.WinControls.UI.RadButton radButton1;
     }
 }

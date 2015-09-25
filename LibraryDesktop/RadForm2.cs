@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using LibraryData.Models;
 using LibraryData.Services;
 using LibraryDesktop.Models;
 using LibraryDesktop.Utils;
@@ -18,6 +19,7 @@ namespace LibraryDesktop
     {
         Font boldFont = new Font(SystemFonts.DialogFont, FontStyle.Bold);        
         List<BookModel> listBookModels = new List<BookModel>();
+        BookModel cacheBookModel = new BookModel(new Book());
         public RadForm2()
         {
             InitializeComponent();                       
@@ -43,6 +45,7 @@ namespace LibraryDesktop
             {
                 var id = e.NewRow.Cells[0].Value.ToString();
                 BookModel bookModel = listBookModels.Where(b => b.id == id).ToList().FirstOrDefault();
+                cacheBookModel = bookModel;
                 radPropertyGrid1.SelectedObject = bookModel;
                 pictureBox2.Image = FormHelper.FetchLargeThumb(bookModel.book_image);
             }
@@ -61,5 +64,25 @@ namespace LibraryDesktop
         {
             
         }        
+
+        private void radPropertyGrid1_Editing(object sender, PropertyGridItemEditingEventArgs e)
+        {
+            radButton1.Enabled = true;
+            radButton2.Enabled = true;
+        }
+
+        private void radPropertyGrid1_MouseLeave(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void radButton1_Click(object sender, EventArgs e)
+        {
+            var bookModel = (BookModel) radPropertyGrid1.SelectedObject;
+        }
+
+
+
+            
     }
 }
