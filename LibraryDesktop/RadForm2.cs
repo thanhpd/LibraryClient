@@ -22,21 +22,17 @@ namespace LibraryDesktop
         BookModel cacheBookModel = new BookModel(new Book());
         public RadForm2()
         {
-            InitializeComponent();                       
+            InitializeComponent();
 
-            listBookModels = (DataProvider.GetAllBooks(100, 0)).Select(book => new BookModel(book)).ToList();
-            radGridView2.DataSource = listBookModels;
-
+            bindData();
             radGridView2.TableElement.RowHeight = 80;
             radGridView2.MasterTemplate.AllowAddNewRow = false;
-        }        
+        }
 
-        private void MasterTemplate_ViewCellFormatting(object sender, CellFormattingEventArgs e)
+        private void bindData()
         {
-            if (e.CellElement is GridHeaderCellElement)
-            {
-                e.CellElement.Font = boldFont;
-            }
+            listBookModels = (DataProvider.GetAllBooks(100, 0)).Select(book => new BookModel(book)).ToList();
+            radGridView2.DataSource = listBookModels;
         }
 
         private void radGridView2_CurrentRowChanging(object sender, CurrentRowChangingEventArgs e)
@@ -48,14 +44,14 @@ namespace LibraryDesktop
                 cacheBookModel = bookModel;
                 radPropertyGrid1.SelectedObject = bookModel;
 
-                if (!String.IsNullOrWhiteSpace(bookModel.book_image) && String.IsNullOrWhiteSpace(bookModel.image_path))
+                if (!String.IsNullOrWhiteSpace(bookModel.book_image))
                 {
                     pictureBox2.Image = FormHelper.FetchLargeThumb(bookModel.book_image);
                 }
-                else if (!String.IsNullOrWhiteSpace(bookModel.image_path))
-                {
-                    pictureBox2.Image = FormHelper.FetchImage(bookModel.image_path, 250, 150);
-                }
+                //else if (!String.IsNullOrWhiteSpace(bookModel.image_path))
+                //{
+                //    pictureBox2.Image = FormHelper.FetchImage(bookModel.image_path, 250, 150);
+                //}
                 else
                 {
                     pictureBox2.Image = null;
@@ -91,10 +87,32 @@ namespace LibraryDesktop
         private void radButton1_Click(object sender, EventArgs e)
         {
             var bookModel = (BookModel) radPropertyGrid1.SelectedObject;
+            DataProvider.EditBook(Convert.ToInt32(bookModel.id), bookModel.book_name, bookModel.image_url, bookModel.book_description, bookModel.book_description, bookModel.book_publisher, bookModel.book_year);
+            bindData();
+        }
+
+        private void radPropertyGrid1_Edited(object sender, PropertyGridItemEditedEventArgs e)
+        {
+            try
+            {
+                var bookModel = (BookModel)radPropertyGrid1.SelectedObject;
+                bookModel.image_url = e.Editor.Value.ToString();
+                pictureBox2.Image = FormHelper.FetchImage(bookModel.NewBookImage, 250, 150);
+            }
+            catch (Exception)
+            {
+
+            }                                   
+        }
+
+        private void radGridView2_ViewCellFormatting(object sender, CellFormattingEventArgs e)
+        {
+            if (e.CellElement is GridHeaderCellElement)
+            {
+                e.CellElement.Font = boldFont;
+            }
         }
 
 
-
-            
     }
 }

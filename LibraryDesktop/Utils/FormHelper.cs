@@ -86,6 +86,11 @@ namespace LibraryDesktop.Utils
             return finalImage;
         }
 
+        public static Image FetchImage(Image image, int maxWidth, int maxHeight)
+        {
+            return ScaleImage(image, maxWidth, maxHeight);
+        }
+
         public static Image ScaleImage(Image image, int maxWidth, int maxHeight)
         {
             var ratioX = (double)maxWidth / image.Width;

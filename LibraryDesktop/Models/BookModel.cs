@@ -21,11 +21,7 @@ namespace LibraryDesktop.Models
         [DisplayName("Image Url")]
         [Description("The url path to the image.")]
         [ReadOnly(true)]
-        public string book_image { get; set; }
-
-        [DisplayName("New Image")]
-        [Description("The full path to the new image for this book record")]
-        public string image_path { get; set; }
+        public string book_image { get; set; }        
 
         [DisplayName("Book Name")]
         [Description("Current book's name.")]
@@ -66,6 +62,14 @@ namespace LibraryDesktop.Models
         [ReadOnly(true)]
         public Image BookImage { get; set; }
 
+        [DisplayName("New Book Image")]
+        [Description("The new cover image of the book.")]        
+        public Image NewBookImage { get; set; }
+
+        [DisplayName("Image Url")]
+        [ReadOnly(true)]
+        public string image_url { get; set; }
+
         public BookModel(Book book)
         {
             id = book.id;
@@ -78,8 +82,9 @@ namespace LibraryDesktop.Models
             created_at = book.created_at;
             updated_at = book.updated_at;
             status = book.status == "1";
+            NewBookImage = null;
 
-            if (!String.IsNullOrWhiteSpace(book_image) && String.IsNullOrWhiteSpace(image_path))
+            if (!String.IsNullOrWhiteSpace(book_image))
             {                
                 BookImage = FormHelper.AddImageStore(book_image, DataProvider.GetImage(book_image));
             }            

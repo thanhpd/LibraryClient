@@ -13,7 +13,7 @@ namespace LibraryData.Utils
         public static string GetAllBooksPath = "book/list";
         public static string FindBookPath = "book/search";
         public static string AddBookPath = "book/add";
-        public static string EditBookPath = "book/edit";
+        public static string EditBookPath = "book/updateWithPost";
         public static string DeleteBookPath = "book/delete";
 
         public static string GetAllBooks = BuildUrl(GetAllBooksPath);
