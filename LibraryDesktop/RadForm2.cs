@@ -103,14 +103,9 @@ namespace LibraryDesktop
             var updateResult = DataProvider.EditBook(Convert.ToInt32(bookModel.id), bookModel.book_name, bookModel.image_url, bookModel.book_description, bookModel.book_description, bookModel.book_publisher, bookModel.book_year);
             if (updateResult)
             {
-                updateRow(bookModel);
-                //var a = listBookModels;
-                var a = new List<BookModel>();
-                foreach (var item in listBookModels)
-                {
-                    a.Add(item);
-                }
-                radGridView2.DataSource = a;
+                updateRow(bookModel);                
+                radGridView2.DataSource = null;
+                radGridView2.DataSource = listBookModels;
                 //bindData();
             }
             else
