@@ -104,7 +104,14 @@ namespace LibraryDesktop
             if (updateResult)
             {
                 updateRow(bookModel);
-                bindData();
+                //var a = listBookModels;
+                var a = new List<BookModel>();
+                foreach (var item in listBookModels)
+                {
+                    a.Add(item);
+                }
+                radGridView2.DataSource = a;
+                //bindData();
             }
             else
             {
@@ -114,16 +121,16 @@ namespace LibraryDesktop
 
         private void radPropertyGrid1_Edited(object sender, PropertyGridItemEditedEventArgs e)
         {
-            try
-            {
-                newBookModel = (BookModel)radPropertyGrid1.SelectedObject;
-                newBookModel.image_url = e.Editor.Value.ToString();
-                pictureBox2.Image = FormHelper.FetchImage(cacheNewRow.NewBookImage, 250, 150);
-            }
-            catch (Exception)
-            {
+            //try
+            //{
+            //    newBookModel = (BookModel)radPropertyGrid1.SelectedObject;
+            //    newBookModel.image_url = e.Editor.Value.ToString();
+            //    pictureBox2.Image = FormHelper.FetchImage(cacheNewRow.NewBookImage, 250, 150);
+            //}
+            //catch (Exception)
+            //{
 
-            }                                   
+            //}                                   
         }
 
         private void radGridView2_ViewCellFormatting(object sender, CellFormattingEventArgs e)
