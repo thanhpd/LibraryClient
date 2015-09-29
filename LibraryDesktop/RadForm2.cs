@@ -196,6 +196,13 @@ namespace LibraryDesktop
             }
         }
 
+        private void radRibbonBar1_Click(object sender, EventArgs e)
+        {            
+            var button = (RadButtonElement) sender;
+            var themeName = button.AccessibleName;
+            ThemeResolutionService.ApplicationThemeName = themeName;
+        }
+
 
     }
 }
