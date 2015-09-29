@@ -29,6 +29,7 @@ namespace LibraryDesktop
             bindData();
             radGridView2.TableElement.RowHeight = 80;
             radGridView2.MasterTemplate.AllowAddNewRow = false;
+            radGridView2.MasterTemplate.EnableSorting = true;
         }
 
         private void bindData()

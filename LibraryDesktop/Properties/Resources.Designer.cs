@@ -63,6 +63,16 @@ namespace LibraryDesktop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bluemarine_favicon {
+            get {
+                object obj = ResourceManager.GetObject("bluemarine_favicon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap green_circle1 {
             get {
                 object obj = ResourceManager.GetObject("green-circle1", resourceCulture);
