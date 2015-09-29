@@ -16,16 +16,14 @@ namespace LibraryDesktop
             InitializeComponent();
         }
 
-        private void radButton2_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void radButton1_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult = DialogResult.OK;
         }
 
-
+        private void radButton2_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+        }        
     }
 }

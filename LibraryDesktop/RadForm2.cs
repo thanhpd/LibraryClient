@@ -34,14 +34,21 @@ namespace LibraryDesktop
 
         private void bindData()
         {
-            var a = listBookModels;
-            radGridView2.DataSource = a;
+            radGridView2.DataSource = null;
+            radGridView2.DataSource = listBookModels;
         }
 
         private void updateRow(BookModel model)
         {
             BookModel bookModel = listBookModels.FirstOrDefault(m => m.id == model.id);
             bookModel = model;            
+        }
+
+        private void removeRow(string id)
+        {
+            BookModel bookModel = listBookModels.FirstOrDefault(m => m.id == id);
+            listBookModels.Remove(bookModel);
+
         }
 
         private void addRow(BookModel model)
@@ -162,7 +169,23 @@ namespace LibraryDesktop
 
             if (result == DialogResult.OK)
             {
-
+                var a = radGridView2.SelectedRows[0].Cells[0].Value.ToString();
+                var b = DataProvider.DeleteBook(a);
+                if (b)
+                {
+                    MessageBox.Show("Deleted Successfully");
+                    removeRow(a);
+                    bindData();
+                }
+                else
+                {
+                    MessageBox.Show("Deleting failed");
+                }
+                confirmForm.Dispose();
+            }
+            else if (result == DialogResult.Cancel)
+            {
+                confirmForm.Dispose();
             }
         }
 
