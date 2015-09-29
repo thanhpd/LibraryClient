@@ -63,6 +63,32 @@
             this.radButtonElement2 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement3 = new Telerik.WinControls.UI.RadButtonElement();
             this.ribbonTab2 = new Telerik.WinControls.UI.RibbonTab();
+            this.radRibbonBarGroup2 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.radButtonElement4 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement5 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement6 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radRibbonBarGroup3 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.radButtonElement7 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement8 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement9 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radRibbonBarGroup4 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.radButtonElement10 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement11 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement12 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radRibbonBarGroup8 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.radButtonElement13 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement14 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radRibbonBarGroup5 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.radButtonElement15 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement16 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radRibbonBarGroup6 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.radButtonElement17 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement18 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radRibbonBarGroup7 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.radButtonElement19 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radButtonElement20 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radRibbonBarGroup9 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.radButtonElement21 = new Telerik.WinControls.UI.RadButtonElement();
             this.radMenuButtonItem1 = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.radRibbonFormBehavior1 = new Telerik.WinControls.UI.RadRibbonFormBehavior();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -387,7 +413,7 @@
             this.radImageButtonElement1});
             this.radStatusStrip1.Location = new System.Drawing.Point(0, 697);
             this.radStatusStrip1.Name = "radStatusStrip1";
-            this.radStatusStrip1.Size = new System.Drawing.Size(1149, 26);
+            this.radStatusStrip1.Size = new System.Drawing.Size(1173, 26);
             this.radStatusStrip1.TabIndex = 2;
             this.radStatusStrip1.Text = "radStatusStrip1";
             // 
@@ -415,8 +441,8 @@
             this.ribbonTab2});
             this.radRibbonBar1.Location = new System.Drawing.Point(0, 0);
             this.radRibbonBar1.Name = "radRibbonBar1";
-            this.radRibbonBar1.Size = new System.Drawing.Size(1149, 162);
-            this.radRibbonBar1.StartButtonImage = global::LibraryDesktop.Properties.Resources.bluemarine_favicon;
+            this.radRibbonBar1.Size = new System.Drawing.Size(1173, 162);
+            this.radRibbonBar1.StartButtonImage = ((System.Drawing.Image)(resources.GetObject("radRibbonBar1.StartButtonImage")));
             this.radRibbonBar1.StartMenuItems.AddRange(new Telerik.WinControls.RadItem[] {
             this.radMenuButtonItem1});
             this.radRibbonBar1.TabIndex = 3;
@@ -426,7 +452,7 @@
             // 
             this.ribbonTab1.AccessibleDescription = "Home";
             this.ribbonTab1.AccessibleName = "Home";
-            this.ribbonTab1.IsSelected = true;
+            this.ribbonTab1.IsSelected = false;
             this.ribbonTab1.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup1});
             this.ribbonTab1.Name = "ribbonTab1";
@@ -447,7 +473,7 @@
             // 
             this.radButtonElement1.AccessibleDescription = "radButtonElement1";
             this.radButtonElement1.AccessibleName = "radButtonElement1";
-            this.radButtonElement1.Image = global::LibraryDesktop.Properties.Resources.plus1;
+            this.radButtonElement1.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement1.Image")));
             this.radButtonElement1.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement1.Name = "radButtonElement1";
             this.radButtonElement1.Text = "Create";
@@ -458,7 +484,7 @@
             // 
             this.radButtonElement2.AccessibleDescription = "radButtonElement2";
             this.radButtonElement2.AccessibleName = "radButtonElement2";
-            this.radButtonElement2.Image = global::LibraryDesktop.Properties.Resources.cross;
+            this.radButtonElement2.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement2.Image")));
             this.radButtonElement2.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement2.Name = "radButtonElement2";
             this.radButtonElement2.Text = "Delete";
@@ -469,7 +495,7 @@
             // 
             this.radButtonElement3.AccessibleDescription = "radButtonElement3";
             this.radButtonElement3.AccessibleName = "radButtonElement3";
-            this.radButtonElement3.Image = global::LibraryDesktop.Properties.Resources.synopsislc;
+            this.radButtonElement3.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement3.Image")));
             this.radButtonElement3.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement3.Name = "radButtonElement3";
             this.radButtonElement3.Text = "Update";
@@ -479,8 +505,306 @@
             // 
             this.ribbonTab2.AccessibleDescription = "Action";
             this.ribbonTab2.AccessibleName = "Action";
+            this.ribbonTab2.IsSelected = true;
+            this.ribbonTab2.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radRibbonBarGroup2,
+            this.radRibbonBarGroup3,
+            this.radRibbonBarGroup4,
+            this.radRibbonBarGroup8,
+            this.radRibbonBarGroup5,
+            this.radRibbonBarGroup6,
+            this.radRibbonBarGroup7,
+            this.radRibbonBarGroup9});
             this.ribbonTab2.Name = "ribbonTab2";
-            this.ribbonTab2.Text = "Action";
+            this.ribbonTab2.Text = "Theme";
+            // 
+            // radRibbonBarGroup2
+            // 
+            this.radRibbonBarGroup2.AccessibleDescription = "Natural";
+            this.radRibbonBarGroup2.AccessibleName = "Natural";
+            this.radRibbonBarGroup2.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radButtonElement4,
+            this.radButtonElement5,
+            this.radButtonElement6});
+            this.radRibbonBarGroup2.Name = "radRibbonBarGroup2";
+            this.radRibbonBarGroup2.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.radRibbonBarGroup2.Text = "Natural";
+            // 
+            // radButtonElement4
+            // 
+            this.radButtonElement4.AccessibleDescription = "Breeze";
+            this.radButtonElement4.AccessibleName = "Breeze";
+            this.radButtonElement4.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement4.Image")));
+            this.radButtonElement4.Name = "radButtonElement4";
+            this.radButtonElement4.Padding = new System.Windows.Forms.Padding(1);
+            this.radButtonElement4.Text = "Breeze";
+            this.radButtonElement4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radButtonElement4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            // 
+            // radButtonElement5
+            // 
+            this.radButtonElement5.AccessibleDescription = "Aqua";
+            this.radButtonElement5.AccessibleName = "Aqua";
+            this.radButtonElement5.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement5.Image")));
+            this.radButtonElement5.Name = "radButtonElement5";
+            this.radButtonElement5.Padding = new System.Windows.Forms.Padding(1);
+            this.radButtonElement5.Text = "Aqua";
+            this.radButtonElement5.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radButtonElement5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            // 
+            // radButtonElement6
+            // 
+            this.radButtonElement6.AccessibleDescription = "Desert";
+            this.radButtonElement6.AccessibleName = "Desert";
+            this.radButtonElement6.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement6.Image")));
+            this.radButtonElement6.Name = "radButtonElement6";
+            this.radButtonElement6.Padding = new System.Windows.Forms.Padding(1);
+            this.radButtonElement6.Text = "Desert";
+            this.radButtonElement6.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radButtonElement6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            // 
+            // radRibbonBarGroup3
+            // 
+            this.radRibbonBarGroup3.AccessibleDescription = "Office 2007";
+            this.radRibbonBarGroup3.AccessibleName = "Office 2007";
+            this.radRibbonBarGroup3.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radButtonElement7,
+            this.radButtonElement8,
+            this.radButtonElement9});
+            this.radRibbonBarGroup3.Name = "radRibbonBarGroup3";
+            this.radRibbonBarGroup3.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.radRibbonBarGroup3.Text = "Office 2007";
+            // 
+            // radButtonElement7
+            // 
+            this.radButtonElement7.AccessibleDescription = "Black";
+            this.radButtonElement7.AccessibleName = "Black";
+            this.radButtonElement7.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement7.Image")));
+            this.radButtonElement7.Name = "radButtonElement7";
+            this.radButtonElement7.Padding = new System.Windows.Forms.Padding(1);
+            this.radButtonElement7.Text = "Black";
+            this.radButtonElement7.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radButtonElement7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            // 
+            // radButtonElement8
+            // 
+            this.radButtonElement8.AccessibleDescription = "Blue";
+            this.radButtonElement8.AccessibleName = "Blue";
+            this.radButtonElement8.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement8.Image")));
+            this.radButtonElement8.Name = "radButtonElement8";
+            this.radButtonElement8.Padding = new System.Windows.Forms.Padding(1);
+            this.radButtonElement8.Text = "Blue";
+            this.radButtonElement8.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radButtonElement8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            // 
+            // radButtonElement9
+            // 
+            this.radButtonElement9.AccessibleDescription = "Silver";
+            this.radButtonElement9.AccessibleName = "Silver";
+            this.radButtonElement9.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement9.Image")));
+            this.radButtonElement9.Name = "radButtonElement9";
+            this.radButtonElement9.Padding = new System.Windows.Forms.Padding(1);
+            this.radButtonElement9.Text = "Silver";
+            this.radButtonElement9.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radButtonElement9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            // 
+            // radRibbonBarGroup4
+            // 
+            this.radRibbonBarGroup4.AccessibleDescription = "Office 2010";
+            this.radRibbonBarGroup4.AccessibleName = "Office 2010";
+            this.radRibbonBarGroup4.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radButtonElement10,
+            this.radButtonElement11,
+            this.radButtonElement12});
+            this.radRibbonBarGroup4.Name = "radRibbonBarGroup4";
+            this.radRibbonBarGroup4.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.radRibbonBarGroup4.Text = "Office 2010";
+            // 
+            // radButtonElement10
+            // 
+            this.radButtonElement10.AccessibleDescription = "Black";
+            this.radButtonElement10.AccessibleName = "Black";
+            this.radButtonElement10.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement10.Image")));
+            this.radButtonElement10.Name = "radButtonElement10";
+            this.radButtonElement10.Padding = new System.Windows.Forms.Padding(1);
+            this.radButtonElement10.Text = "Black";
+            this.radButtonElement10.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radButtonElement10.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            // 
+            // radButtonElement11
+            // 
+            this.radButtonElement11.AccessibleDescription = "Blue";
+            this.radButtonElement11.AccessibleName = "Blue";
+            this.radButtonElement11.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement11.Image")));
+            this.radButtonElement11.Name = "radButtonElement11";
+            this.radButtonElement11.Padding = new System.Windows.Forms.Padding(1);
+            this.radButtonElement11.Text = "Blue";
+            this.radButtonElement11.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radButtonElement11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            // 
+            // radButtonElement12
+            // 
+            this.radButtonElement12.AccessibleDescription = "Silver";
+            this.radButtonElement12.AccessibleName = "Silver";
+            this.radButtonElement12.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement12.Image")));
+            this.radButtonElement12.Name = "radButtonElement12";
+            this.radButtonElement12.Padding = new System.Windows.Forms.Padding(1);
+            this.radButtonElement12.Text = "Silver";
+            this.radButtonElement12.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radButtonElement12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            // 
+            // radRibbonBarGroup8
+            // 
+            this.radRibbonBarGroup8.AccessibleDescription = "Office 2013";
+            this.radRibbonBarGroup8.AccessibleName = "Office 2013";
+            this.radRibbonBarGroup8.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radButtonElement13,
+            this.radButtonElement14});
+            this.radRibbonBarGroup8.Name = "radRibbonBarGroup8";
+            this.radRibbonBarGroup8.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.radRibbonBarGroup8.Text = "Office 2013";
+            // 
+            // radButtonElement13
+            // 
+            this.radButtonElement13.AccessibleDescription = "Dark";
+            this.radButtonElement13.AccessibleName = "Dark";
+            this.radButtonElement13.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement13.Image")));
+            this.radButtonElement13.Name = "radButtonElement13";
+            this.radButtonElement13.Padding = new System.Windows.Forms.Padding(1);
+            this.radButtonElement13.Text = "Dark";
+            this.radButtonElement13.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radButtonElement13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            // 
+            // radButtonElement14
+            // 
+            this.radButtonElement14.AccessibleDescription = "Light";
+            this.radButtonElement14.AccessibleName = "Light";
+            this.radButtonElement14.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement14.Image")));
+            this.radButtonElement14.Name = "radButtonElement14";
+            this.radButtonElement14.Padding = new System.Windows.Forms.Padding(1);
+            this.radButtonElement14.Text = "Light";
+            this.radButtonElement14.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radButtonElement14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            // 
+            // radRibbonBarGroup5
+            // 
+            this.radRibbonBarGroup5.AccessibleDescription = "Visual Studio 2012";
+            this.radRibbonBarGroup5.AccessibleName = "Visual Studio 2012";
+            this.radRibbonBarGroup5.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radButtonElement15,
+            this.radButtonElement16});
+            this.radRibbonBarGroup5.Name = "radRibbonBarGroup5";
+            this.radRibbonBarGroup5.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.radRibbonBarGroup5.Text = "Visual Studio 2012";
+            // 
+            // radButtonElement15
+            // 
+            this.radButtonElement15.AccessibleDescription = "Dark";
+            this.radButtonElement15.AccessibleName = "Dark";
+            this.radButtonElement15.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement15.Image")));
+            this.radButtonElement15.Name = "radButtonElement15";
+            this.radButtonElement15.Padding = new System.Windows.Forms.Padding(1);
+            this.radButtonElement15.Text = "Dark";
+            this.radButtonElement15.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radButtonElement15.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            // 
+            // radButtonElement16
+            // 
+            this.radButtonElement16.AccessibleDescription = "Light";
+            this.radButtonElement16.AccessibleName = "Light";
+            this.radButtonElement16.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement16.Image")));
+            this.radButtonElement16.Name = "radButtonElement16";
+            this.radButtonElement16.Padding = new System.Windows.Forms.Padding(1);
+            this.radButtonElement16.Text = "Light";
+            this.radButtonElement16.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radButtonElement16.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            // 
+            // radRibbonBarGroup6
+            // 
+            this.radRibbonBarGroup6.AccessibleDescription = "Telerik Metro";
+            this.radRibbonBarGroup6.AccessibleName = "Telerik Metro";
+            this.radRibbonBarGroup6.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radButtonElement17,
+            this.radButtonElement18});
+            this.radRibbonBarGroup6.Name = "radRibbonBarGroup6";
+            this.radRibbonBarGroup6.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.radRibbonBarGroup6.Text = "Telerik Metro";
+            // 
+            // radButtonElement17
+            // 
+            this.radButtonElement17.AccessibleDescription = "Default";
+            this.radButtonElement17.AccessibleName = "Default";
+            this.radButtonElement17.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement17.Image")));
+            this.radButtonElement17.Name = "radButtonElement17";
+            this.radButtonElement17.Padding = new System.Windows.Forms.Padding(1);
+            this.radButtonElement17.Text = "Default";
+            this.radButtonElement17.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radButtonElement17.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            // 
+            // radButtonElement18
+            // 
+            this.radButtonElement18.AccessibleDescription = "Blue";
+            this.radButtonElement18.AccessibleName = "Blue";
+            this.radButtonElement18.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement18.Image")));
+            this.radButtonElement18.Name = "radButtonElement18";
+            this.radButtonElement18.Padding = new System.Windows.Forms.Padding(1);
+            this.radButtonElement18.Text = "Blue";
+            this.radButtonElement18.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radButtonElement18.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            // 
+            // radRibbonBarGroup7
+            // 
+            this.radRibbonBarGroup7.AccessibleDescription = "Windows";
+            this.radRibbonBarGroup7.AccessibleName = "Windows";
+            this.radRibbonBarGroup7.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radButtonElement19,
+            this.radButtonElement20});
+            this.radRibbonBarGroup7.Name = "radRibbonBarGroup7";
+            this.radRibbonBarGroup7.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.radRibbonBarGroup7.Text = "Windows";
+            // 
+            // radButtonElement19
+            // 
+            this.radButtonElement19.AccessibleDescription = "Windows 7";
+            this.radButtonElement19.AccessibleName = "Windows 7";
+            this.radButtonElement19.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement19.Image")));
+            this.radButtonElement19.Name = "radButtonElement19";
+            this.radButtonElement19.Padding = new System.Windows.Forms.Padding(1);
+            this.radButtonElement19.Text = "Windows 7";
+            this.radButtonElement19.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radButtonElement19.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            // 
+            // radButtonElement20
+            // 
+            this.radButtonElement20.AccessibleDescription = "Windows 8";
+            this.radButtonElement20.AccessibleName = "Windows 8";
+            this.radButtonElement20.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement20.Image")));
+            this.radButtonElement20.Name = "radButtonElement20";
+            this.radButtonElement20.Padding = new System.Windows.Forms.Padding(1);
+            this.radButtonElement20.Text = "Windows 8";
+            this.radButtonElement20.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radButtonElement20.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            // 
+            // radRibbonBarGroup9
+            // 
+            this.radRibbonBarGroup9.AccessibleDescription = "Other";
+            this.radRibbonBarGroup9.AccessibleName = "Other";
+            this.radRibbonBarGroup9.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radButtonElement21});
+            this.radRibbonBarGroup9.Name = "radRibbonBarGroup9";
+            this.radRibbonBarGroup9.Orientation = System.Windows.Forms.Orientation.Vertical;
+            this.radRibbonBarGroup9.Text = "Other";
+            // 
+            // radButtonElement21
+            // 
+            this.radButtonElement21.AccessibleDescription = "High Contrast";
+            this.radButtonElement21.AccessibleName = "High Contrast";
+            this.radButtonElement21.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement21.Image")));
+            this.radButtonElement21.Name = "radButtonElement21";
+            this.radButtonElement21.Padding = new System.Windows.Forms.Padding(1);
+            this.radButtonElement21.Text = "High Contrast";
+            this.radButtonElement21.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.radButtonElement21.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             // 
             // radMenuButtonItem1
             // 
@@ -516,7 +840,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1149, 723);
+            this.ClientSize = new System.Drawing.Size(1173, 723);
             this.Controls.Add(this.radRibbonBar1);
             this.Controls.Add(this.radStatusStrip1);
             this.Controls.Add(this.radSplitContainer1);
@@ -606,5 +930,31 @@
         private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
         private Telerik.WinControls.Themes.Windows7Theme windows7Theme1;
         private Telerik.WinControls.Themes.Windows8Theme windows8Theme1;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup2;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup3;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup4;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup8;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup5;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup6;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup7;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement4;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement5;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement6;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement7;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement8;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement9;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement10;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement11;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement12;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement13;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement14;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement15;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement16;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement17;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement18;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement19;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement20;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup9;
+        private Telerik.WinControls.UI.RadButtonElement radButtonElement21;
     }
 }
