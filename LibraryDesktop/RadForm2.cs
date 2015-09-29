@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 using LibraryData.Models;
 using LibraryData.Services;
@@ -25,7 +26,8 @@ namespace LibraryDesktop
         public RadForm2()
         {
             InitializeComponent();
-            listBookModels = (DataProvider.GetAllBooks(100, 0)).Select(book => new BookModel(book)).Reverse().ToList();            
+            //Thread.Sleep(10000);
+            listBookModels = (DataProvider.GetAllBooks(100, 0)).Select(book => new BookModel(book)).Reverse().ToList();
             bindData();
             radGridView2.TableElement.RowHeight = 80;
             radGridView2.MasterTemplate.AllowAddNewRow = false;

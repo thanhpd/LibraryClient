@@ -188,6 +188,12 @@
     <Compile Include="RadForm2.Designer.cs">
       <DependentUpon>RadForm2.cs</DependentUpon>
     </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\FormHelper.cs" />
     <Compile Include="Utils\PicturePanel.cs">
       <SubType>Component</SubType>
@@ -208,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RadForm2.resx">
       <DependentUpon>RadForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="LibraryDesktop_TemporaryKey.pfx" />
     <None Include="packages.config" />
