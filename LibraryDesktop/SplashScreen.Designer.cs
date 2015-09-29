@@ -30,16 +30,16 @@
         {
             this.radSplitContainer1 = new Telerik.WinControls.UI.RadSplitContainer();
             this.splitPanel1 = new Telerik.WinControls.UI.SplitPanel();
-            this.splitPanel2 = new Telerik.WinControls.UI.SplitPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.splitPanel2 = new Telerik.WinControls.UI.SplitPanel();
             this.radWaitingBar1 = new Telerik.WinControls.UI.RadWaitingBar();
             ((System.ComponentModel.ISupportInitialize)(this.radSplitContainer1)).BeginInit();
             this.radSplitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitPanel1)).BeginInit();
             this.splitPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitPanel2)).BeginInit();
             this.splitPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radWaitingBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +55,7 @@
             // 
             // 
             // 
-            this.radSplitContainer1.RootElement.MinSize = new System.Drawing.Size(25, 25);
+            this.radSplitContainer1.RootElement.MinSize = new System.Drawing.Size(0, 0);
             this.radSplitContainer1.Size = new System.Drawing.Size(292, 270);
             this.radSplitContainer1.TabIndex = 0;
             this.radSplitContainer1.TabStop = false;
@@ -69,29 +69,13 @@
             // 
             // 
             // 
-            this.splitPanel1.RootElement.MinSize = new System.Drawing.Size(25, 25);
+            this.splitPanel1.RootElement.MinSize = new System.Drawing.Size(0, 0);
             this.splitPanel1.Size = new System.Drawing.Size(292, 240);
             this.splitPanel1.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0F, 0.4022556F);
             this.splitPanel1.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, 107);
             this.splitPanel1.TabIndex = 0;
             this.splitPanel1.TabStop = false;
             this.splitPanel1.Text = "splitPanel1";
-            // 
-            // splitPanel2
-            // 
-            this.splitPanel2.Controls.Add(this.radWaitingBar1);
-            this.splitPanel2.Location = new System.Drawing.Point(0, 244);
-            this.splitPanel2.Name = "splitPanel2";
-            // 
-            // 
-            // 
-            this.splitPanel2.RootElement.MinSize = new System.Drawing.Size(25, 25);
-            this.splitPanel2.Size = new System.Drawing.Size(292, 26);
-            this.splitPanel2.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0F, -0.4022556F);
-            this.splitPanel2.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, -107);
-            this.splitPanel2.TabIndex = 1;
-            this.splitPanel2.TabStop = false;
-            this.splitPanel2.Text = "splitPanel2";
             // 
             // pictureBox1
             // 
@@ -101,6 +85,22 @@
             this.pictureBox1.Size = new System.Drawing.Size(292, 240);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // splitPanel2
+            // 
+            this.splitPanel2.Controls.Add(this.radWaitingBar1);
+            this.splitPanel2.Location = new System.Drawing.Point(0, 244);
+            this.splitPanel2.Name = "splitPanel2";
+            // 
+            // 
+            // 
+            this.splitPanel2.RootElement.MinSize = new System.Drawing.Size(0, 0);
+            this.splitPanel2.Size = new System.Drawing.Size(292, 26);
+            this.splitPanel2.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0F, -0.4022556F);
+            this.splitPanel2.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, -107);
+            this.splitPanel2.TabIndex = 1;
+            this.splitPanel2.TabStop = false;
+            this.splitPanel2.Text = "splitPanel2";
             // 
             // radWaitingBar1
             // 
@@ -120,21 +120,24 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(292, 270);
             this.Controls.Add(this.radSplitContainer1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SplashScreen";
             // 
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "SplashScreen";
             ((System.ComponentModel.ISupportInitialize)(this.radSplitContainer1)).EndInit();
             this.radSplitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitPanel1)).EndInit();
             this.splitPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitPanel2)).EndInit();
             this.splitPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radWaitingBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
