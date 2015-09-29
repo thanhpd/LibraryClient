@@ -25,7 +25,7 @@ namespace LibraryDesktop
         public RadForm2()
         {
             InitializeComponent();
-            listBookModels = (DataProvider.GetAllBooks(100, 0)).Select(book => new BookModel(book)).ToList();
+            listBookModels = (DataProvider.GetAllBooks(100, 0)).Select(book => new BookModel(book)).Reverse().ToList();            
             bindData();
             radGridView2.TableElement.RowHeight = 80;
             radGridView2.MasterTemplate.AllowAddNewRow = false;
@@ -157,7 +157,14 @@ namespace LibraryDesktop
 
             if (result == DialogResult.OK)
             {
-                
+                var latestId = Convert.ToInt32(listBookModels.OrderByDescending(b => b.id).First().id);
+                var newestItem = (DataProvider.GetAllBooks(1, latestId)).Select(book => new BookModel(book)).ToList();
+                listBookModels.Add(newestItem[0]);
+                bindData();
+                createForm.Dispose();
+            } else if (result == DialogResult.Cancel)
+            {
+                createForm.Dispose();
             }
         }
 

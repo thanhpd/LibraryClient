@@ -52,14 +52,15 @@ namespace LibraryDesktop
 
         private void radButton4_Click(object sender, EventArgs e)
         {
-            Close();            
+            DialogResult = DialogResult.Cancel;  
         }
 
         private void radButton3_Click(object sender, EventArgs e)
         {
-            DataProvider.AddNewBook(bookModel.book_name, bookModel.image_path, bookModel.book_description,
+            var result = DataProvider.AddNewBook(bookModel.book_name, bookModel.image_path, bookModel.book_description,
                 bookModel.book_author, bookModel.book_publisher, bookModel.book_year);
-            
+            if (result) DialogResult = DialogResult.OK;
+            else MessageBox.Show("Failed to add this object.");
         }
 
         private void radDataEntry1_BindingCreated(object sender, BindingCreatedEventArgs e)
