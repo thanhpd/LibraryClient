@@ -234,6 +234,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfirmDeleteBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmDeleteBox.Designer.cs">
+      <DependentUpon>ConfirmDeleteBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateBookForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -258,6 +264,9 @@
     <Compile Include="Utils\PicturePanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="ConfirmDeleteBox.resx">
+      <DependentUpon>ConfirmDeleteBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateBookForm.resx">
       <DependentUpon>CreateBookForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -319,10 +328,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bluemarine_favicon.ico" />
+    <None Include="Resources\synopsislc.png" />
+    <None Include="Resources\cross.png" />
     <Content Include="Resources\green-circle1.png" />
     <None Include="Resources\red-circle1.png" />
     <None Include="Resources\green-circle11.png" />
     <Content Include="Resources\img-placeholder.PNG" />
+    <None Include="Resources\plus.bmp" />
+    <None Include="Resources\plus-4-xxl.png" />
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\plus1.png" />
     <Content Include="Resources\red-circle.png" />
   </ItemGroup>
   <ItemGroup>

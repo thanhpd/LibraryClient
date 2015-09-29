@@ -63,7 +63,10 @@
             this.splitPanel1 = new Telerik.WinControls.UI.SplitPanel();
             this.radDataEntry1 = new Telerik.WinControls.UI.RadDataEntry();
             this.splitPanel2 = new Telerik.WinControls.UI.SplitPanel();
+            this.picturePanel1 = new LibraryDesktop.Utils.PicturePanel();
             this.splitPanel3 = new Telerik.WinControls.UI.SplitPanel();
+            this.radButton4 = new Telerik.WinControls.UI.RadButton();
+            this.radButton3 = new Telerik.WinControls.UI.RadButton();
             this.radTextBox7 = new Telerik.WinControls.UI.RadTextBox();
             this.radTextBox8 = new Telerik.WinControls.UI.RadTextBox();
             this.radTextBox9 = new Telerik.WinControls.UI.RadTextBox();
@@ -90,8 +93,6 @@
             this.radLabel24 = new Telerik.WinControls.UI.RadLabel();
             this.radPanel14 = new Telerik.WinControls.UI.RadPanel();
             this.radLabel26 = new Telerik.WinControls.UI.RadLabel();
-            this.radButton3 = new Telerik.WinControls.UI.RadButton();
-            this.radButton4 = new Telerik.WinControls.UI.RadButton();
             this.radTextBox13 = new Telerik.WinControls.UI.RadTextBox();
             this.radTextBox14 = new Telerik.WinControls.UI.RadTextBox();
             this.radTextBox15 = new Telerik.WinControls.UI.RadTextBox();
@@ -164,7 +165,6 @@
             this.radPanel32 = new Telerik.WinControls.UI.RadPanel();
             this.radLabel60 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel61 = new Telerik.WinControls.UI.RadLabel();
-            this.picturePanel1 = new LibraryDesktop.Utils.PicturePanel();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox3)).BeginInit();
@@ -210,6 +210,8 @@
             this.splitPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitPanel3)).BeginInit();
             this.splitPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox9)).BeginInit();
@@ -243,8 +245,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.radPanel14)).BeginInit();
             this.radPanel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel26)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox15)).BeginInit();
@@ -735,6 +735,16 @@
             this.splitPanel2.TabStop = false;
             this.splitPanel2.Text = "splitPanel2";
             // 
+            // picturePanel1
+            // 
+            this.picturePanel1.AutoScroll = true;
+            this.picturePanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.picturePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picturePanel1.Location = new System.Drawing.Point(0, 0);
+            this.picturePanel1.Name = "picturePanel1";
+            this.picturePanel1.Size = new System.Drawing.Size(298, 182);
+            this.picturePanel1.TabIndex = 0;
+            // 
             // splitPanel3
             // 
             this.splitPanel3.Controls.Add(this.radButton4);
@@ -750,6 +760,25 @@
             this.splitPanel3.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, -67);
             this.splitPanel3.TabIndex = 2;
             this.splitPanel3.TabStop = false;
+            // 
+            // radButton4
+            // 
+            this.radButton4.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.radButton4.Location = new System.Drawing.Point(171, 32);
+            this.radButton4.Name = "radButton4";
+            this.radButton4.Size = new System.Drawing.Size(100, 28);
+            this.radButton4.TabIndex = 1;
+            this.radButton4.Text = "Cancel";
+            this.radButton4.Click += new System.EventHandler(this.radButton4_Click);
+            // 
+            // radButton3
+            // 
+            this.radButton3.Location = new System.Drawing.Point(22, 32);
+            this.radButton3.Name = "radButton3";
+            this.radButton3.Size = new System.Drawing.Size(100, 28);
+            this.radButton3.TabIndex = 0;
+            this.radButton3.Text = "OK";
+            this.radButton3.Click += new System.EventHandler(this.radButton3_Click);
             // 
             // radTextBox7
             // 
@@ -1043,24 +1072,6 @@
             this.radLabel26.TabIndex = 2;
             this.radLabel26.TextWrap = false;
             // 
-            // radButton3
-            // 
-            this.radButton3.Location = new System.Drawing.Point(22, 32);
-            this.radButton3.Name = "radButton3";
-            this.radButton3.Size = new System.Drawing.Size(100, 28);
-            this.radButton3.TabIndex = 0;
-            this.radButton3.Text = "OK";
-            this.radButton3.Click += new System.EventHandler(this.radButton3_Click);
-            // 
-            // radButton4
-            // 
-            this.radButton4.Location = new System.Drawing.Point(171, 32);
-            this.radButton4.Name = "radButton4";
-            this.radButton4.Size = new System.Drawing.Size(100, 28);
-            this.radButton4.TabIndex = 1;
-            this.radButton4.Text = "Cancel";
-            this.radButton4.Click += new System.EventHandler(this.radButton4_Click);
-            // 
             // radTextBox13
             // 
             this.radTextBox13.AutoSize = false;
@@ -1147,7 +1158,7 @@
             // 
             // 
             this.radLabel27.RootElement.MinSize = new System.Drawing.Size(20, 0);
-            this.radLabel27.Size = new System.Drawing.Size(20, 2);
+            this.radLabel27.Size = new System.Drawing.Size(20, 22);
             this.radLabel27.TabIndex = 2;
             this.radLabel27.TextWrap = false;
             // 
@@ -1183,7 +1194,7 @@
             // 
             // 
             this.radLabel29.RootElement.MinSize = new System.Drawing.Size(20, 0);
-            this.radLabel29.Size = new System.Drawing.Size(20, 2);
+            this.radLabel29.Size = new System.Drawing.Size(20, 22);
             this.radLabel29.TabIndex = 2;
             this.radLabel29.TextWrap = false;
             // 
@@ -1219,7 +1230,7 @@
             // 
             // 
             this.radLabel31.RootElement.MinSize = new System.Drawing.Size(20, 0);
-            this.radLabel31.Size = new System.Drawing.Size(20, 2);
+            this.radLabel31.Size = new System.Drawing.Size(20, 22);
             this.radLabel31.TabIndex = 2;
             this.radLabel31.TextWrap = false;
             // 
@@ -1255,7 +1266,7 @@
             // 
             // 
             this.radLabel33.RootElement.MinSize = new System.Drawing.Size(20, 0);
-            this.radLabel33.Size = new System.Drawing.Size(20, 2);
+            this.radLabel33.Size = new System.Drawing.Size(20, 22);
             this.radLabel33.TabIndex = 2;
             this.radLabel33.TextWrap = false;
             // 
@@ -1291,7 +1302,7 @@
             // 
             // 
             this.radLabel35.RootElement.MinSize = new System.Drawing.Size(20, 0);
-            this.radLabel35.Size = new System.Drawing.Size(20, 2);
+            this.radLabel35.Size = new System.Drawing.Size(20, 22);
             this.radLabel35.TabIndex = 2;
             this.radLabel35.TextWrap = false;
             // 
@@ -1327,7 +1338,7 @@
             // 
             // 
             this.radLabel37.RootElement.MinSize = new System.Drawing.Size(20, 0);
-            this.radLabel37.Size = new System.Drawing.Size(20, 2);
+            this.radLabel37.Size = new System.Drawing.Size(20, 22);
             this.radLabel37.TabIndex = 2;
             this.radLabel37.TextWrap = false;
             // 
@@ -1417,7 +1428,7 @@
             // 
             // 
             this.radLabel39.RootElement.MinSize = new System.Drawing.Size(20, 0);
-            this.radLabel39.Size = new System.Drawing.Size(20, 2);
+            this.radLabel39.Size = new System.Drawing.Size(20, 22);
             this.radLabel39.TabIndex = 2;
             this.radLabel39.TextWrap = false;
             // 
@@ -1453,7 +1464,7 @@
             // 
             // 
             this.radLabel41.RootElement.MinSize = new System.Drawing.Size(20, 0);
-            this.radLabel41.Size = new System.Drawing.Size(20, 2);
+            this.radLabel41.Size = new System.Drawing.Size(20, 22);
             this.radLabel41.TabIndex = 2;
             this.radLabel41.TextWrap = false;
             // 
@@ -1489,7 +1500,7 @@
             // 
             // 
             this.radLabel43.RootElement.MinSize = new System.Drawing.Size(20, 0);
-            this.radLabel43.Size = new System.Drawing.Size(20, 2);
+            this.radLabel43.Size = new System.Drawing.Size(20, 22);
             this.radLabel43.TabIndex = 2;
             this.radLabel43.TextWrap = false;
             // 
@@ -1525,7 +1536,7 @@
             // 
             // 
             this.radLabel45.RootElement.MinSize = new System.Drawing.Size(20, 0);
-            this.radLabel45.Size = new System.Drawing.Size(20, 2);
+            this.radLabel45.Size = new System.Drawing.Size(20, 22);
             this.radLabel45.TabIndex = 2;
             this.radLabel45.TextWrap = false;
             // 
@@ -1561,7 +1572,7 @@
             // 
             // 
             this.radLabel47.RootElement.MinSize = new System.Drawing.Size(20, 0);
-            this.radLabel47.Size = new System.Drawing.Size(20, 2);
+            this.radLabel47.Size = new System.Drawing.Size(20, 22);
             this.radLabel47.TabIndex = 2;
             this.radLabel47.TextWrap = false;
             // 
@@ -1597,7 +1608,7 @@
             // 
             // 
             this.radLabel49.RootElement.MinSize = new System.Drawing.Size(20, 0);
-            this.radLabel49.Size = new System.Drawing.Size(20, 2);
+            this.radLabel49.Size = new System.Drawing.Size(20, 22);
             this.radLabel49.TabIndex = 2;
             this.radLabel49.TextWrap = false;
             // 
@@ -1687,7 +1698,7 @@
             // 
             // 
             this.radLabel51.RootElement.MinSize = new System.Drawing.Size(20, 0);
-            this.radLabel51.Size = new System.Drawing.Size(20, 2);
+            this.radLabel51.Size = new System.Drawing.Size(20, 22);
             this.radLabel51.TabIndex = 2;
             this.radLabel51.TextWrap = false;
             // 
@@ -1723,7 +1734,7 @@
             // 
             // 
             this.radLabel53.RootElement.MinSize = new System.Drawing.Size(20, 0);
-            this.radLabel53.Size = new System.Drawing.Size(20, 2);
+            this.radLabel53.Size = new System.Drawing.Size(20, 22);
             this.radLabel53.TabIndex = 2;
             this.radLabel53.TextWrap = false;
             // 
@@ -1759,7 +1770,7 @@
             // 
             // 
             this.radLabel55.RootElement.MinSize = new System.Drawing.Size(20, 0);
-            this.radLabel55.Size = new System.Drawing.Size(20, 2);
+            this.radLabel55.Size = new System.Drawing.Size(20, 22);
             this.radLabel55.TabIndex = 2;
             this.radLabel55.TextWrap = false;
             // 
@@ -1795,7 +1806,7 @@
             // 
             // 
             this.radLabel57.RootElement.MinSize = new System.Drawing.Size(20, 0);
-            this.radLabel57.Size = new System.Drawing.Size(20, 2);
+            this.radLabel57.Size = new System.Drawing.Size(20, 22);
             this.radLabel57.TabIndex = 2;
             this.radLabel57.TextWrap = false;
             // 
@@ -1831,7 +1842,7 @@
             // 
             // 
             this.radLabel59.RootElement.MinSize = new System.Drawing.Size(20, 0);
-            this.radLabel59.Size = new System.Drawing.Size(20, 2);
+            this.radLabel59.Size = new System.Drawing.Size(20, 22);
             this.radLabel59.TabIndex = 2;
             this.radLabel59.TextWrap = false;
             // 
@@ -1867,24 +1878,16 @@
             // 
             // 
             this.radLabel61.RootElement.MinSize = new System.Drawing.Size(20, 0);
-            this.radLabel61.Size = new System.Drawing.Size(20, 2);
+            this.radLabel61.Size = new System.Drawing.Size(20, 22);
             this.radLabel61.TabIndex = 2;
             this.radLabel61.TextWrap = false;
             // 
-            // picturePanel1
-            // 
-            this.picturePanel1.AutoScroll = true;
-            this.picturePanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.picturePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picturePanel1.Location = new System.Drawing.Point(0, 0);
-            this.picturePanel1.Name = "picturePanel1";
-            this.picturePanel1.Size = new System.Drawing.Size(298, 182);
-            this.picturePanel1.TabIndex = 0;
-            // 
             // CreateBookForm
             // 
+            this.AcceptButton = this.radButton3;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.radButton4;
             this.ClientSize = new System.Drawing.Size(298, 490);
             this.Controls.Add(this.radSplitContainer1);
             this.Controls.Add(this.radPanel7);
@@ -1951,6 +1954,8 @@
             this.splitPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitPanel3)).EndInit();
             this.splitPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.radButton4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radButton3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox9)).EndInit();
@@ -1991,8 +1996,6 @@
             this.radPanel14.ResumeLayout(false);
             this.radPanel14.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel26)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radButton4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox15)).EndInit();

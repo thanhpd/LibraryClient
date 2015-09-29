@@ -38,12 +38,16 @@ namespace LibraryDesktop
 
         private void OpenDialogOnValueChanging(object sender, ValueChangingEventArgs e)
         {
-            e.Cancel = !File.Exists(e.NewValue.ToString());
-            if (!e.Cancel)
+            if (e.OldValue != null || e.NewValue != null)
             {
-                picturePanel1.BackgroundImage = FormHelper.FetchImage(e.NewValue.ToString(), 298, 182);
-                bookModel.image_path = e.NewValue.ToString();
+               e.Cancel = !File.Exists(e.NewValue.ToString());
+               if (!e.Cancel)
+               {
+                   picturePanel1.BackgroundImage = FormHelper.FetchImage(e.NewValue.ToString(), 298, 182);
+                   bookModel.image_path = e.NewValue.ToString();
+               } 
             }
+            
         }        
 
         private void radButton4_Click(object sender, EventArgs e)
@@ -55,6 +59,7 @@ namespace LibraryDesktop
         {
             DataProvider.AddNewBook(bookModel.book_name, bookModel.image_path, bookModel.book_description,
                 bookModel.book_author, bookModel.book_publisher, bookModel.book_year);
+            
         }
 
         private void radDataEntry1_BindingCreated(object sender, BindingCreatedEventArgs e)

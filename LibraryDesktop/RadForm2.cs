@@ -44,6 +44,11 @@ namespace LibraryDesktop
             bookModel = model;            
         }
 
+        private void addRow(BookModel model)
+        {
+            listBookModels.Add(model);
+        }
+
         private BookModel rowCaching(string id)
         {            
             BookModel bookModel = listBookModels.Where(b => b.id == id).ToList().FirstOrDefault();
@@ -134,6 +139,30 @@ namespace LibraryDesktop
             if (e.CellElement is GridHeaderCellElement)
             {
                 e.CellElement.Font = boldFont;
+            }
+        }
+
+        private void radButtonElement1_Click(object sender, EventArgs e)
+        {
+            var createForm = new CreateBookForm();
+            createForm.StartPosition = FormStartPosition.CenterParent;
+            DialogResult result = createForm.ShowDialog(this);
+
+            if (result == DialogResult.OK)
+            {
+                
+            }
+        }
+
+        private void radButtonElement2_Click(object sender, EventArgs e)
+        {
+            var confirmForm = new ConfirmDeleteBox();
+            confirmForm.StartPosition = FormStartPosition.CenterParent;
+            DialogResult result = confirmForm.ShowDialog(this);
+
+            if (result == DialogResult.OK)
+            {
+
             }
         }
 
