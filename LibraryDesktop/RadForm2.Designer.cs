@@ -277,9 +277,6 @@
             this.radGridView2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(219)))), ((int)(((byte)(255)))));
             this.radGridView2.BeginEditMode = Telerik.WinControls.RadGridViewBeginEditMode.BeginEditOnF2;
             this.radGridView2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.radGridView2.EnableCustomFiltering = true;
-            this.radGridView2.EnableCustomGrouping = true;
-            this.radGridView2.EnableCustomSorting = true;
             this.radGridView2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.radGridView2.ForeColor = System.Drawing.Color.Black;
             this.radGridView2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -386,9 +383,6 @@
             gridViewDateTimeColumn2});
             this.radGridView2.MasterTemplate.DataSource = this.bookModelBindingSource;
             this.radGridView2.MasterTemplate.EnableAlternatingRowColor = true;
-            this.radGridView2.MasterTemplate.EnableCustomFiltering = true;
-            this.radGridView2.MasterTemplate.EnableCustomGrouping = true;
-            this.radGridView2.MasterTemplate.EnableCustomSorting = true;
             this.radGridView2.MasterTemplate.EnableGrouping = false;
             this.radGridView2.MasterTemplate.EnablePaging = true;
             sortDescriptor1.PropertyName = "book_description";
@@ -414,7 +408,7 @@
             this.radImageButtonElement1});
             this.radStatusStrip1.Location = new System.Drawing.Point(0, 697);
             this.radStatusStrip1.Name = "radStatusStrip1";
-            this.radStatusStrip1.Size = new System.Drawing.Size(1229, 26);
+            this.radStatusStrip1.Size = new System.Drawing.Size(1237, 26);
             this.radStatusStrip1.TabIndex = 2;
             this.radStatusStrip1.Text = "radStatusStrip1";
             // 
@@ -442,7 +436,7 @@
             this.ribbonTab2});
             this.radRibbonBar1.Location = new System.Drawing.Point(0, 0);
             this.radRibbonBar1.Name = "radRibbonBar1";
-            this.radRibbonBar1.Size = new System.Drawing.Size(1229, 162);
+            this.radRibbonBar1.Size = new System.Drawing.Size(1237, 162);
             this.radRibbonBar1.StartButtonImage = ((System.Drawing.Image)(resources.GetObject("radRibbonBar1.StartButtonImage")));
             this.radRibbonBar1.StartMenuItems.AddRange(new Telerik.WinControls.RadItem[] {
             this.radMenuButtonItem1});
@@ -453,7 +447,7 @@
             // 
             this.ribbonTab1.AccessibleDescription = "Home";
             this.ribbonTab1.AccessibleName = "Home";
-            this.ribbonTab1.IsSelected = false;
+            this.ribbonTab1.IsSelected = true;
             this.ribbonTab1.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup1});
             this.ribbonTab1.Name = "ribbonTab1";
@@ -506,7 +500,7 @@
             // 
             this.ribbonTab2.AccessibleDescription = "Action";
             this.ribbonTab2.AccessibleName = "Action";
-            this.ribbonTab2.IsSelected = true;
+            this.ribbonTab2.IsSelected = false;
             this.ribbonTab2.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radRibbonBarGroup2,
             this.radRibbonBarGroup3,
@@ -891,7 +885,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1229, 723);
+            this.ClientSize = new System.Drawing.Size(1237, 723);
             this.Controls.Add(this.radRibbonBar1);
             this.Controls.Add(this.radStatusStrip1);
             this.Controls.Add(this.radSplitContainer1);
