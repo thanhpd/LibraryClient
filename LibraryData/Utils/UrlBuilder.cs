@@ -10,6 +10,7 @@ namespace LibraryData.Utils
     public class UrlBuilder
     {
         public static string BaseUrl = "http://128.199.167.255/soa/";
+        public static string ImageRepository = "http://s.it-ebooks-api.info/";
         public static string GetAllBooksPath = "book/list";
         public static string FindBookPath = "book/search";
         public static string AddBookPath = "book/add";

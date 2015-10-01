@@ -11,9 +11,9 @@ namespace LibraryData.Services
 {
     public class RequestHandling
     {
-        public static Task<T> ExecuteReceive<T>(RestRequest request) where T : new()
+        public static Task<T> ExecuteReceive<T>(RestRequest request, string baseUrl) where T : new()
         {
-            var client = new RestClient(UrlBuilder.BaseUrl);
+            var client = new RestClient(baseUrl);
             var tcs = new TaskCompletionSource<T>();  
             client.ExecuteAsync<T>(request, response =>
             {
@@ -29,9 +29,9 @@ namespace LibraryData.Services
             return tcs.Task;
         }
 
-        public static byte[] ExecuteReceive(RestRequest request)
+        public static byte[] ExecuteReceive(RestRequest request, string baseUrl)
         {
-            var client = new RestClient(UrlBuilder.BaseUrl);
+            var client = new RestClient(baseUrl);
             var response = client.Execute(request);
 
             if (response.ErrorException != null)

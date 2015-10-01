@@ -20,13 +20,15 @@ namespace LibraryDesktop
     {
         Font boldFont = new Font(SystemFonts.DialogFont, FontStyle.Bold);        
         List<BookModel> listBookModels = new List<BookModel>();
+        List<Book> rawData = new List<Book>();
         BookModel cacheLastRow = new BookModel(new Book());
         BookModel cacheNewRow = new BookModel(new Book());
         private BookModel newBookModel = new BookModel(new Book());
         public RadForm2()
         {
-            InitializeComponent();            
-            listBookModels = (DataProvider.GetAllBooks(100, 0)).Select(book => new BookModel(book)).Reverse().ToList();
+            InitializeComponent();
+            rawData = (DataProvider.GetAllBooks(100, 0));
+            listBookModels = rawData.Select(book => new BookModel(book)).Reverse().ToList();            
             bindData();
             radGridView2.TableElement.RowHeight = 80;
             radGridView2.MasterTemplate.AllowAddNewRow = false;
@@ -203,6 +205,22 @@ namespace LibraryDesktop
             var button = (RadButtonElement) sender;
             var themeName = button.AccessibleName;
             ThemeResolutionService.ApplicationThemeName = themeName;
+        }
+
+        private void radToggleButtonElement1_CheckStateChanging(object sender, CheckStateChangingEventArgs args)
+        {
+            radGridView2.EnableFiltering = !radGridView2.EnableFiltering;
+        }
+
+        private void radToggleButtonElement2_CheckStateChanging(object sender, CheckStateChangingEventArgs args)
+        {
+            radGridView2.AllowSearchRow = !radGridView2.AllowSearchRow;
+        }
+
+        private void radToggleButtonElement3_CheckStateChanging(object sender, CheckStateChangingEventArgs args)
+        {
+            radGridView2.EnableGrouping = !radGridView2.EnableGrouping;
+            radGridView2.ShowGroupPanel = !radGridView2.ShowGroupPanel;
         }
 
 

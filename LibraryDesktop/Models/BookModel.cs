@@ -87,10 +87,10 @@ namespace LibraryDesktop.Models
 
             if (!String.IsNullOrWhiteSpace(book_image))
             {
-                //BookImage = FormHelper.AddImageStore(book_image, DataProvider.GetImage(book_image));
+                BookImage = FormHelper.AddImageStore(book_image, DataProvider.GetImage(book_image));
                 //BookImage = FormHelper.FetchImage(DataProvider.GetImage(book_image), 150, 80);
-                var stream = new MemoryStream(DataProvider.GetImage(book_image));
-                BookImage = Image.FromStream(stream);
+                //var stream = new MemoryStream(DataProvider.GetImage(book_image));
+                //BookImage = Image.FromStream(stream);
             }            
         }
     }

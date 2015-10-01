@@ -17,11 +17,11 @@ namespace LibraryData.Services
         public static List<Book> GetAllBooks(int limit, int offset)
         {
             var request = new RestRequest();
-            request.Resource = String.Format("{0}?limit={1}&offset={2}", UrlBuilder.GetAllBooksPath, 100, 0);
+            request.Resource = String.Format("{0}?limit={1}&offset={2}", UrlBuilder.GetAllBooksPath, limit, offset);
             request.RootElement = "data";
             request.OnBeforeDeserialization = response => { response.ContentType = "application/json"; };
 
-            var result = RequestHandling.ExecuteReceive<List<Book>>(request).Result;
+            var result = RequestHandling.ExecuteReceive<List<Book>>(request, UrlBuilder.BaseUrl).Result;
             return result;
         }
 
@@ -40,9 +40,9 @@ namespace LibraryData.Services
         public static byte[] GetImage(string path)
         {
             var request = new RestRequest();
-            request.Resource = path;
+            request.Resource = "";
 
-            var result = RequestHandling.ExecuteReceive(request);
+            var result = RequestHandling.ExecuteReceive(request, path);
             return result;
         }
 

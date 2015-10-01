@@ -54,15 +54,16 @@
             this.radPropertyGrid1 = new Telerik.WinControls.UI.RadPropertyGrid();
             this.radGridView2 = new Telerik.WinControls.UI.RadGridView();
             this.bookModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
-            this.radImageButtonElement1 = new Telerik.WinControls.UI.RadImageButtonElement();
-            this.radWaitingBarElement1 = new Telerik.WinControls.UI.RadWaitingBarElement();
             this.radRibbonBar1 = new Telerik.WinControls.UI.RadRibbonBar();
             this.ribbonTab1 = new Telerik.WinControls.UI.RibbonTab();
             this.radRibbonBarGroup1 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.radButtonElement1 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement2 = new Telerik.WinControls.UI.RadButtonElement();
             this.radButtonElement3 = new Telerik.WinControls.UI.RadButtonElement();
+            this.radRibbonBarGroup10 = new Telerik.WinControls.UI.RadRibbonBarGroup();
+            this.radToggleButtonElement1 = new Telerik.WinControls.UI.RadToggleButtonElement();
+            this.radToggleButtonElement2 = new Telerik.WinControls.UI.RadToggleButtonElement();
+            this.radToggleButtonElement3 = new Telerik.WinControls.UI.RadToggleButtonElement();
             this.ribbonTab2 = new Telerik.WinControls.UI.RibbonTab();
             this.radRibbonBarGroup2 = new Telerik.WinControls.UI.RadRibbonBarGroup();
             this.radButtonElement4 = new Telerik.WinControls.UI.RadButtonElement();
@@ -115,6 +116,9 @@
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.windows7Theme1 = new Telerik.WinControls.Themes.Windows7Theme();
             this.windows8Theme1 = new Telerik.WinControls.Themes.Windows8Theme();
+            this.radImageButtonElement1 = new Telerik.WinControls.UI.RadImageButtonElement();
+            this.radWaitingBarElement1 = new Telerik.WinControls.UI.RadWaitingBarElement();
+            this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
             ((System.ComponentModel.ISupportInitialize)(this.radSplitContainer1)).BeginInit();
             this.radSplitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitPanel1)).BeginInit();
@@ -132,11 +136,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView2.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookModelBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookModelBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,7 +153,7 @@
             // 
             // 
             this.radSplitContainer1.RootElement.MinSize = new System.Drawing.Size(0, 0);
-            this.radSplitContainer1.Size = new System.Drawing.Size(1128, 500);
+            this.radSplitContainer1.Size = new System.Drawing.Size(1128, 608);
             this.radSplitContainer1.SplitterWidth = 5;
             this.radSplitContainer1.TabIndex = 1;
             this.radSplitContainer1.TabStop = false;
@@ -166,7 +170,7 @@
             // 
             // 
             this.splitPanel1.RootElement.MinSize = new System.Drawing.Size(0, 0);
-            this.splitPanel1.Size = new System.Drawing.Size(1128, 500);
+            this.splitPanel1.Size = new System.Drawing.Size(1128, 608);
             this.splitPanel1.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0.234127F, 0F);
             this.splitPanel1.SizeInfo.SplitterCorrection = new System.Drawing.Size(237, 0);
             this.splitPanel1.TabIndex = 0;
@@ -186,7 +190,7 @@
             // 
             // 
             this.radSplitContainer2.RootElement.MinSize = new System.Drawing.Size(0, 0);
-            this.radSplitContainer2.Size = new System.Drawing.Size(300, 500);
+            this.radSplitContainer2.Size = new System.Drawing.Size(300, 608);
             this.radSplitContainer2.SplitterWidth = 5;
             this.radSplitContainer2.TabIndex = 2;
             this.radSplitContainer2.TabStop = false;
@@ -202,7 +206,7 @@
             // 
             // 
             this.splitPanel2.RootElement.MinSize = new System.Drawing.Size(0, 0);
-            this.splitPanel2.Size = new System.Drawing.Size(300, 144);
+            this.splitPanel2.Size = new System.Drawing.Size(300, 176);
             this.splitPanel2.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0F, -0.2080979F);
             this.splitPanel2.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, -112);
             this.splitPanel2.TabIndex = 0;
@@ -215,7 +219,7 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(300, 144);
+            this.pictureBox2.Size = new System.Drawing.Size(300, 176);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -225,13 +229,13 @@
             this.splitPanel3.Controls.Add(this.radButton2);
             this.splitPanel3.Controls.Add(this.radButton1);
             this.splitPanel3.Controls.Add(this.radPropertyGrid1);
-            this.splitPanel3.Location = new System.Drawing.Point(0, 149);
+            this.splitPanel3.Location = new System.Drawing.Point(0, 181);
             this.splitPanel3.Name = "splitPanel3";
             // 
             // 
             // 
             this.splitPanel3.RootElement.MinSize = new System.Drawing.Size(0, 0);
-            this.splitPanel3.Size = new System.Drawing.Size(300, 351);
+            this.splitPanel3.Size = new System.Drawing.Size(300, 427);
             this.splitPanel3.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0F, 0.2080979F);
             this.splitPanel3.SizeInfo.SplitterCorrection = new System.Drawing.Size(0, 256);
             this.splitPanel3.TabIndex = 1;
@@ -241,7 +245,7 @@
             // 
             // radButton2
             // 
-            this.radButton2.Location = new System.Drawing.Point(171, 320);
+            this.radButton2.Location = new System.Drawing.Point(175, 333);
             this.radButton2.Name = "radButton2";
             this.radButton2.Size = new System.Drawing.Size(100, 27);
             this.radButton2.TabIndex = 2;
@@ -249,7 +253,7 @@
             // 
             // radButton1
             // 
-            this.radButton1.Location = new System.Drawing.Point(45, 320);
+            this.radButton1.Location = new System.Drawing.Point(50, 333);
             this.radButton1.Name = "radButton1";
             this.radButton1.Size = new System.Drawing.Size(100, 27);
             this.radButton1.TabIndex = 1;
@@ -263,7 +267,7 @@
             this.radPropertyGrid1.Name = "radPropertyGrid1";
             this.radPropertyGrid1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.radPropertyGrid1.SelectedObject = this.radGridView2.RootElement;
-            this.radPropertyGrid1.Size = new System.Drawing.Size(300, 374);
+            this.radPropertyGrid1.Size = new System.Drawing.Size(300, 327);
             this.radPropertyGrid1.SortOrder = System.Windows.Forms.SortOrder.Ascending;
             this.radPropertyGrid1.TabIndex = 0;
             this.radPropertyGrid1.Text = "radPropertyGrid1";
@@ -280,7 +284,7 @@
             this.radGridView2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.radGridView2.ForeColor = System.Drawing.Color.Black;
             this.radGridView2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.radGridView2.Location = new System.Drawing.Point(1, 3);
+            this.radGridView2.Location = new System.Drawing.Point(1, 0);
             // 
             // 
             // 
@@ -312,16 +316,20 @@
             gridViewTextBoxColumn3.FieldName = "book_name";
             gridViewTextBoxColumn3.HeaderText = "Book Name";
             gridViewTextBoxColumn3.IsAutoGenerated = true;
+            gridViewTextBoxColumn3.Multiline = true;
             gridViewTextBoxColumn3.Name = "book_name";
             gridViewTextBoxColumn3.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewTextBoxColumn3.Width = 160;
+            gridViewTextBoxColumn3.WrapText = true;
             gridViewTextBoxColumn4.EnableExpressionEditor = false;
             gridViewTextBoxColumn4.FieldName = "book_author";
             gridViewTextBoxColumn4.HeaderText = "Author(s)";
             gridViewTextBoxColumn4.IsAutoGenerated = true;
+            gridViewTextBoxColumn4.Multiline = true;
             gridViewTextBoxColumn4.Name = "book_author";
             gridViewTextBoxColumn4.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewTextBoxColumn4.Width = 120;
+            gridViewTextBoxColumn4.WrapText = true;
             gridViewTextBoxColumn5.EnableExpressionEditor = false;
             gridViewTextBoxColumn5.FieldName = "book_year";
             gridViewTextBoxColumn5.HeaderText = "Year";
@@ -333,17 +341,21 @@
             gridViewTextBoxColumn6.FieldName = "book_publisher";
             gridViewTextBoxColumn6.HeaderText = "Publisher";
             gridViewTextBoxColumn6.IsAutoGenerated = true;
+            gridViewTextBoxColumn6.Multiline = true;
             gridViewTextBoxColumn6.Name = "book_publisher";
             gridViewTextBoxColumn6.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewTextBoxColumn6.Width = 110;
+            gridViewTextBoxColumn6.WrapText = true;
             gridViewTextBoxColumn7.EnableExpressionEditor = false;
             gridViewTextBoxColumn7.FieldName = "book_description";
             gridViewTextBoxColumn7.HeaderText = "Description";
             gridViewTextBoxColumn7.IsAutoGenerated = true;
+            gridViewTextBoxColumn7.Multiline = true;
             gridViewTextBoxColumn7.Name = "book_description";
             gridViewTextBoxColumn7.SortOrder = Telerik.WinControls.UI.RadSortOrder.Ascending;
             gridViewTextBoxColumn7.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             gridViewTextBoxColumn7.Width = 140;
+            gridViewTextBoxColumn7.WrapText = true;
             gridViewCheckBoxColumn1.DataType = typeof(string);
             gridViewCheckBoxColumn1.EnableExpressionEditor = false;
             gridViewCheckBoxColumn1.FieldName = "status";
@@ -385,6 +397,7 @@
             this.radGridView2.MasterTemplate.EnableAlternatingRowColor = true;
             this.radGridView2.MasterTemplate.EnableGrouping = false;
             this.radGridView2.MasterTemplate.EnablePaging = true;
+            this.radGridView2.MasterTemplate.PageSize = 10;
             sortDescriptor1.PropertyName = "book_description";
             this.radGridView2.MasterTemplate.SortDescriptors.AddRange(new Telerik.WinControls.Data.SortDescriptor[] {
             sortDescriptor1});
@@ -392,7 +405,7 @@
             this.radGridView2.Name = "radGridView2";
             this.radGridView2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.radGridView2.ShowGroupPanel = false;
-            this.radGridView2.Size = new System.Drawing.Size(821, 528);
+            this.radGridView2.Size = new System.Drawing.Size(821, 508);
             this.radGridView2.TabIndex = 1;
             this.radGridView2.Text = "radGridView2";
             this.radGridView2.ViewCellFormatting += new Telerik.WinControls.UI.CellFormattingEventHandler(this.radGridView2_ViewCellFormatting);
@@ -402,43 +415,6 @@
             // 
             this.bookModelBindingSource.DataSource = typeof(LibraryDesktop.Models.BookModel);
             // 
-            // radStatusStrip1
-            // 
-            this.radStatusStrip1.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.radImageButtonElement1,
-            this.radWaitingBarElement1});
-            this.radStatusStrip1.Location = new System.Drawing.Point(0, 697);
-            this.radStatusStrip1.Name = "radStatusStrip1";
-            this.radStatusStrip1.Size = new System.Drawing.Size(1145, 26);
-            this.radStatusStrip1.TabIndex = 2;
-            this.radStatusStrip1.Text = "radStatusStrip1";
-            // 
-            // radImageButtonElement1
-            // 
-            this.radImageButtonElement1.AccessibleDescription = "radImageButtonElement1";
-            this.radImageButtonElement1.AccessibleName = "radImageButtonElement1";
-            this.radImageButtonElement1.Alignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.radImageButtonElement1.AutoSize = false;
-            this.radImageButtonElement1.Bounds = new System.Drawing.Rectangle(0, 0, 95, 18);
-            this.radImageButtonElement1.DisplayStyle = Telerik.WinControls.DisplayStyle.ImageAndText;
-            this.radImageButtonElement1.Image = ((System.Drawing.Image)(resources.GetObject("radImageButtonElement1.Image")));
-            this.radImageButtonElement1.Name = "radImageButtonElement1";
-            this.radImageButtonElement1.ShowBorder = false;
-            this.radStatusStrip1.SetSpring(this.radImageButtonElement1, false);
-            this.radImageButtonElement1.Text = "Disconnected";
-            this.radImageButtonElement1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.radImageButtonElement1.ToolTipText = "Unable to connect to server";
-            this.radImageButtonElement1.Click += new System.EventHandler(this.radImageButtonElement1_Click);
-            // 
-            // radWaitingBarElement1
-            // 
-            this.radWaitingBarElement1.AutoSize = true;
-            this.radWaitingBarElement1.Name = "radWaitingBarElement1";
-            this.radStatusStrip1.SetSpring(this.radWaitingBarElement1, false);
-            this.radWaitingBarElement1.Text = "";
-            this.radWaitingBarElement1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.radWaitingBarElement1.WaitingIndicatorSize = new System.Drawing.Size(100, 14);
-            // 
             // radRibbonBar1
             // 
             this.radRibbonBar1.CommandTabs.AddRange(new Telerik.WinControls.RadItem[] {
@@ -446,7 +422,7 @@
             this.ribbonTab2});
             this.radRibbonBar1.Location = new System.Drawing.Point(0, 0);
             this.radRibbonBar1.Name = "radRibbonBar1";
-            this.radRibbonBar1.Size = new System.Drawing.Size(1145, 162);
+            this.radRibbonBar1.Size = new System.Drawing.Size(1169, 162);
             this.radRibbonBar1.StartButtonImage = ((System.Drawing.Image)(resources.GetObject("radRibbonBar1.StartButtonImage")));
             this.radRibbonBar1.StartMenuItems.AddRange(new Telerik.WinControls.RadItem[] {
             this.radMenuButtonItem1});
@@ -459,7 +435,8 @@
             this.ribbonTab1.AccessibleName = "Home";
             this.ribbonTab1.IsSelected = true;
             this.ribbonTab1.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.radRibbonBarGroup1});
+            this.radRibbonBarGroup1,
+            this.radRibbonBarGroup10});
             this.ribbonTab1.Name = "ribbonTab1";
             this.ribbonTab1.Text = "Home";
             // 
@@ -505,6 +482,56 @@
             this.radButtonElement3.Name = "radButtonElement3";
             this.radButtonElement3.Text = "Update";
             this.radButtonElement3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // radRibbonBarGroup10
+            // 
+            this.radRibbonBarGroup10.AccessibleDescription = "Option";
+            this.radRibbonBarGroup10.AccessibleName = "Option";
+            this.radRibbonBarGroup10.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radToggleButtonElement1,
+            this.radToggleButtonElement2,
+            this.radToggleButtonElement3});
+            this.radRibbonBarGroup10.Name = "radRibbonBarGroup10";
+            this.radRibbonBarGroup10.Text = "Option";
+            // 
+            // radToggleButtonElement1
+            // 
+            this.radToggleButtonElement1.AccessibleDescription = "Filter";
+            this.radToggleButtonElement1.AccessibleName = "Filter";
+            this.radToggleButtonElement1.Image = global::LibraryDesktop.Properties.Resources.plus1;
+            this.radToggleButtonElement1.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radToggleButtonElement1.Name = "radToggleButtonElement1";
+            this.radToggleButtonElement1.Padding = new System.Windows.Forms.Padding(1);
+            this.radToggleButtonElement1.ReadOnly = false;
+            this.radToggleButtonElement1.Text = "Filter";
+            this.radToggleButtonElement1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.radToggleButtonElement1.CheckStateChanging += new Telerik.WinControls.UI.CheckStateChangingEventHandler(this.radToggleButtonElement1_CheckStateChanging);
+            // 
+            // radToggleButtonElement2
+            // 
+            this.radToggleButtonElement2.AccessibleDescription = "Search";
+            this.radToggleButtonElement2.AccessibleName = "Search";
+            this.radToggleButtonElement2.Image = global::LibraryDesktop.Properties.Resources.plus1;
+            this.radToggleButtonElement2.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radToggleButtonElement2.Name = "radToggleButtonElement2";
+            this.radToggleButtonElement2.Padding = new System.Windows.Forms.Padding(1);
+            this.radToggleButtonElement2.ReadOnly = false;
+            this.radToggleButtonElement2.Text = "Search";
+            this.radToggleButtonElement2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.radToggleButtonElement2.CheckStateChanging += new Telerik.WinControls.UI.CheckStateChangingEventHandler(this.radToggleButtonElement2_CheckStateChanging);
+            // 
+            // radToggleButtonElement3
+            // 
+            this.radToggleButtonElement3.AccessibleDescription = "Grouping";
+            this.radToggleButtonElement3.AccessibleName = "Grouping";
+            this.radToggleButtonElement3.Image = global::LibraryDesktop.Properties.Resources.plus1;
+            this.radToggleButtonElement3.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radToggleButtonElement3.Name = "radToggleButtonElement3";
+            this.radToggleButtonElement3.Padding = new System.Windows.Forms.Padding(1);
+            this.radToggleButtonElement3.ReadOnly = false;
+            this.radToggleButtonElement3.Text = "Grouping";
+            this.radToggleButtonElement3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.radToggleButtonElement3.CheckStateChanging += new Telerik.WinControls.UI.CheckStateChangingEventHandler(this.radToggleButtonElement3_CheckStateChanging);
             // 
             // ribbonTab2
             // 
@@ -891,11 +918,52 @@
             // 
             this.bookModelBindingSource1.DataSource = typeof(LibraryDesktop.Models.BookModel);
             // 
+            // radImageButtonElement1
+            // 
+            this.radImageButtonElement1.AccessibleDescription = "radImageButtonElement1";
+            this.radImageButtonElement1.AccessibleName = "radImageButtonElement1";
+            this.radImageButtonElement1.Alignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.radImageButtonElement1.AutoSize = false;
+            this.radImageButtonElement1.Bounds = new System.Drawing.Rectangle(0, 0, 95, 18);
+            this.radImageButtonElement1.DisplayStyle = Telerik.WinControls.DisplayStyle.ImageAndText;
+            this.radImageButtonElement1.Image = ((System.Drawing.Image)(resources.GetObject("radImageButtonElement1.Image")));
+            this.radImageButtonElement1.ImageIndexClicked = 0;
+            this.radImageButtonElement1.ImageIndexHovered = 0;
+            this.radImageButtonElement1.Name = "radImageButtonElement1";
+            this.radImageButtonElement1.ShowBorder = false;
+            this.radStatusStrip1.SetSpring(this.radImageButtonElement1, false);
+            this.radImageButtonElement1.Text = "Disconnected";
+            this.radImageButtonElement1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.radImageButtonElement1.ToolTipText = "Unable to connect to server";
+            this.radImageButtonElement1.Click += new System.EventHandler(this.radImageButtonElement1_Click);
+            // 
+            // radWaitingBarElement1
+            // 
+            this.radWaitingBarElement1.AutoSize = true;
+            this.radWaitingBarElement1.DisabledTextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.radWaitingBarElement1.Name = "radWaitingBarElement1";
+            this.radStatusStrip1.SetSpring(this.radWaitingBarElement1, false);
+            this.radWaitingBarElement1.Text = "";
+            this.radWaitingBarElement1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.radWaitingBarElement1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.radWaitingBarElement1.WaitingIndicatorSize = new System.Drawing.Size(100, 14);
+            // 
+            // radStatusStrip1
+            // 
+            this.radStatusStrip1.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radImageButtonElement1,
+            this.radWaitingBarElement1});
+            this.radStatusStrip1.Location = new System.Drawing.Point(0, 697);
+            this.radStatusStrip1.Name = "radStatusStrip1";
+            this.radStatusStrip1.Size = new System.Drawing.Size(1169, 26);
+            this.radStatusStrip1.TabIndex = 1;
+            this.radStatusStrip1.Text = "radStatusStrip1";
+            // 
             // RadForm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1145, 723);
+            this.ClientSize = new System.Drawing.Size(1169, 723);
             this.Controls.Add(this.radRibbonBar1);
             this.Controls.Add(this.radStatusStrip1);
             this.Controls.Add(this.radSplitContainer1);
@@ -929,11 +997,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.radGridView2.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookModelBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radRibbonBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookModelBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radStatusStrip1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -949,15 +1017,11 @@
         private Telerik.WinControls.UI.RadSplitContainer radSplitContainer2;
         private Telerik.WinControls.UI.SplitPanel splitPanel2;
         private Telerik.WinControls.UI.SplitPanel splitPanel3;
-        private Telerik.WinControls.UI.RadPropertyGrid radPropertyGrid1;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.BindingSource bookModelBindingSource1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Telerik.WinControls.UI.RadStatusStrip radStatusStrip1;
-        private Telerik.WinControls.UI.RadImageButtonElement radImageButtonElement1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Telerik.WinControls.UI.RadButton radButton2;
-        private Telerik.WinControls.UI.RadButton radButton1;
         private Telerik.WinControls.UI.RadRibbonBar radRibbonBar1;
         private Telerik.WinControls.UI.RibbonTab ribbonTab1;
         private Telerik.WinControls.UI.RadRibbonFormBehavior radRibbonFormBehavior1;
@@ -1013,6 +1077,14 @@
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup9;
         private Telerik.WinControls.UI.RadButtonElement radButtonElement21;
         private Telerik.WinControls.UI.RadButtonElement radButtonElement22;
+        private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup10;
+        private Telerik.WinControls.UI.RadToggleButtonElement radToggleButtonElement1;
+        private Telerik.WinControls.UI.RadToggleButtonElement radToggleButtonElement2;
+        private Telerik.WinControls.UI.RadToggleButtonElement radToggleButtonElement3;
+        private Telerik.WinControls.UI.RadButton radButton1;
+        private Telerik.WinControls.UI.RadPropertyGrid radPropertyGrid1;
+        private Telerik.WinControls.UI.RadStatusStrip radStatusStrip1;
+        private Telerik.WinControls.UI.RadImageButtonElement radImageButtonElement1;
         private Telerik.WinControls.UI.RadWaitingBarElement radWaitingBarElement1;
     }
 }
