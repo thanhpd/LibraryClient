@@ -33,7 +33,7 @@ namespace LibraryDesktop
             //run form - time taking operation
             RadForm2 mainForm = new RadForm2();
             mainForm.Load += new EventHandler(radForm2_Load);
-            Application.Run(mainForm);
+            Application.Run(mainForm);            
         }
 
         private static void radForm2_Load(object sender, EventArgs e)

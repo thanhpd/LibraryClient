@@ -127,6 +127,12 @@
   <data name="red-circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\red-circle1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="uet_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\uet_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="synopsislc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\synopsislc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="img-placeholder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\img-placeholder.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,7 +148,7 @@
   <data name="plus1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plus1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="synopsislc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\synopsislc.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="coltech1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coltech1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

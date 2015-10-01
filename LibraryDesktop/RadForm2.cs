@@ -25,13 +25,13 @@ namespace LibraryDesktop
         private BookModel newBookModel = new BookModel(new Book());
         public RadForm2()
         {
-            InitializeComponent();
-            //Thread.Sleep(10000);
+            InitializeComponent();            
             listBookModels = (DataProvider.GetAllBooks(100, 0)).Select(book => new BookModel(book)).Reverse().ToList();
             bindData();
             radGridView2.TableElement.RowHeight = 80;
             radGridView2.MasterTemplate.AllowAddNewRow = false;
             radGridView2.MasterTemplate.EnableSorting = true;
+            radWaitingBarElement1.Visibility = ElementVisibility.Hidden;
         }
 
         private void bindData()

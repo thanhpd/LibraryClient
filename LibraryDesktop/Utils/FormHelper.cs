@@ -16,6 +16,8 @@ namespace LibraryDesktop.Utils
 {
     public class FormHelper
     {
+        public static List<SingleImage>  ListImages = new List<SingleImage>();
+
         public static void SetTextForTextBox(RadTextBox textBox, RadGridView gridView, string cellId)
         {
             try
@@ -40,6 +42,7 @@ namespace LibraryDesktop.Utils
 
             var smallThumb = FetchImage(byteArrayIn, 150, 80);
             var largeThumb = FetchImage(byteArrayIn, 250, 150);
+            //var largeThumb = smallThumb;            
             var singleImage = new SingleImage
             {
                 ImageUrl = imagePath,
@@ -48,6 +51,7 @@ namespace LibraryDesktop.Utils
             };
 
             listImages.Images.Add(singleImage);
+            //ListImages.Add(singleImage);
 
             return smallThumb;
         }
@@ -55,7 +59,8 @@ namespace LibraryDesktop.Utils
         public static Image FetchLargeThumb(string imagePath)
         {
             var listImages = ImageSet.GetInstance();
-            var image = listImages.Images.Where(t => t.ImageUrl == imagePath).ToList().First().LargeThumbnail;
+            var image = listImages.Images.Where(t => t.ImageUrl == imagePath).ToList().First().LargeThumbnail;            
+            //var image = ListImages.Where(t => t.ImageUrl == imagePath).ToList().First().LargeThumbnail;
 
             return image;
         }

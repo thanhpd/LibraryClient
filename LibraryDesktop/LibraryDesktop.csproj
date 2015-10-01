@@ -265,8 +265,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bluemarine_favicon.ico" />
+    <None Include="Resources\uet_logo.png" />
     <None Include="Resources\synopsislc.png" />
     <None Include="Resources\cross.png" />
+    <None Include="Resources\coltech1.png" />
     <Content Include="Resources\green-circle1.png" />
     <None Include="Resources\red-circle1.png" />
     <None Include="Resources\green-circle11.png" />

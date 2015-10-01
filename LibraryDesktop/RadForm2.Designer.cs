@@ -56,6 +56,7 @@
             this.bookModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
             this.radImageButtonElement1 = new Telerik.WinControls.UI.RadImageButtonElement();
+            this.radWaitingBarElement1 = new Telerik.WinControls.UI.RadWaitingBarElement();
             this.radRibbonBar1 = new Telerik.WinControls.UI.RadRibbonBar();
             this.ribbonTab1 = new Telerik.WinControls.UI.RibbonTab();
             this.radRibbonBarGroup1 = new Telerik.WinControls.UI.RadRibbonBarGroup();
@@ -266,7 +267,6 @@
             this.radPropertyGrid1.SortOrder = System.Windows.Forms.SortOrder.Ascending;
             this.radPropertyGrid1.TabIndex = 0;
             this.radPropertyGrid1.Text = "radPropertyGrid1";
-            this.radPropertyGrid1.ThemeName = "Windows8";
             this.radPropertyGrid1.ToolbarVisible = true;
             this.radPropertyGrid1.Editing += new Telerik.WinControls.UI.PropertyGridItemEditingEventHandler(this.radPropertyGrid1_Editing);
             this.radPropertyGrid1.Edited += new Telerik.WinControls.UI.PropertyGridItemEditedEventHandler(this.radPropertyGrid1_Edited);
@@ -405,10 +405,11 @@
             // radStatusStrip1
             // 
             this.radStatusStrip1.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.radImageButtonElement1});
+            this.radImageButtonElement1,
+            this.radWaitingBarElement1});
             this.radStatusStrip1.Location = new System.Drawing.Point(0, 697);
             this.radStatusStrip1.Name = "radStatusStrip1";
-            this.radStatusStrip1.Size = new System.Drawing.Size(1237, 26);
+            this.radStatusStrip1.Size = new System.Drawing.Size(1145, 26);
             this.radStatusStrip1.TabIndex = 2;
             this.radStatusStrip1.Text = "radStatusStrip1";
             // 
@@ -429,6 +430,15 @@
             this.radImageButtonElement1.ToolTipText = "Unable to connect to server";
             this.radImageButtonElement1.Click += new System.EventHandler(this.radImageButtonElement1_Click);
             // 
+            // radWaitingBarElement1
+            // 
+            this.radWaitingBarElement1.AutoSize = true;
+            this.radWaitingBarElement1.Name = "radWaitingBarElement1";
+            this.radStatusStrip1.SetSpring(this.radWaitingBarElement1, false);
+            this.radWaitingBarElement1.Text = "";
+            this.radWaitingBarElement1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.radWaitingBarElement1.WaitingIndicatorSize = new System.Drawing.Size(100, 14);
+            // 
             // radRibbonBar1
             // 
             this.radRibbonBar1.CommandTabs.AddRange(new Telerik.WinControls.RadItem[] {
@@ -436,7 +446,7 @@
             this.ribbonTab2});
             this.radRibbonBar1.Location = new System.Drawing.Point(0, 0);
             this.radRibbonBar1.Name = "radRibbonBar1";
-            this.radRibbonBar1.Size = new System.Drawing.Size(1237, 162);
+            this.radRibbonBar1.Size = new System.Drawing.Size(1145, 162);
             this.radRibbonBar1.StartButtonImage = ((System.Drawing.Image)(resources.GetObject("radRibbonBar1.StartButtonImage")));
             this.radRibbonBar1.StartMenuItems.AddRange(new Telerik.WinControls.RadItem[] {
             this.radMenuButtonItem1});
@@ -885,11 +895,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1237, 723);
+            this.ClientSize = new System.Drawing.Size(1145, 723);
             this.Controls.Add(this.radRibbonBar1);
             this.Controls.Add(this.radStatusStrip1);
             this.Controls.Add(this.radSplitContainer1);
             this.FormBehavior = this.radRibbonFormBehavior1;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IconScaling = Telerik.WinControls.Enumerations.ImageScaling.None;
             this.MaximizeBox = false;
@@ -1002,5 +1013,6 @@
         private Telerik.WinControls.UI.RadRibbonBarGroup radRibbonBarGroup9;
         private Telerik.WinControls.UI.RadButtonElement radButtonElement21;
         private Telerik.WinControls.UI.RadButtonElement radButtonElement22;
+        private Telerik.WinControls.UI.RadWaitingBarElement radWaitingBarElement1;
     }
 }

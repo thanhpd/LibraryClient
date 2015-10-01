@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -85,8 +86,11 @@ namespace LibraryDesktop.Models
             NewBookImage = null;
 
             if (!String.IsNullOrWhiteSpace(book_image))
-            {                
-                BookImage = FormHelper.AddImageStore(book_image, DataProvider.GetImage(book_image));
+            {
+                //BookImage = FormHelper.AddImageStore(book_image, DataProvider.GetImage(book_image));
+                //BookImage = FormHelper.FetchImage(DataProvider.GetImage(book_image), 150, 80);
+                var stream = new MemoryStream(DataProvider.GetImage(book_image));
+                BookImage = Image.FromStream(stream);
             }            
         }
     }

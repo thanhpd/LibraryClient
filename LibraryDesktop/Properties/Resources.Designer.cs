@@ -73,6 +73,16 @@ namespace LibraryDesktop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap coltech1 {
+            get {
+                object obj = ResourceManager.GetObject("coltech1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cross {
             get {
                 object obj = ResourceManager.GetObject("cross", resourceCulture);
@@ -146,6 +156,16 @@ namespace LibraryDesktop.Properties {
         internal static System.Drawing.Bitmap synopsislc {
             get {
                 object obj = ResourceManager.GetObject("synopsislc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap uet_logo {
+            get {
+                object obj = ResourceManager.GetObject("uet_logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -16,6 +16,7 @@ namespace LibraryDesktop
             InitializeComponent();
 
             this.StartPosition = FormStartPosition.CenterScreen;
+            radWaitingBar1.StartWaiting();
         }
     }
 }
