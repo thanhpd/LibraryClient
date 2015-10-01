@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,15 +21,16 @@ namespace LibraryDesktop
     {
         Font boldFont = new Font(SystemFonts.DialogFont, FontStyle.Bold);        
         List<BookModel> listBookModels = new List<BookModel>();
-        List<Book> rawData = new List<Book>();
+        private Queue<Book> rawData;
+        
         BookModel cacheLastRow = new BookModel(new Book());
-        BookModel cacheNewRow = new BookModel(new Book());
-        private BookModel newBookModel = new BookModel(new Book());
+        BookModel cacheNewRow = new BookModel(new Book());        
         public RadForm2()
         {
             InitializeComponent();
-            rawData = (DataProvider.GetAllBooks(100, 0));
-            listBookModels = rawData.Select(book => new BookModel(book)).Reverse().ToList();            
+            rawData = new Queue<Book>(DataProvider.GetAllBooks(100, 0));            
+            //listBookModels = rawData.Select(book => new BookModel(book)).Reverse().ToList();
+            modelTransform();
             bindData();
             radGridView2.TableElement.RowHeight = 80;
             radGridView2.MasterTemplate.AllowAddNewRow = false;
@@ -36,9 +38,64 @@ namespace LibraryDesktop
             radWaitingBarElement1.Visibility = ElementVisibility.Hidden;
         }
 
+        private void modelTransform()
+        {
+            Application.DoEvents();
+            var listWorkers = new List<BackgroundWorker>();
+            bool[] restart = new bool[5];
+            for (int i = 0; i < 5; i++)
+            {
+                var backgroundWorker = new BackgroundWorker();
+                backgroundWorker.WorkerReportsProgress = true;
+                backgroundWorker.DoWork += BackgroundWorkerOnDoWork;
+                backgroundWorker.ProgressChanged += BackgroundWorkerOnProgressChanged;
+                backgroundWorker.RunWorkerCompleted += BackgroundWorkerOnRunWorkerCompleted;                
+                restart[i] = false;
+                listWorkers.Add(backgroundWorker);
+            }
+            while (rawData.Count > 0)
+            {
+                foreach (var worker in listWorkers)
+                {
+                    if (!worker.IsBusy)
+                    {
+                        worker.RunWorkerAsync();
+                    }
+                    //else if (!worker.CancellationPending)
+                    //{
+                    //    worker.CancelAsync();
+                    //}
+                }
+            }
+        }
+
+        private void BackgroundWorkerOnRunWorkerCompleted(object sender, RunWorkerCompletedEventArgs runWorkerCompletedEventArgs)
+        {
+            Debug.WriteLine("Completed " + DateTime.Now);
+        }
+
+        private void BackgroundWorkerOnProgressChanged(object sender, ProgressChangedEventArgs progressChangedEventArgs)
+        {
+            Debug.WriteLine("Progress " + progressChangedEventArgs.ProgressPercentage + " " + DateTime.Now);
+        }
+
+        private void BackgroundWorkerOnDoWork(object sender, DoWorkEventArgs doWorkEventArgs)
+        {
+            BackgroundWorker worker = sender as BackgroundWorker;       
+            if (rawData.Count > 0)
+            {
+                var rawItem = rawData.Dequeue();                
+                var bookModel = new BookModel(rawItem);
+                listBookModels.Add(bookModel);
+                Debug.WriteLine("Working " + DateTime.Now);
+            }
+            worker.ReportProgress(100);
+        }
+
         private void bindData()
         {
             radGridView2.DataSource = null;
+            listBookModels = listBookModels.OrderBy(b => b.id).ToList();
             radGridView2.DataSource = listBookModels;
         }
 
@@ -122,8 +179,7 @@ namespace LibraryDesktop
             {
                 updateRow(bookModel);                
                 radGridView2.DataSource = null;
-                radGridView2.DataSource = listBookModels;
-                //bindData();
+                radGridView2.DataSource = listBookModels;                
             }
             else
             {

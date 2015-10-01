@@ -40,10 +40,15 @@ namespace LibraryData.Services
         public static byte[] GetImage(string path)
         {
             var request = new RestRequest();
-            request.Resource = "";
-
-            var result = RequestHandling.ExecuteReceive(request, path);
-            return result;
+            if (path.Contains("http://"))
+            {
+                return RequestHandling.ExecuteReceive(request, path);
+            }
+            else
+            {
+                request.Resource = path;
+                return RequestHandling.ExecuteReceive(request, UrlBuilder.BaseUrl);
+            }            
         }
 
         public static bool AddNewBook(string bookName, string bookImagePath, string bookDescription, string bookAuthor,

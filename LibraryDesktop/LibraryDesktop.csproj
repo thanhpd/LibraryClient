@@ -195,6 +195,7 @@
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\FormHelper.cs" />
+    <Compile Include="Utils\ListExtension.cs" />
     <Compile Include="Utils\PicturePanel.cs">
       <SubType>Component</SubType>
     </Compile>
