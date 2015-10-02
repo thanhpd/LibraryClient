@@ -410,6 +410,7 @@
             this.radGridView2.Text = "radGridView2";
             this.radGridView2.ViewCellFormatting += new Telerik.WinControls.UI.CellFormattingEventHandler(this.radGridView2_ViewCellFormatting);
             this.radGridView2.CurrentRowChanging += new Telerik.WinControls.UI.CurrentRowChangingEventHandler(this.radGridView2_CurrentRowChanging);
+            this.radGridView2.PageChanging += new System.EventHandler<Telerik.WinControls.PageChangingEventArgs>(this.radGridView2_PageChanging);
             // 
             // bookModelBindingSource
             // 
@@ -422,7 +423,7 @@
             this.radLabelElement1});
             this.radStatusStrip1.Location = new System.Drawing.Point(0, 697);
             this.radStatusStrip1.Name = "radStatusStrip1";
-            this.radStatusStrip1.Size = new System.Drawing.Size(1160, 26);
+            this.radStatusStrip1.Size = new System.Drawing.Size(1140, 26);
             this.radStatusStrip1.TabIndex = 1;
             this.radStatusStrip1.Text = "radStatusStrip1";
             // 
@@ -461,7 +462,7 @@
             this.ribbonTab2});
             this.radRibbonBar1.Location = new System.Drawing.Point(0, 0);
             this.radRibbonBar1.Name = "radRibbonBar1";
-            this.radRibbonBar1.Size = new System.Drawing.Size(1160, 162);
+            this.radRibbonBar1.Size = new System.Drawing.Size(1140, 162);
             this.radRibbonBar1.StartButtonImage = ((System.Drawing.Image)(resources.GetObject("radRibbonBar1.StartButtonImage")));
             this.radRibbonBar1.StartMenuItems.AddRange(new Telerik.WinControls.RadItem[] {
             this.radMenuButtonItem2});
@@ -963,7 +964,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1160, 723);
+            this.ClientSize = new System.Drawing.Size(1140, 723);
             this.Controls.Add(this.radRibbonBar1);
             this.Controls.Add(this.radStatusStrip1);
             this.Controls.Add(this.radSplitContainer1);

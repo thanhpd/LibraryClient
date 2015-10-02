@@ -63,11 +63,10 @@ namespace LibraryData.Services
         public static Task<T> ExecuteSend<T>(RestRequest request) where T : new()
         {
             var client = new RestClient(UrlBuilder.BaseUrl);
-            var tcs = new TaskCompletionSource<T>();
-
-            try
+            var tcs = new TaskCompletionSource<T>();            
+            client.ExecuteAsync<T>(request, response =>
             {
-                client.ExecuteAsync<T>(request, response =>
+                try
                 {
                     if (response.ErrorException != null)
                     {
@@ -75,15 +74,14 @@ namespace LibraryData.Services
                         var twilioException = new ApplicationException(message, response.ErrorException);
                         throw twilioException;
                     }
-
                     tcs.SetResult(response.Data);
-                });
-            }
-            catch (ApplicationException e)
-            {
-                Debug.WriteLine(e.Message);
-                tcs.SetResult(new T());
-            }
+                }
+                catch (ApplicationException e)
+                {
+                    Debug.WriteLine(e.Message);
+                    tcs.SetResult(new T());
+                }                    
+            });            
                         
             return tcs.Task;           
         }

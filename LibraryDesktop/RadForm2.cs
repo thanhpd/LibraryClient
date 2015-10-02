@@ -105,6 +105,8 @@ namespace LibraryDesktop
             radGridView2.DataSource = null;
             listBookModels = listBookModels.OrderBy(b => int.Parse(b.id)).ToList();
             radGridView2.DataSource = listBookModels;
+            radButtonElement1.Enabled = false;
+            radButtonElement2.Enabled = false;
         }
 
         private void updateRow(BookModel model)
@@ -134,7 +136,9 @@ namespace LibraryDesktop
         private void radGridView2_CurrentRowChanging(object sender, CurrentRowChangingEventArgs e)
         {
             try
-            {                
+            {
+                radButtonElement1.Enabled = true;
+                radButtonElement2.Enabled = true;
                 cacheLastRow = rowCaching(e.CurrentRow.Cells[0].Value.ToString());
                 cacheNewRow = rowCaching(e.NewRow.Cells[0].Value.ToString());
                 radPropertyGrid1.SelectedObject = cacheNewRow;
@@ -254,21 +258,31 @@ namespace LibraryDesktop
 
             if (result == DialogResult.OK)
             {
-                var a = radGridView2.SelectedRows[0].Cells[0].Value.ToString();
-                var b = DataProvider.DeleteBook(a);
-                if (b)
-                {                    
-                    radLabelElement1.Text = "Deleted successfully";
-                    radLabelElement1.ForeColor = Color.Green;
-                    removeRow(a);
-                    bindData();
+                try
+                {
+                    var a = radGridView2.SelectedRows[0].Cells[0].Value.ToString();
+                    var b = DataProvider.DeleteBook(a);
+                    if (b)
+                    {
+                        radLabelElement1.Text = "Deleted successfully";
+                        radLabelElement1.ForeColor = Color.Green;
+                        removeRow(a);
+                        bindData();
+                    }
+                    else
+                    {
+                        radLabelElement1.Text = "Deleting failed";
+                        radLabelElement1.ForeColor = Color.DarkRed;
+                    }
+                    confirmForm.Dispose();
                 }
-                else
-                {                    
+                catch (Exception)
+                {
                     radLabelElement1.Text = "Deleting failed";
                     radLabelElement1.ForeColor = Color.DarkRed;
+                    confirmForm.Dispose();
                 }
-                confirmForm.Dispose();
+                
             }
             else if (result == DialogResult.Cancel)
             {
@@ -331,6 +345,12 @@ namespace LibraryDesktop
             modelTransform();
             bindData();
             splashThread.Abort();            
+        }
+
+        private void radGridView2_PageChanging(object sender, PageChangingEventArgs e)
+        {
+            radButtonElement1.Enabled = false;
+            radButtonElement2.Enabled = false;
         }
 
 
