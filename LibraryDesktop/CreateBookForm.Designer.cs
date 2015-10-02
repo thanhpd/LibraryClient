@@ -165,6 +165,7 @@
             this.radPanel32 = new Telerik.WinControls.UI.RadPanel();
             this.radLabel60 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel61 = new Telerik.WinControls.UI.RadLabel();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox3)).BeginInit();
@@ -1882,6 +1883,12 @@
             this.radLabel61.TabIndex = 2;
             this.radLabel61.TextWrap = false;
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
+            // 
             // CreateBookForm
             // 
             this.AcceptButton = this.radButton3;
@@ -2247,5 +2254,6 @@
         private Telerik.WinControls.UI.RadTextBox radTextBox30;
         private Telerik.WinControls.UI.RadLabel radLabel60;
         private Telerik.WinControls.UI.RadLabel radLabel61;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

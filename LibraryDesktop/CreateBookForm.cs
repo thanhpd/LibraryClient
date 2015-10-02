@@ -57,10 +57,11 @@ namespace LibraryDesktop
 
         private void radButton3_Click(object sender, EventArgs e)
         {
-            var result = DataProvider.AddNewBook(bookModel.book_name, bookModel.image_path, bookModel.book_description,
-                bookModel.book_author, bookModel.book_publisher, bookModel.book_year);
-            if (result) DialogResult = DialogResult.OK;
-            else MessageBox.Show("Failed to add this object.");
+            backgroundWorker1.RunWorkerAsync();
+            //var result = DataProvider.AddNewBook(bookModel.book_name, bookModel.image_path, bookModel.book_description,
+            //    bookModel.book_author, bookModel.book_publisher, bookModel.book_year);
+            //if (result) DialogResult = DialogResult.OK;
+            //else MessageBox.Show("Failed to add this object.");
         }
 
         private void radDataEntry1_BindingCreated(object sender, BindingCreatedEventArgs e)
@@ -74,6 +75,24 @@ namespace LibraryDesktop
         void Binding_Parse(object sender, ConvertEventArgs e)
         {
             e.Value = openDialog.Value;
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            var result = DataProvider.AddNewBook(bookModel.book_name, bookModel.image_path, bookModel.book_description,
+                bookModel.book_author, bookModel.book_publisher, bookModel.book_year);
+            if (result) DialogResult = DialogResult.OK;
+            else MessageBox.Show("Failed to add this object.");
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+
         }
     }
 }

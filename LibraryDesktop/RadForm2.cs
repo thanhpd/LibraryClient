@@ -95,7 +95,7 @@ namespace LibraryDesktop
         private void bindData()
         {
             radGridView2.DataSource = null;
-            listBookModels = listBookModels.OrderBy(b => b.id).ToList();
+            listBookModels = listBookModels.OrderBy(b => int.Parse(b.id)).ToList();
             radGridView2.DataSource = listBookModels;
         }
 
