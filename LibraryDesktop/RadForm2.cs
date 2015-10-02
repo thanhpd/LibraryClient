@@ -279,6 +279,18 @@ namespace LibraryDesktop
             radGridView2.ShowGroupPanel = !radGridView2.ShowGroupPanel;
         }
 
+        private void radMenuButtonItem2_Click(object sender, EventArgs e)
+        {
+            var dialog = new RadAboutBox1();
+            dialog.StartPosition = FormStartPosition.CenterParent;
+            DialogResult result = dialog.ShowDialog(this);
+            if (result == DialogResult.OK)
+            {
+                dialog.Dispose();
+            }
+            dialog.Dispose();
+        }
+
 
     }
 }
