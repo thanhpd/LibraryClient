@@ -75,6 +75,7 @@
             this.windows8Theme1 = new Telerik.WinControls.Themes.Windows8Theme();
             this.radStatusStrip1 = new Telerik.WinControls.UI.RadStatusStrip();
             this.radImageButtonElement1 = new Telerik.WinControls.UI.RadImageButtonElement();
+            this.radLabelElement1 = new Telerik.WinControls.UI.RadLabelElement();
             this.radRibbonBar1 = new Telerik.WinControls.UI.RadRibbonBar();
             this.ribbonTab1 = new Telerik.WinControls.UI.RibbonTab();
             this.radRibbonBarGroup1 = new Telerik.WinControls.UI.RadRibbonBarGroup();
@@ -118,7 +119,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bookModelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.radLabelElement1 = new Telerik.WinControls.UI.RadLabelElement();
             ((System.ComponentModel.ISupportInitialize)(this.radSplitContainer1)).BeginInit();
             this.radSplitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitPanel1)).BeginInit();
@@ -422,7 +422,7 @@
             this.radLabelElement1});
             this.radStatusStrip1.Location = new System.Drawing.Point(0, 697);
             this.radStatusStrip1.Name = "radStatusStrip1";
-            this.radStatusStrip1.Size = new System.Drawing.Size(1152, 26);
+            this.radStatusStrip1.Size = new System.Drawing.Size(1160, 26);
             this.radStatusStrip1.TabIndex = 1;
             this.radStatusStrip1.Text = "radStatusStrip1";
             // 
@@ -445,6 +445,15 @@
             this.radImageButtonElement1.ToolTipText = "Unable to connect to server";
             this.radImageButtonElement1.Click += new System.EventHandler(this.radImageButtonElement1_Click);
             // 
+            // radLabelElement1
+            // 
+            this.radLabelElement1.AccessibleDescription = "No Operation";
+            this.radLabelElement1.AccessibleName = "No Operation";
+            this.radLabelElement1.Name = "radLabelElement1";
+            this.radStatusStrip1.SetSpring(this.radLabelElement1, false);
+            this.radLabelElement1.Text = "No Operation";
+            this.radLabelElement1.TextWrap = true;
+            // 
             // radRibbonBar1
             // 
             this.radRibbonBar1.CommandTabs.AddRange(new Telerik.WinControls.RadItem[] {
@@ -452,7 +461,7 @@
             this.ribbonTab2});
             this.radRibbonBar1.Location = new System.Drawing.Point(0, 0);
             this.radRibbonBar1.Name = "radRibbonBar1";
-            this.radRibbonBar1.Size = new System.Drawing.Size(1152, 162);
+            this.radRibbonBar1.Size = new System.Drawing.Size(1160, 162);
             this.radRibbonBar1.StartButtonImage = ((System.Drawing.Image)(resources.GetObject("radRibbonBar1.StartButtonImage")));
             this.radRibbonBar1.StartMenuItems.AddRange(new Telerik.WinControls.RadItem[] {
             this.radMenuButtonItem2});
@@ -510,8 +519,9 @@
             this.radButtonElement3.Image = ((System.Drawing.Image)(resources.GetObject("radButtonElement3.Image")));
             this.radButtonElement3.ImageAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.radButtonElement3.Name = "radButtonElement3";
-            this.radButtonElement3.Text = "Update";
+            this.radButtonElement3.Text = "Refresh";
             this.radButtonElement3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.radButtonElement3.Click += new System.EventHandler(this.radButtonElement3_Click);
             // 
             // radRibbonBarGroup10
             // 
@@ -949,20 +959,11 @@
             // 
             this.bookModelBindingSource1.DataSource = typeof(LibraryDesktop.Models.BookModel);
             // 
-            // radLabelElement1
-            // 
-            this.radLabelElement1.AccessibleDescription = "No Operation";
-            this.radLabelElement1.AccessibleName = "No Operation";
-            this.radLabelElement1.Name = "radLabelElement1";
-            this.radStatusStrip1.SetSpring(this.radLabelElement1, false);
-            this.radLabelElement1.Text = "No Operation";
-            this.radLabelElement1.TextWrap = true;
-            // 
             // RadForm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1152, 723);
+            this.ClientSize = new System.Drawing.Size(1160, 723);
             this.Controls.Add(this.radRibbonBar1);
             this.Controls.Add(this.radStatusStrip1);
             this.Controls.Add(this.radSplitContainer1);

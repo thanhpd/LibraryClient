@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("UET Library")]
-[assembly: AssemblyDescription("A simple library management application for Service Oriented Architecture, Fall 2015")]
+[assembly: AssemblyDescription("A simple library management application for Service Oriented Architecture, Fall 2015 \n Credit: Phan Duy Thanh, Nguyen The Huy, Nguyen Duc Thinh - K57CA.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("VNU,H - UET")]
 [assembly: AssemblyProduct("LibraryDesktop")]

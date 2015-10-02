@@ -22,9 +22,9 @@ namespace LibraryDesktop
         Font boldFont = new Font(SystemFonts.DialogFont, FontStyle.Bold);        
         List<BookModel> listBookModels = new List<BookModel>();
         private Queue<Book> rawData;
-        
+        private bool op = true;
         BookModel cacheLastRow = new BookModel(new Book());
-        BookModel cacheNewRow = new BookModel(new Book());        
+        BookModel cacheNewRow = new BookModel(new Book());
         public RadForm2()
         {
             InitializeComponent();
@@ -33,12 +33,12 @@ namespace LibraryDesktop
             bindData();
             radGridView2.TableElement.RowHeight = 80;
             radGridView2.MasterTemplate.AllowAddNewRow = false;
-            radGridView2.MasterTemplate.EnableSorting = true;            
+            radGridView2.MasterTemplate.EnableSorting = true;
+            radLabelElement1.Font = boldFont;
         }
 
         private void modelTransform()
-        {
-            Application.DoEvents();
+        {                                        
             var listWorkers = new List<BackgroundWorker>();
             bool[] restart = new bool[5];
             for (int i = 0; i < 5; i++)
@@ -46,30 +46,40 @@ namespace LibraryDesktop
                 var backgroundWorker = new BackgroundWorker();
                 backgroundWorker.WorkerReportsProgress = true;
                 backgroundWorker.DoWork += BackgroundWorkerOnDoWork;
+                backgroundWorker.WorkerSupportsCancellation = true;
                 backgroundWorker.ProgressChanged += BackgroundWorkerOnProgressChanged;
                 backgroundWorker.RunWorkerCompleted += BackgroundWorkerOnRunWorkerCompleted;                
                 restart[i] = false;
                 listWorkers.Add(backgroundWorker);
             }
+            
             while (rawData.Count > 0)
             {
+                Application.DoEvents();
                 foreach (var worker in listWorkers)
                 {
                     if (!worker.IsBusy)
                     {
                         worker.RunWorkerAsync();
                     }
-                    //else if (!worker.CancellationPending)
-                    //{
-                    //    worker.CancelAsync();
-                    //}
+                    else if (!worker.CancellationPending)
+                    {
+                        worker.CancelAsync();
+                    }
                 }
             }
         }
 
         private void BackgroundWorkerOnRunWorkerCompleted(object sender, RunWorkerCompletedEventArgs runWorkerCompletedEventArgs)
         {
-            Debug.WriteLine("Completed " + DateTime.Now);
+            if (runWorkerCompletedEventArgs.Error != null)
+            {
+                Debug.WriteLine(runWorkerCompletedEventArgs.Error);
+            }
+            else
+            {
+                Debug.WriteLine("Completed " + DateTime.Now);   
+            }            
         }
 
         private void BackgroundWorkerOnProgressChanged(object sender, ProgressChangedEventArgs progressChangedEventArgs)
@@ -87,7 +97,7 @@ namespace LibraryDesktop
                 listBookModels.Add(bookModel);
                 Debug.WriteLine("Working " + DateTime.Now);
             }
-            worker.ReportProgress(100);
+            //worker.ReportProgress(100);
         }
 
         private void bindData()
@@ -299,6 +309,28 @@ namespace LibraryDesktop
                 dialog.Dispose();
             }
             dialog.Dispose();
+        }
+
+        private void radButtonElement3_Click(object sender, EventArgs e)
+        {
+            LoadingForm dialog = new LoadingForm();
+            rawData = new Queue<Book>(DataProvider.GetAllBooks(100, 0));
+            listBookModels.Clear();
+            
+            Thread splashThread = new Thread(new ThreadStart(
+                delegate
+                {
+                    dialog = new LoadingForm();
+                    Application.Run(dialog);                    
+                }
+                ));
+
+            splashThread.SetApartmentState(ApartmentState.STA);
+            splashThread.Start();
+
+            modelTransform();
+            bindData();
+            splashThread.Abort();            
         }
 
 
