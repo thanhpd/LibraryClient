@@ -17,14 +17,22 @@ namespace LibraryData.Services
             var tcs = new TaskCompletionSource<T>();  
             client.ExecuteAsync<T>(request, response =>
             {
-                if (response.ErrorException != null)
+                try
                 {
-                    const string message = "Error retrieving response.  Check inner details for more info.";
-                    var twilioException = new ApplicationException(message, response.ErrorException);
-                    throw twilioException;
-                }
+                    if (response.ErrorException != null)
+                    {
+                        const string message = "Error retrieving response.  Check inner details for more info.";
+                        var twilioException = new ApplicationException(message, response.ErrorException);
+                        throw twilioException;
+                    }
 
-                tcs.SetResult(response.Data);
+                    tcs.SetResult(response.Data);
+                }
+                catch (ApplicationException e)
+                {
+                    Debug.WriteLine(e.Message);
+                    tcs.SetResult(new T());
+                }                
             });
             return tcs.Task;
         }
@@ -34,20 +42,7 @@ namespace LibraryData.Services
             var client = new RestClient(baseUrl);
             var response = client.Execute(request);
 
-            if (response.ErrorException != null)
-            {
-                const string message = "Error retrieving response.  Check inner details for more info.";
-                var twilioException = new ApplicationException(message, response.ErrorException);
-                throw twilioException;
-            }
-            return response.RawBytes;
-        }
-
-        public static Task<T> ExecuteSend<T>(RestRequest request) where T : new()
-        {
-            var client = new RestClient(UrlBuilder.BaseUrl);
-            var tcs = new TaskCompletionSource<T>();
-            client.ExecuteAsync<T>(request, response =>
+            try
             {
                 if (response.ErrorException != null)
                 {
@@ -55,22 +50,42 @@ namespace LibraryData.Services
                     var twilioException = new ApplicationException(message, response.ErrorException);
                     throw twilioException;
                 }
-                
-                tcs.SetResult(response.Data);
-            });
+                return response.RawBytes;
+            }
+            catch (ApplicationException e)
+            {
+                Debug.WriteLine(e);
+                return new byte[1];
+            }
+            
+        }
 
-            //TO-DO: Analyze response to define whether succeed or not
-            return tcs.Task;
+        public static Task<T> ExecuteSend<T>(RestRequest request) where T : new()
+        {
+            var client = new RestClient(UrlBuilder.BaseUrl);
+            var tcs = new TaskCompletionSource<T>();
 
-            //var response = client.Execute(request);
-            //if (response.ErrorException != null)
-            //{
-            //    const string message = "Error retrieving response.  Check inner details for more info.";
-            //    var twilioException = new ApplicationException(message, response.ErrorException);
-            //    throw twilioException;
-            //}
+            try
+            {
+                client.ExecuteAsync<T>(request, response =>
+                {
+                    if (response.ErrorException != null)
+                    {
+                        const string message = "Error retrieving response.  Check inner details for more info.";
+                        var twilioException = new ApplicationException(message, response.ErrorException);
+                        throw twilioException;
+                    }
 
-            //return true;
+                    tcs.SetResult(response.Data);
+                });
+            }
+            catch (ApplicationException e)
+            {
+                Debug.WriteLine(e.Message);
+                tcs.SetResult(new T());
+            }
+                        
+            return tcs.Task;           
         }
         
     }
