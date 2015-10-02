@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.Drawing.Design;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -56,6 +57,7 @@ namespace LibraryDesktop.Models
 
         [DisplayName("Description")]
         [Description("The description of the book.")]
+        [EditorAttribute("System.ComponentModel.Design.MultilineStringEditor, System.Design","System.Drawing.Design.UITypeEditor")]
         public string book_description { get; set; }
 
         [DisplayName("Book Image")]
@@ -73,25 +75,28 @@ namespace LibraryDesktop.Models
 
         public BookModel(Book book)
         {
-            id = book.id;
-            book_image = book.book_image;
-            book_name = book.book_name;
-            book_author = book.book_author;
-            book_publisher = book.book_publisher;
-            book_year = book.book_year;
-            book_description = book.book_description;
-            created_at = book.created_at;
-            updated_at = book.updated_at;
-            status = book.status == "1";
-            NewBookImage = null;
-
-            if (!String.IsNullOrWhiteSpace(book_image))
+            if (book != null)
             {
-                BookImage = FormHelper.AddImageStore(book_image, DataProvider.GetImage(book_image));
-                //BookImage = FormHelper.FetchImage(DataProvider.GetImage(book_image), 150, 80);
-                //var stream = new MemoryStream(DataProvider.GetImage(book_image));
-                //BookImage = Image.FromStream(stream);
-            }            
+                id = book.id;
+                book_image = book.book_image;
+                book_name = book.book_name;
+                book_author = book.book_author;
+                book_publisher = book.book_publisher;
+                book_year = book.book_year;
+                book_description = book.book_description;
+                created_at = book.created_at;
+                updated_at = book.updated_at;
+                status = book.status == "1";
+                NewBookImage = null;
+
+                if (!String.IsNullOrWhiteSpace(book_image))
+                {
+                    BookImage = FormHelper.AddImageStore(book_image, DataProvider.GetImage(book_image));
+                    //BookImage = FormHelper.FetchImage(DataProvider.GetImage(book_image), 150, 80);
+                    //var stream = new MemoryStream(DataProvider.GetImage(book_image));
+                    //BookImage = Image.FromStream(stream);
+                }
+            }                        
         }
     }
 }

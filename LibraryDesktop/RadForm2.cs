@@ -28,14 +28,12 @@ namespace LibraryDesktop
         public RadForm2()
         {
             InitializeComponent();
-            rawData = new Queue<Book>(DataProvider.GetAllBooks(100, 0));            
-            //listBookModels = rawData.Select(book => new BookModel(book)).Reverse().ToList();
+            rawData = new Queue<Book>(DataProvider.GetAllBooks(100, 0));                        
             modelTransform();
             bindData();
             radGridView2.TableElement.RowHeight = 80;
             radGridView2.MasterTemplate.AllowAddNewRow = false;
-            radGridView2.MasterTemplate.EnableSorting = true;
-            radWaitingBarElement1.Visibility = ElementVisibility.Hidden;
+            radGridView2.MasterTemplate.EnableSorting = true;            
         }
 
         private void modelTransform()
@@ -207,6 +205,12 @@ namespace LibraryDesktop
             {
                 e.CellElement.Font = boldFont;
             }
+
+            if (e.Row is GridViewDataRowInfo)
+            {
+                e.CellElement.ToolTipText = e.CellElement.Text;
+                
+            }
         }
 
         private void radButtonElement1_Click(object sender, EventArgs e)
@@ -217,6 +221,8 @@ namespace LibraryDesktop
 
             if (result == DialogResult.OK)
             {
+                radLabelElement1.Text = "Book added!";
+                radLabelElement1.ForeColor = Color.Green;
                 var latestId = Convert.ToInt32(listBookModels.OrderByDescending(b => b.id).First().id);
                 var newestItem = (DataProvider.GetAllBooks(1, latestId)).Select(book => new BookModel(book)).ToList();
                 listBookModels.Add(newestItem[0]);
@@ -224,6 +230,8 @@ namespace LibraryDesktop
                 createForm.Dispose();
             } else if (result == DialogResult.Cancel)
             {
+                radLabelElement1.Text = "Operation Canceled!";
+                radLabelElement1.ForeColor = Color.DarkRed;
                 createForm.Dispose();
             }
         }
@@ -239,14 +247,16 @@ namespace LibraryDesktop
                 var a = radGridView2.SelectedRows[0].Cells[0].Value.ToString();
                 var b = DataProvider.DeleteBook(a);
                 if (b)
-                {
-                    MessageBox.Show("Deleted Successfully");
+                {                    
+                    radLabelElement1.Text = "Deleted successfully";
+                    radLabelElement1.ForeColor = Color.Green;
                     removeRow(a);
                     bindData();
                 }
                 else
-                {
-                    MessageBox.Show("Deleting failed");
+                {                    
+                    radLabelElement1.Text = "Deleting failed";
+                    radLabelElement1.ForeColor = Color.DarkRed;
                 }
                 confirmForm.Dispose();
             }

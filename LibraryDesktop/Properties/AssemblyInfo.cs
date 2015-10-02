@@ -5,10 +5,10 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("LibraryDesktop")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("UET Library")]
+[assembly: AssemblyDescription("A simple library management application for Service Oriented Architecture, Fall 2015")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("VNU,H - UET")]
 [assembly: AssemblyProduct("LibraryDesktop")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
