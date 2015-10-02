@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LibraryDesktop.Models;
 
 namespace LibraryDesktop.Utils
 {
@@ -14,5 +15,8 @@ namespace LibraryDesktop.Utils
             list.RemoveAt(index);
             return r;
         }
+
+        public static int count = 0;
+        public static List<BookModel> BackupBookModels = new List<BookModel>();
     }
 }

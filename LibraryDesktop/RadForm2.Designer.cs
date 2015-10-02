@@ -147,7 +147,7 @@
             // radSplitContainer1
             // 
             this.radSplitContainer1.Controls.Add(this.splitPanel1);
-            this.radSplitContainer1.Location = new System.Drawing.Point(7, 165);
+            this.radSplitContainer1.Location = new System.Drawing.Point(9, 165);
             this.radSplitContainer1.Name = "radSplitContainer1";
             // 
             // 
@@ -245,18 +245,18 @@
             // 
             // radButton2
             // 
-            this.radButton2.Location = new System.Drawing.Point(175, 333);
+            this.radButton2.Location = new System.Drawing.Point(177, 285);
             this.radButton2.Name = "radButton2";
             this.radButton2.Size = new System.Drawing.Size(100, 27);
-            this.radButton2.TabIndex = 2;
+            this.radButton2.TabIndex = 99;
             this.radButton2.Text = "Cancel";
             // 
             // radButton1
             // 
-            this.radButton1.Location = new System.Drawing.Point(50, 333);
+            this.radButton1.Location = new System.Drawing.Point(43, 285);
             this.radButton1.Name = "radButton1";
             this.radButton1.Size = new System.Drawing.Size(100, 27);
-            this.radButton1.TabIndex = 1;
+            this.radButton1.TabIndex = 100;
             this.radButton1.Text = "Save";
             this.radButton1.Click += new System.EventHandler(this.radButton1_Click);
             // 
@@ -267,7 +267,7 @@
             this.radPropertyGrid1.Name = "radPropertyGrid1";
             this.radPropertyGrid1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.radPropertyGrid1.SelectedObject = this.radGridView2.RootElement;
-            this.radPropertyGrid1.Size = new System.Drawing.Size(300, 327);
+            this.radPropertyGrid1.Size = new System.Drawing.Size(300, 279);
             this.radPropertyGrid1.SortOrder = System.Windows.Forms.SortOrder.Ascending;
             this.radPropertyGrid1.TabIndex = 0;
             this.radPropertyGrid1.Text = "radPropertyGrid1";
@@ -423,7 +423,7 @@
             this.radLabelElement1});
             this.radStatusStrip1.Location = new System.Drawing.Point(0, 697);
             this.radStatusStrip1.Name = "radStatusStrip1";
-            this.radStatusStrip1.Size = new System.Drawing.Size(1140, 26);
+            this.radStatusStrip1.Size = new System.Drawing.Size(1148, 26);
             this.radStatusStrip1.TabIndex = 1;
             this.radStatusStrip1.Text = "radStatusStrip1";
             // 
@@ -462,7 +462,7 @@
             this.ribbonTab2});
             this.radRibbonBar1.Location = new System.Drawing.Point(0, 0);
             this.radRibbonBar1.Name = "radRibbonBar1";
-            this.radRibbonBar1.Size = new System.Drawing.Size(1140, 162);
+            this.radRibbonBar1.Size = new System.Drawing.Size(1148, 162);
             this.radRibbonBar1.StartButtonImage = ((System.Drawing.Image)(resources.GetObject("radRibbonBar1.StartButtonImage")));
             this.radRibbonBar1.StartMenuItems.AddRange(new Telerik.WinControls.RadItem[] {
             this.radMenuButtonItem2});
@@ -964,7 +964,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1140, 723);
+            this.ClientSize = new System.Drawing.Size(1148, 723);
             this.Controls.Add(this.radRibbonBar1);
             this.Controls.Add(this.radStatusStrip1);
             this.Controls.Add(this.radSplitContainer1);

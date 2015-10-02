@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Design;
 using System.IO;
@@ -95,7 +96,7 @@ namespace LibraryDesktop.Models
                     //BookImage = FormHelper.FetchImage(DataProvider.GetImage(book_image), 150, 80);
                     //var stream = new MemoryStream(DataProvider.GetImage(book_image));
                     //BookImage = Image.FromStream(stream);
-                }
+                }                
             }                        
         }
     }
