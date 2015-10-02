@@ -174,6 +174,12 @@
     <Compile Include="CreateBookForm.Designer.cs">
       <DependentUpon>CreateBookForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="HelpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpForm.Designer.cs">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoadingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CreateBookForm.resx">
       <DependentUpon>CreateBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpForm.resx">
+      <DependentUpon>HelpForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoadingForm.resx">
       <DependentUpon>LoadingForm.cs</DependentUpon>
@@ -288,6 +297,7 @@
     <None Include="Resources\synopsislc.png" />
     <None Include="Resources\cross.png" />
     <None Include="Resources\coltech1.png" />
+    <None Include="Resources\exclaim.png" />
     <Content Include="Resources\green-circle1.png" />
     <None Include="Resources\red-circle1.png" />
     <None Include="Resources\green-circle11.png" />
@@ -296,6 +306,7 @@
     <None Include="Resources\plus-4-xxl.png" />
     <None Include="Resources\plus.png" />
     <None Include="Resources\plus1.png" />
+    <None Include="Resources\question.png" />
     <Content Include="Resources\red-circle.png" />
   </ItemGroup>
   <ItemGroup>

@@ -20,11 +20,8 @@ namespace LibraryDesktop
     public partial class RadForm2 : Telerik.WinControls.UI.RadForm
     {
         Font boldFont = new Font(SystemFonts.DialogFont, FontStyle.Bold);        
-        List<BookModel> listBookModels = new List<BookModel>();
-        List<BookModel> listBookModels2 = new List<BookModel>();
-        private Queue<Book> rawData;
-        private List<Book> copyPartialQueue = new List<Book>();
-        private bool op = true;
+        List<BookModel> listBookModels = new List<BookModel>();        
+        private Queue<Book> rawData;                
         BookModel cacheLastRow = new BookModel(new Book());
         BookModel cacheNewRow = new BookModel(new Book());
         public RadForm2()
@@ -32,17 +29,15 @@ namespace LibraryDesktop
             InitializeComponent();
             var tmp = DataProvider.GetAllBooks(100, 0).OrderBy(b => b.id).ToList();
             rawData = new Queue<Book>(tmp);
-            var copycat = new Queue<Book>(tmp);
-            for (int i = 0; i < 10; i++)
-            {
-                copyPartialQueue.Add(copycat.Dequeue());   
-            }   
             modelTransform();
             bindData();
             radGridView2.TableElement.RowHeight = 80;
             radGridView2.MasterTemplate.AllowAddNewRow = false;
             radGridView2.MasterTemplate.EnableSorting = true;
             radLabelElement1.Font = boldFont;
+            
+            var tmp1 = rowCaching(radGridView2.Rows[0].Cells[0].Value.ToString());
+            radPropertyGrid1.SelectedObject = tmp1;
         }
 
         private void modelTransform()
@@ -75,7 +70,8 @@ namespace LibraryDesktop
                 }
             }
 
-            listBookModels2 = copyPartialQueue.Select(book => new BookModel(book)).ToList();
+            //listBookModels2 = copyPartialQueue.Select(book => new BookModel(book)).ToList();
+            Thread.Sleep(5000);
         }
 
         private void BackgroundWorkerOnRunWorkerCompleted(object sender, RunWorkerCompletedEventArgs runWorkerCompletedEventArgs)
@@ -99,24 +95,18 @@ namespace LibraryDesktop
         {
             BackgroundWorker worker = sender as BackgroundWorker;       
             if (rawData.Count > 0)
-            {
-                //Debug.WriteLine("Rawdata" + rawData.Count);
+            {                
                 var rawItem = rawData.Dequeue();
-                var bookModel = new BookModel(rawItem);
-                //Debug.WriteLine("bookModel " + bookModel.id);
-                listBookModels.Add(bookModel);
-                //Debug.WriteLine("Working " + DateTime.Now);
-                doWorkEventArgs.Result = bookModel;
+                var bookModel = new BookModel(rawItem);                
+                listBookModels.Add(bookModel);                                
             }            
         }
 
         private void bindData()
-        {
-            var a = listBookModels2;
+        {            
             radGridView2.DataSource = null;
-            listBookModels = listBookModels.OrderBy(b => int.Parse(b.id)).ToList();
-            radGridView2.DataSource = listBookModels;
-            radButtonElement1.Enabled = false;
+            listBookModels = listBookModels.OrderBy(b => b.id).ToList();            
+            radGridView2.DataSource = listBookModels;            
             radButtonElement2.Enabled = false;
         }
 
@@ -147,8 +137,7 @@ namespace LibraryDesktop
         private void radGridView2_CurrentRowChanging(object sender, CurrentRowChangingEventArgs e)
         {
             try
-            {
-                radButtonElement1.Enabled = true;
+            {                
                 radButtonElement2.Enabled = true;
                 cacheLastRow = rowCaching(e.CurrentRow.Cells[0].Value.ToString());
                 cacheNewRow = rowCaching(e.NewRow.Cells[0].Value.ToString());
@@ -202,11 +191,15 @@ namespace LibraryDesktop
             {
                 updateRow(bookModel);                
                 radGridView2.DataSource = null;
-                radGridView2.DataSource = listBookModels;                
+                radGridView2.DataSource = listBookModels;
+                radLabelElement1.Text = "Book updated!";
+                radLabelElement1.ForeColor = Color.Green;
             }
             else
             {
                 bookModel = cacheLastRow;
+                radLabelElement1.Text = "Updating book failed. Reverted to the old record.";
+                radLabelElement1.ForeColor = Color.DarkRed;
             }
         }
 
@@ -359,9 +352,32 @@ namespace LibraryDesktop
         }
 
         private void radGridView2_PageChanging(object sender, PageChangingEventArgs e)
-        {
-            radButtonElement1.Enabled = false;
+        {            
             radButtonElement2.Enabled = false;
+        }
+
+        private void radButtonElement24_Click(object sender, EventArgs e)
+        {
+            var dialog = new RadAboutBox1();
+            dialog.StartPosition = FormStartPosition.CenterParent;
+            DialogResult result = dialog.ShowDialog(this);
+            if (result == DialogResult.OK)
+            {
+                dialog.Dispose();
+            }
+            dialog.Dispose();
+        }
+
+        private void radButtonElement23_Click(object sender, EventArgs e)
+        {
+            var dialog = new HelpForm();
+            dialog.StartPosition = FormStartPosition.CenterParent;
+            DialogResult result = dialog.ShowDialog(this);
+            if (result == DialogResult.OK)
+            {
+                dialog.Dispose();
+            }
+            dialog.Dispose();
         }
 
 
