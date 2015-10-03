@@ -293,14 +293,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bluemarine_favicon.ico" />
+    <None Include="Resources\search.png" />
     <None Include="Resources\uet_logo.png" />
     <None Include="Resources\synopsislc.png" />
     <None Include="Resources\cross.png" />
     <None Include="Resources\coltech1.png" />
     <None Include="Resources\exclaim.png" />
+    <None Include="Resources\filter.png" />
     <Content Include="Resources\green-circle1.png" />
     <None Include="Resources\red-circle1.png" />
     <None Include="Resources\green-circle11.png" />
+    <None Include="Resources\group.png" />
     <Content Include="Resources\img-placeholder.PNG" />
     <None Include="Resources\plus.bmp" />
     <None Include="Resources\plus-4-xxl.png" />
