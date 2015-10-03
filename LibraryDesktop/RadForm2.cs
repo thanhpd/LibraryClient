@@ -29,7 +29,7 @@ namespace LibraryDesktop
             InitializeComponent();
             var tmp = DataProvider.GetAllBooks(100, 0).OrderBy(b => b.id).ToList();
             rawData = new Queue<Book>(tmp);
-            modelTransform();
+            modelTransform();            
             bindData();
             radGridView2.TableElement.RowHeight = 80;
             radGridView2.MasterTemplate.AllowAddNewRow = false;
