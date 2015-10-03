@@ -19,7 +19,8 @@ namespace LibraryDesktop
 {
     public partial class RadForm2 : Telerik.WinControls.UI.RadForm
     {
-        Font boldFont = new Font(SystemFonts.DialogFont, FontStyle.Bold);        
+        Font boldFont = new Font(SystemFonts.DialogFont, FontStyle.Bold);
+        private List<Book> tmp;
         List<BookModel> listBookModels = new List<BookModel>();        
         private Queue<Book> rawData;                
         BookModel cacheLastRow = new BookModel(new Book());
@@ -27,7 +28,7 @@ namespace LibraryDesktop
         public RadForm2()
         {
             InitializeComponent();
-            var tmp = DataProvider.GetAllBooks(100, 0).OrderBy(b => b.id).ToList();
+            tmp = DataProvider.GetAllBooks(100, 0).OrderBy(b => b.id).ToList();
             rawData = new Queue<Book>(tmp);
             modelTransform();            
             bindData();
@@ -54,7 +55,7 @@ namespace LibraryDesktop
                 backgroundWorker.RunWorkerCompleted += BackgroundWorkerOnRunWorkerCompleted;                                
                 listWorkers.Add(backgroundWorker);
             }            
-            while (rawData.Count > 0)
+            while (rawData.Count > 0 || listBookModels.Count < tmp.Count)
             {
                 Application.DoEvents();
                 foreach (var worker in listWorkers)
@@ -62,16 +63,12 @@ namespace LibraryDesktop
                     if (!worker.IsBusy)
                     {
                         worker.RunWorkerAsync();
-                    }
-                    //else if (!worker.CancellationPending)
-                    //{
-                    //    worker.CancelAsync();
-                    //}
+                    }                    
                 }
             }
 
             //listBookModels2 = copyPartialQueue.Select(book => new BookModel(book)).ToList();
-            Thread.Sleep(5000);
+            //Thread.Sleep(5000);
         }
 
         private void BackgroundWorkerOnRunWorkerCompleted(object sender, RunWorkerCompletedEventArgs runWorkerCompletedEventArgs)
@@ -79,16 +76,12 @@ namespace LibraryDesktop
             if (runWorkerCompletedEventArgs.Error != null)
             {
                 Debug.WriteLine(runWorkerCompletedEventArgs.Error);
-            }
-            else
-            {
-                //Debug.WriteLine("Completed " + DateTime.Now);                   
-            }            
+            }                    
         }
 
         private void BackgroundWorkerOnProgressChanged(object sender, ProgressChangedEventArgs progressChangedEventArgs)
         {
-            //Debug.WriteLine("Progress " + progressChangedEventArgs.ProgressPercentage + " " + DateTime.Now);
+            
         }
 
         private void BackgroundWorkerOnDoWork(object sender, DoWorkEventArgs doWorkEventArgs)
